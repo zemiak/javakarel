@@ -12,19 +12,19 @@ JAVAC = javac -d ../../../classes -classpath ../../../acm.jar
 # Main entries
 
 all: $(JAR)
-	@true
+    @true
 
 
 # ***************************************************************
 # Java compilations
 
 karel.jar: always
-	@mkdir -p classes
-	@echo "[Compiling source files]"
-	@(cd src/stanford/karel ; $(JAVAC) *.java)
-	@echo "[Creating karel.jar]"
-	@(cd classes ; jar xf ../acm.jar)
-	@(cd classes ; jar cf ../karel.jar */*/*.class)
+    @mkdir -p classes
+    @echo "[Compiling source files]"
+    @(cd src/stanford/karel ; $(JAVAC) *.java)
+    @echo "[Creating karel.jar]"
+    @(cd classes ; jar xf ../acm.jar)
+    @(cd classes ; jar cf ../karel.jar */*/*.class)
 
 always:
 
@@ -34,7 +34,7 @@ always:
 #    clean -- delete derived files in preparation for rebuild
 
 tidy:
-	rm -f -r *~ .,* core a.out
+    rm -f -r *~ .,* core a.out
 
 clean scratch: tidy
-	rm -f -r $(JAR) classes
+    rm -f -r $(JAR) classes
