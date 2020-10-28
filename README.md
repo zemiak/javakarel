@@ -15,11 +15,41 @@ To test out an example open the root directory in your terminal. Then navigate t
     $ cd src/main/examples/BlankKarel
     $ jbang BlankKarel.java
 
-## Karel Commands
+# Karel Commands
 
-Karel's basic set of commands are:
+Taken from: https://karel.csbridge.org/java/en/intro.html
+The original PDF: https://karel.csbridge.org/original.pdf
+
+## Basic Commands
 
     move();
     turnLeft();
     putBeeper();
     pickBeeper();
+
+## Karel Conditions
+
+    frontIsClear()
+    beepersPresent()
+    beepersInBag()
+    leftIsClear()
+    rightIsClear()
+    facingNorth()
+    facingSouth()
+    facingEast()
+    facingWest()
+    frontIsBlocked() noBeepersPresent()
+    noBeepersInBag()
+    leftIsBlocked()
+    rightIsBlocked()
+    notFacingNorth()
+    notFacingSouth()
+    notFacingEast()
+    notFacingWest()
+
+## Super Karel
+
+    turnRight();
+    turnAround();
+    random(p);
+    paintCorner(color);

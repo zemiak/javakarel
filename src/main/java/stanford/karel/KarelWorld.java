@@ -837,25 +837,22 @@ class KarelWorld extends Canvas {
         if (beeperSize % 2 == 0) beeperSize--;
         int half = (beeperSize + 1) / 2;
         KarelRegion r = new KarelRegion();
-        // r.setOrigin(x, y, 0, -half, EAST);
-        // r.addVector(half, half, EAST);
-        // r.addVector(-half, half, EAST);
-        // r.addVector(-half, -half, EAST);
-        // r.addVector(half, -half, EAST);
-        // g.setColor(BEEPER_COLOR);
-        // g.fillPolygon(r.getPolygon());
-        // g.drawPolygon(r.getPolygon());
-     //    g.setColor(Color.BLACK);
-     //    for (int i = 0; i < border; i++) {
-     //        int delta = half + i;
-        //     g.drawLine(x - delta, y, x, y + delta);
-        //     g.drawLine(x, y + delta, x + delta, y);
-        //     g.drawLine(x + delta, y, x, y - delta);
-        //     g.drawLine(x, y - delta, x - delta, y);
-        // }
-
+        r.setOrigin(x, y, 0, -half, EAST);
+        r.addVector(half, half, EAST);
+        r.addVector(-half, half, EAST);
+        r.addVector(-half, -half, EAST);
+        r.addVector(half, -half, EAST);
         g.setColor(BEEPER_COLOR);
-        g.fillOval(x - half, y - half, beeperSize, beeperSize);
+        g.fillPolygon(r.getPolygon());
+        g.drawPolygon(r.getPolygon());
+        g.setColor(Color.BLACK);
+        for (int i = 0; i < border; i++) {
+            int delta = half + i;
+            g.drawLine(x - delta, y, x, y + delta);
+            g.drawLine(x, y + delta, x + delta, y);
+            g.drawLine(x + delta, y, x, y - delta);
+            g.drawLine(x, y - delta, x - delta, y);
+        }
 
         if (size > MIN_LABEL && n != 1) {
             labelBeeper(g, x, y, size, beeperLabel(n), comp);
@@ -867,26 +864,23 @@ class KarelWorld extends Canvas {
         int beeperSize = (int) Math.round(size * BEEPER_FRACTION);
         if (beeperSize % 2 == 0) beeperSize--;
         int half = (beeperSize + 1) / 2;
-        // KarelRegion r = new KarelRegion();
-        // r.setOrigin(x, y, 0, -half, EAST);
-        // r.addVector(half, half, EAST);
-        // r.addVector(-half, half, EAST);
-        // r.addVector(-half, -half, EAST);
-        // r.addVector(half, -half, EAST);
-        // g.setColor(BEEPER_COLOR);
-        // g.fillPolygon(r.getPolygon());
-        // g.drawPolygon(r.getPolygon());
-     //    g.setColor(Color.BLACK);
-     //    for (int i = 0; i < border; i++) {
-     //        int delta = half + i;
-        //     g.drawLine(x - delta, y, x, y + delta);
-        //     g.drawLine(x, y + delta, x + delta, y);
-        //     g.drawLine(x + delta, y, x, y - delta);
-        //     g.drawLine(x, y - delta, x - delta, y);
-        // }
-
+        KarelRegion r = new KarelRegion();
+        r.setOrigin(x, y, 0, -half, EAST);
+        r.addVector(half, half, EAST);
+        r.addVector(-half, half, EAST);
+        r.addVector(-half, -half, EAST);
+        r.addVector(half, -half, EAST);
         g.setColor(BEEPER_COLOR);
-        g.fillOval(x - half, y - half, beeperSize, beeperSize);
+        g.fillPolygon(r.getPolygon());
+        g.drawPolygon(r.getPolygon());
+        g.setColor(Color.BLACK);
+        for (int i = 0; i < border; i++) {
+            int delta = half + i;
+            g.drawLine(x - delta, y, x, y + delta);
+            g.drawLine(x, y + delta, x + delta, y);
+            g.drawLine(x + delta, y, x, y - delta);
+            g.drawLine(x, y - delta, x - delta, y);
+        }
 
         labelBeeper(g, x, y, size, label, comp);
     }

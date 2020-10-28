@@ -31,11 +31,5 @@ target
 .DS_Store
 .mvn
 .factorypath
+target/maven-status/maven-compiler-plugin/compile/default-compile/*
 
-movies-st/target
-movies-st/.vscode
-movies-st/.classpath
-movies-st/.project
-movies-st/.settings
-movies-st/.mvn
-movies-st/.factorypath
