@@ -4,7 +4,7 @@
 import acm.program.*;
 import stanford.karel.*;
 
-public class BlankKarel extends Karel {
+public class RowOfBeepers extends Karel {
     public void run() {
         while(frontIsClear())
         {
