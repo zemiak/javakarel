@@ -102,7 +102,7 @@ public class Karel implements Runnable {
  * Instructs Karel to pick up a beeper from the current
  * corner.  This method fails if there are no beepers present.
  */
-    public void takeBall() {
+    public void pickBeeper() {
         checkWorld("pickBeeper");
         int nb = world.getBeepersOnCorner(x, y);
         if (nb < 1) throw new ErrorException("pickBeeper: No beepers on this corner");
@@ -116,7 +116,7 @@ public class Karel implements Runnable {
  * it on the current corner.  This method fails if there are no
  * beepers in the bag.
  */
-    public void putBall() {
+    public void putBeeper() {
         checkWorld("putBeeper");
         int nb = getBeepersInBag();
         if (nb < 1) throw new ErrorException("putBeeper: No beepers in bag");
@@ -190,7 +190,7 @@ public class Karel implements Runnable {
  *
  * @return <code>true</code> if there are any beepers on this corner
  */
-    public boolean ballsPresent() {
+    public boolean beepersPresent() {
         checkWorld("beepersPresent");
         return world.getBeepersOnCorner(x, y) > 0;
     }
@@ -200,7 +200,7 @@ public class Karel implements Runnable {
  *
  * @return <code>true</code> if there are no beepers on this corner
  */
-    public boolean noBallsPresent() {
+    public boolean noBeepersPresent() {
         checkWorld("noBeepersPresent");
         return world.getBeepersOnCorner(x, y) == 0;
     }

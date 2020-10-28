@@ -15,7 +15,7 @@ public class BlankKarel extends Karel {
     public void run() {
         while(frontIsClear())
         {
-            putBall();
+            put();
             move();
         }
     }
