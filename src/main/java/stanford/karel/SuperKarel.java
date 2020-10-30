@@ -14,19 +14,19 @@ import java.awt.*;
 /**
  * Extended Karel class that supports the following features:
  *
- * <p><ul>
+ * <p>&nbsp;</p><ul>
  * <li>Built-in implementations of the <code>turnRight</code>
  *     and <code>turnAround</code> methods.
- * <p>
+ * <p>&nbsp;</p>
  * <li>New methods to support adding color to corners (the
  *     command <code>paintCorner</code> and the predicate
  *     <code>cornerColorIs</code>).
- * <p>
+ * <p>&nbsp;</p>
  * <li>A predicate method <code>random(p)</code> which returns
  *     <code>true</code> with probability <code>p</code>.  If
  *     <code>p</code> is omitted, <code>random</code> returns
  *     <code>true</code> 50 percent of the time.
- * <p>
+ * <p>&nbsp;</p>
  * <li>A method <code>pause(ms)</code>, which delays processing
  *     for the specified number of milliseconds.  This method
  *     makes it possible to control animation much more
@@ -102,7 +102,7 @@ public class SuperKarel extends Karel {
  * <code>PINK</code>, <code>RED</code>, <code>WHITE</code>,
  * <code>YELLOW</code>.
  *
- * @param The new color for the corner.
+ * @param color The new color for the corner.
  */
     public void paintCorner(Color color) {
         KarelWorld world = getWorld();

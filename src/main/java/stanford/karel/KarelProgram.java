@@ -49,7 +49,7 @@ public class KarelProgram extends Program {
     /**
      * Creates a new turtle program.
      *
-     * @usage KarelProgram program = new KarelProgram();
+     * KarelProgram program = new KarelProgram();
      */
     public KarelProgram() {
         world = createWorld();
@@ -81,7 +81,7 @@ public class KarelProgram extends Program {
     /**
      * Returns the <code>KarelWorld</code> object in which Karel lives.
      *
-     * @usage KarelWorld world = getWorld();
+     * KarelWorld world = getWorld();
      * @return The <code>KarelWorld</code> object in which Karel lives
      */
     public KarelWorld getWorld() {
@@ -92,7 +92,8 @@ public class KarelProgram extends Program {
     /**
      * Returns the default directory in which Karel's worlds live.
      *
-     * @usage String path = KarelProgram.getWorldDirectory();
+     * String path = KarelProgram.getWorldDirectory();
+     *
      * @return The directory in which Karel's worlds lives
      */
     public static String getWorldDirectory() {
@@ -108,9 +109,9 @@ public class KarelProgram extends Program {
      * Creates the <code>KarelWorld</code> in which Karel lives. Subclasses can
      * override this method to create their own <code>KarelWorld</code> types.
      *
-     * @usage KarelWorld world = program.createWorld();
+     * KarelWorld world = program.createWorld();
+     *
      * @return The <code>World</code> object in which Karel lives
-     * @noshow student
      */
     protected KarelWorld createWorld() {
         return new KarelWorld();
@@ -119,8 +120,6 @@ public class KarelProgram extends Program {
     /* Protected method: isStarted() */
     /**
      * Checks to see whether this program has started.
-     *
-     * @noshow student
      */
     protected boolean isStarted() {
         if (world == null || !super.isStarted())

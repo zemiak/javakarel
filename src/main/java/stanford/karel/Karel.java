@@ -22,28 +22,28 @@ import java.awt.*;
  * <dl>
  * <dt><code><a href="#move()">move</a>()</code></dt>
  *    <dd>Moves this Karel forward one block.  Karel cannot move forward if there
- *        is a wall blocking the way.</dd><p>
+ *        is a wall blocking the way.</dd>
  * <dt><code><a href="#turnLeft()">turnLeft</a>()</code></dt>
- *    <dd>Rotates this Karel 90 degrees to the left (counterclockwise).</dd><p>
+ *    <dd>Rotates this Karel 90 degrees to the left (counterclockwise).</dd>
  * <dt><code><a href="#pickBeeper()">pickBeeper</a>()</code></dt>
  *    <dd>Picks up one beeper from the current corner and stores the beeper in
  *        this Karel's beeper bag, which can hold an infinite number of beepers.
  *        Karel can execute a <code>pickBeeper</code> instruction only if there
- *        is a beeper on the current corner.</dd><p>
+ *        is a beeper on the current corner.</dd>
  * <dt><code><a href="#putBeeper()">putBeeper</a>()</code></dt>
  *    <dd>Takes one beeper from this Karel's beeper bag and deposits it on the
  *        current corner.  Karel can execute a <code>pickBeeper</code> instruction
- *        only if there is a beeper in its bag.</dd><p>
+ *        only if there is a beeper in its bag.</dd>
  * </dl>
  *
- * <p>Karel programs are executed by defining a new subclass that extends
+ * <p>&nbsp;</p>Karel programs are executed by defining a new subclass that extends
  * <code>Karel</code> and provides it with a <code>run</code> method that
  * defines its operation.  For example, the following Karel subclass represents
  * a Karel program that moves forward, picks up a beeper from the square, and
  * then moves forward one more time:
  *
- * <p><table cellspacing=0 cellpadding=0><tr><td width=36>&nbsp;</td>
- * <td><table cellspacing=0 cellpadding=0><tr><td><pre><code>
+ * <p>&nbsp;</p><table><caption>&nbsp;</caption><tr><td>&nbsp;</td>
+ * <td><table><caption>&nbsp;</caption><tr><td><pre><code>
  * public class SimpleKarelExample extends Karel {
  * &nbsp;&nbsp;&nbsp;public void run() {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;move();
@@ -336,6 +336,8 @@ public class Karel implements Runnable {
 /**
  * Starts a <code>KarelProgram</code> containing this Karel instance, passing
  * it the specified arguments.
+ *
+ * @param args Argument array passed to acm program
  */
     protected void start(String[] args) {
         KarelProgram program = new KarelProgram();
