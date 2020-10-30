@@ -1,7 +1,7 @@
 {
     "aliases": {
       "rowofbeepers": {
-        "script-ref": "src/RowOfBeepers.java"
+        "script-ref": "RowOfBeepers.java"
       }
     },
     "base-ref": "src/main/examples",
