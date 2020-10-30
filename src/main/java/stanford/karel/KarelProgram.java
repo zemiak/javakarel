@@ -212,35 +212,50 @@ public class KarelProgram extends Program {
             world.add(karel);
             setTitle(karelClass);
             String worldName = getParameter("world");
-            if (worldName == null)
+            if (worldName == null) {
                 worldName = karelClass;
-            try {
-                URL url;
-                if (Paths.get(System.getProperty("user.dir"), worldName + ".w").toFile().canRead()) {
-                    url = new URL(getCodeBase(), worldName + ".w");
-                } else {
-                    url = new URL(getCodeBase(), "Worlds/" + worldName + ".w");
-                }
+            }
 
-                URLConnection connection = url.openConnection();
-                world.load(new InputStreamReader(connection.getInputStream()));
-            } catch (Exception ex) {
+            String inlineWorld = karel.getKarelWorld();
+            if (null == inlineWorld) {
                 try {
-                    System.out.println("World: " + worldName);
-                    InputStream resourceStream = this.getClass().getResourceAsStream("/worlds/" + worldName + ".w");
-                    world.load(new InputStreamReader(resourceStream));
-                } catch (Exception ex1) {
-                    System.out.println("Exceptions: ");
-                    ex.printStackTrace();
-                    ex1.printStackTrace();
+                    URL url;
+                    if (Paths.get(System.getProperty("user.dir"), worldName + ".w").toFile().canRead()) {
+                        url = new URL(getCodeBase(), worldName + ".w");
+                    } else {
+                        url = new URL(getCodeBase(), "Worlds/" + worldName + ".w");
+                    }
+
+                    URLConnection connection = url.openConnection();
+                    world.load(new InputStreamReader(connection.getInputStream()));
+                } catch (Exception ex) {
+                    try {
+                        System.out.println("World: " + worldName);
+                        InputStream resourceStream = this.getClass().getResourceAsStream("/worlds/" + worldName + ".w");
+                        world.load(new InputStreamReader(resourceStream));
+                    } catch (Exception ex1) {
+                        System.out.println("Exceptions: ");
+                        ex.printStackTrace();
+                        ex1.printStackTrace();
+                    }
                 }
+            } else {
+                world.load(inlineWorld.split("\n"));
             }
         }
         world.setRepaintFlag(true);
         world.setDisplayFlag(true);
         world.repaint();
+        boolean firstTime = true;
+
         while (true) {
-            started = false;
+            if (firstTime) {
+                started = karel.isAutorunEnabled();
+                firstTime = false;
+            } else {
+                started = false;
+            }
+
             synchronized (this) {
                 while (!started) {
                     try {

@@ -69,6 +69,14 @@ public class Karel implements Runnable {
         world = null;
     }
 
+    protected String getKarelWorld() {
+        return null;
+    }
+
+    protected boolean isAutorunEnabled() {
+        return false;
+    }
+
 /**
  * Specifies the code for this <code>Karel</code> program.
  * You need to provide a new implementation of this method
