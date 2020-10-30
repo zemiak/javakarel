@@ -1,5 +1,5 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $? // (1)
-//DEPS com.zemiak:javakarel:1.0.0-SNAPSHOT
+//DEPS io.github.zemiak:javakarel:1.0
 
 import acm.program.*;
 import stanford.karel.*;
