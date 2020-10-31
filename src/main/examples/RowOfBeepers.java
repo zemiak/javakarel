@@ -5,6 +5,11 @@ import acm.program.*;
 import stanford.karel.*;
 
 public class RowOfBeepers extends Karel {
+
+    public static void main(String... args) {
+        stanford.karel.Karel.main(args);
+    }
+    
     public void run() {
         while(frontIsClear())
         {
