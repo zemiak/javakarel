@@ -74,7 +74,7 @@ public class Karel implements Runnable {
     }
 
     protected boolean isAutorunEnabled() {
-        return false;
+        return true;
     }
 
 /**

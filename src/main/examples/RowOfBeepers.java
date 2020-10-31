@@ -1,15 +1,9 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $? // (1)
-//DEPS io.github.zemiak:javakarel:1.0
+//DEPS io.github.zemiak:javakarel:1.1-SNAPSHOT
 
-import acm.program.*;
 import stanford.karel.*;
 
 public class RowOfBeepers extends Karel {
-
-    public static void main(String... args) {
-        stanford.karel.Karel.main(args);
-    }
-    
     public void run() {
         while(frontIsClear())
         {
@@ -36,9 +30,5 @@ public class RowOfBeepers extends Karel {
             + "\n"
             + "BeeperBag: INFINITE\n"
             + "Speed: 0.00\n";
-    }
-
-    protected boolean isAutorunEnabled() {
-        return true;
     }
 }
