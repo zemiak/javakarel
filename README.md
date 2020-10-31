@@ -12,8 +12,8 @@ We are using **jbang** to run the examples. Learn more at https://www.jbang.dev
 
 To test out an example open the root directory in your terminal. Then navigate to SimpleKarel example
 
-    $ cd src/main/examples/BlankKarel
-    $ jbang BlankKarel.java
+    $ cd src/main/examples/RowOfBeepers
+    $ jbang RowOfBeepers.java
 
 # Karel Commands
 

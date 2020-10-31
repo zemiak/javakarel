@@ -1,0 +1,9 @@
+{
+  "aliases": {
+    "rowofbeepers": {
+      "script-ref": "RowOfBeepers.java"
+    }
+  },
+  "base-ref": "src/main/examples",
+  "description": "JavaKarel Examples"
+}
