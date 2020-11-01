@@ -31,5 +31,9 @@ public class rowofbeepers extends Karel {
             + "BeeperBag: INFINITE\n"
             + "Speed: 0.00\n";
     }
+
+    public static void main(String... args) {
+        Karel.main(args);
+    }
 }
 
