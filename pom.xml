@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.zemiak</groupId>
     <artifactId>javakarel</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
 
     <name>Java implementation of Karel</name>
     <description>This the original Stanford Karel for Java, packaged for Maven. ACM Library is included. See also https://cs.stanford.edu/people/eroberts/karel-the-robot-learns-java.pdf</description>
