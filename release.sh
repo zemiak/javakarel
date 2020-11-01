@@ -1,6 +1,6 @@
 #!/bin/sh
 
-// gpg --keyserver keys.gnupg.net --send-key XXX
+# gpg --keyserver keys.gnupg.net --send-key XXX
 
 GPG_TTY=$(tty)
 export GPG_TTY
