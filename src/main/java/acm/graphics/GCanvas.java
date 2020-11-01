@@ -55,7 +55,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Creates a new <code>GCanvas</code> that contains no objects.
  *
- * @usage GCanvas gc = new GCanvas();
+ * Example: GCanvas gc = new GCanvas();
  */
 	public GCanvas() {
 		contents = new GObjectList(this);
@@ -75,7 +75,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Adds the graphical object to this canvas.
  *
- * @usage gc.add(gobj);
+ * Example: gc.add(gobj);
  * @param gobj The graphical object to add
  */
 	public void add(GObject gobj) {
@@ -88,7 +88,7 @@ public class GCanvas extends Container implements GContainer {
  * Adds the graphical object to this canvas and sets its location
  * to the point (<code>x</code>,&nbsp;<code>y</code>).
  *
- * @usage gc.add(gobj, x, y);
+ * Example: gc.add(gobj, x, y);
  * @param gobj The graphical object to add
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
@@ -102,7 +102,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Adds the graphical object to this canvas and sets its location to the specified point.
  *
- * @usage gc.add(gobj, pt);
+ * Example: gc.add(gobj, pt);
  * @param gobj The graphical object to add
  * @param pt A <code>GPoint</code> object giving the coordinates of the point
  */
@@ -114,7 +114,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Removes a graphical object from this <code>GCanvas</code>.
  *
- * @usage gc.remove(gobj);
+ * Example: gc.remove(gobj);
  * @param gobj The graphical object to remove
  */
 	public void remove(GObject gobj) {
@@ -126,7 +126,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Removes all graphical objects from this <code>GCanvas</code>.
  *
- * @usage gc.removeAll();
+ * Example: gc.removeAll();
  */
 	public void removeAll() {
 		contents.removeAll();
@@ -142,7 +142,7 @@ public class GCanvas extends Container implements GContainer {
  * the <code>Container</code> class, but the result is typically
  * ignored.
  *
- * @usage gc.add(comp);
+ * Example: gc.add(comp);
  * @param comp The component to add
  */
 	public Component add(Component comp) {
@@ -162,7 +162,7 @@ public class GCanvas extends Container implements GContainer {
  * Adds the component to this canvas and sets its location
  * to the point (<code>x</code>,&nbsp;<code>y</code>).
  *
- * @usage gc.add(comp, x, y);
+ * Example: gc.add(comp, x, y);
  * @param comp The component to add
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
@@ -176,7 +176,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Adds the component to this canvas and sets its location to the specified point.
  *
- * @usage gc.add(comp, pt);
+ * Example: gc.add(comp, pt);
  * @param comp The component to add
  * @param pt A <code>GPoint</code> object giving the coordinates of the point
  */
@@ -188,7 +188,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Removes the component from the canvas.
  *
- * @usage gc.remove(comp);
+ * Example: gc.remove(comp);
  * @param comp The component to remove
  */
 	public void remove(Component comp) {
@@ -200,7 +200,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Returns the number of graphical objects stored in this <code>GCanvas</code>.
  *
- * @usage int n = gc.getElementCount();
+ * Example: int n = gc.getElementCount();
  * @return The number of graphical objects in this <code>GCanvas</code>
  */
 	public int getElementCount() {
@@ -212,7 +212,7 @@ public class GCanvas extends Container implements GContainer {
  * Returns the graphical object at the specified index, numbering from back
  * to front in the the <i>z</i> dimension.
  *
- * @usage GObject gobj = gc.getElement(index);
+ * Example: GObject gobj = gc.getElement(index);
  * @param index The index of the component to return
  * @return The graphical object at the specified index
  */
@@ -226,7 +226,7 @@ public class GCanvas extends Container implements GContainer {
  * (<code>x</code>, <code>y</code>), or <code>null</code> if no such
  * object exists.
  *
- * @usage GObject gobj = gc.getElementAt(x, y);
+ * Example: GObject gobj = gc.getElementAt(x, y);
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return The graphical object at the specified location, or <code>null</code>
@@ -241,7 +241,7 @@ public class GCanvas extends Container implements GContainer {
  * Returns the topmost graphical object that contains the specified point,
  * or <code>null</code> if no such object exists.
  *
- * @usage GObject gobj = gc.getElementAt(pt);
+ * Example: GObject gobj = gc.getElementAt(pt);
  * @param pt The coordinates being tested
  * @return The graphical object at the specified location, or <code>null</code>
  *         if no such object exists
@@ -255,10 +255,10 @@ public class GCanvas extends Container implements GContainer {
  * Returns an <code>Iterator</code> that cycles through the elements within
  * this container in the default direction, which is from back to front.
  * You can also run the iterator in the opposite direction by using the
- * <a href="#iterator(int)"><code>iterator</code></a><code>(</code><font
- * size=-1><i>direction</i></font><code>)</code> form of this method.
+ * <code>iterator</code><code>(</code><font>
+ * <i>direction</i></font><code>)</code> form of this method.
  *
- * @usage Iterator<GObject> i = gc.iterator();
+ * Example: Iterator i = gc.iterator();
  * @return An <code>Iterator</code> ranging over the elements of the
  *         container from back to front
  */
@@ -270,14 +270,13 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Returns an <code>Iterator</code> that cycles through the elements
  * within this container in the specified direction, which must be one
- * of the constants <a href="GContainer.html#FRONT_TO_BACK"><code>GContainer.FRONT_TO_BACK</code></a>
- * or <a href="GContainer.html#BACK_TO_FRONT"><code>GContainer.BACK_TO_FRONT</code></a>.<p>
+ * of the constants <code>GContainer.FRONT_TO_BACK</code>
+ * or <code>GContainer.BACK_TO_FRONT</code>.
  *
- * <p><pre><code>
  * &nbsp;    for (Iterator&lt;GObject&gt; i = gc.iterator(direction); i.hasNext(); )
- * </code></pre>
  *
- * @usage Iterator<GObject> i = gc.iterator(direction);
+ * Example: Iterator i = gc.iterator(direction);
+ * @param direction FRONT_TO_BACK or BACK_TO_FRONT
  * @return An <code>Iterator</code> ranging over the elements of the
  *         container in the specified direction
  */
@@ -292,10 +291,10 @@ public class GCanvas extends Container implements GContainer {
  * the <code>GCanvas</code> transparent, so that any other lightweight components
  * behind it show through.
  *
- * @usage gc.setOpaque(flag);
+ * Example: gc.setOpaque(flag);
  * @param flag <code>true</code> to make this canvas opaque, and <code>false</code>
  *             to make it transparent
- * @noshow
+ *
  */
 	public void setOpaque(boolean flag) {
 		opaque = flag;
@@ -306,10 +305,10 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Returns a boolean value indicating whether this canvas is opaque.
  *
- * @usage if (gc.isOpaque(flag)) . . .
+ * Example: if (gc.isOpaque(flag)) . . .
  * @return <code>true</code> if this canvas is opaque, and <code>false</code>
  *          if it is transparent
- * @noshow
+ *
  */
 	public boolean isOpaque() {
 		return opaque;
@@ -321,7 +320,7 @@ public class GCanvas extends Container implements GContainer {
  * components, but not in earlier ones.  Defining this method here makes this entry
  * available in all browsers.
  *
- * @usage int width = gc.getWidth();
+ * Example: int width = gc.getWidth();
  * @return The width of this canvas
  */
 	public int getWidth() {
@@ -334,7 +333,7 @@ public class GCanvas extends Container implements GContainer {
  * components, but not in earlier ones.  Defining this method here makes this entry
  * available in all browsers.
  *
- * @usage int height = gc.getHeight();
+ * Example: int height = gc.getHeight();
  * @return The height of this canvas in pixels
  */
 	public int getHeight() {
@@ -345,9 +344,9 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Paints the canvas.  This method is not ordinarily called by clients.
  *
- * @usage gc.paint(g);
+ * Example: gc.paint(g);
  * @param g The graphics context into which the canvas is painted
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		Graphics g0 = g;
@@ -371,9 +370,9 @@ public class GCanvas extends Container implements GContainer {
  * Updates the canvas.  This method is overridden here to support transparency
  * in the Swing style.
  *
- * @usage gc.update(g);
+ * Example: gc.update(g);
  * @param g The graphics context into which the canvas is painted
- * @noshow
+ *
  */
 	public void update(Graphics g) {
 		paint(g);
@@ -391,7 +390,7 @@ public class GCanvas extends Container implements GContainer {
  * The advantage of this model is that you can then make many different changes
  * and have them all appear at once with a single <code>repaint</code> call.
  *
- * @usage gc.setAutoRepaintFlag(state);
+ * Example: gc.setAutoRepaintFlag(state);
  * @param state <code>true</code> to enable auto-repaint mode, and <code>false</code>
  *              to disable it
  */
@@ -402,9 +401,9 @@ public class GCanvas extends Container implements GContainer {
 /* Method: getAutoRepaintFlag() */
 /**
  * Returns the current setting of the auto-repaint flag as described in
- * <a href="#setAutoRepaintFlag(boolean)"><code>setAutoRepaintFlag</code></a>.
+ * <code>setAutoRepaintFlag</code>.
  *
- * @usage if (gc.getAutoRepaintFlag()) . . .
+ * Example: if (gc.getAutoRepaintFlag()) . . .
  * @return <code>true</code> if auto-repaint mode is enabled, and <code>false</code>
  *          otherwise
  */
@@ -420,7 +419,7 @@ public class GCanvas extends Container implements GContainer {
  * If this value is set to <code>true</code>, the renderers will use the native
  * arc code, which is more efficient but less accurate.
  *
- * @usage gc.setNativeArcFlag(state);
+ * Example: gc.setNativeArcFlag(state);
  * @param state <code>true</code> to enable native arcs, <code>false</code> to use polygons
  */
 	public void setNativeArcFlag(boolean state) {
@@ -430,9 +429,9 @@ public class GCanvas extends Container implements GContainer {
 /* Method: getNativeArcFlag() */
 /**
  * Returns the current setting of the native-arc flag as described in
- * <a href="#setNativeArcFlag(boolean)"><code>setNativeArcFlag</code></a>.
+ * <code>setNativeArcFlag</code>.
  *
- * @usage if (gc.getNativeArcFlag()) . . .
+ * Example: if (gc.getNativeArcFlag()) . . .
  * @return <code>true</code> if native arcs are enabled, and <code>false</code>
  *          otherwise
  */
@@ -445,7 +444,8 @@ public class GCanvas extends Container implements GContainer {
  * Implements the <code>sendToFront</code> function from the <code>GContainer</code>
  * interface.  Clients should not be calling this method, but the semantics of
  * interfaces forces it to be exported.
- * @noshow
+ *
+ * @param gobj object to relocate
  */
 	protected void sendToFront(GObject gobj) {
 		contents.sendToFront(gobj);
@@ -457,7 +457,8 @@ public class GCanvas extends Container implements GContainer {
  * Implements the <code>sendToBack</code> function from the <code>GContainer</code>
  * interface.  Clients should not be calling this method, but the semantics of
  * interfaces forces it to be exported.
- * @noshow
+ *
+ * @param gobj object to relocate
  */
 	protected void sendToBack(GObject gobj) {
 		contents.sendToBack(gobj);
@@ -469,7 +470,8 @@ public class GCanvas extends Container implements GContainer {
  * Implements the <code>sendForward</code> function from the <code>GContainer</code>
  * interface.  Clients should not be calling this method, but the semantics of
  * interfaces forces it to be exported.
- * @noshow
+ *
+ * @param gobj object to relocate
  */
 	protected void sendForward(GObject gobj) {
 		contents.sendForward(gobj);
@@ -481,7 +483,8 @@ public class GCanvas extends Container implements GContainer {
  * Implements the <code>sendBackward</code> function from the <code>GContainer</code>
  * interface.  Clients should not be calling this method, but the semantics of
  * interfaces forces it to be exported.
- * @noshow
+ *
+ * @param gobj object to relocate
  */
 	protected void sendBackward(GObject gobj) {
 		contents.sendBackward(gobj);
@@ -493,9 +496,9 @@ public class GCanvas extends Container implements GContainer {
  * Dispatches this mouse event to the uppermost graphical object for which
  * the active point is within the object bounds.
  *
- * @usage gc.dispatchMouseEvent(MouseEvent e);
+ * Example: gc.dispatchMouseEvent(MouseEvent e);
  * @param e The event that triggered this response
- * @noshow
+ *
  */
 	protected void dispatchMouseEvent(MouseEvent e) {
 		GObject gobj = contents.getElementAt(e.getX(), e.getY(), true);
@@ -533,8 +536,8 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Initializes the offscreen memory image used for double buffering.
  *
- * @usage gc.initOffscreenImage();
- * @noshow
+ * Example: gc.initOffscreenImage();
+ *
  */
 	protected void initOffscreenImage() {
 		Dimension size = getSize();
@@ -545,11 +548,11 @@ public class GCanvas extends Container implements GContainer {
 /* Protected method: conditionalRepaint() */
 /**
  * Repaints the canvas if auto-repaint is in effect.  This method is called only
- * by the <a href="GObject.html#repaint()"><code>repaint</code></a> method in
+ * by the <code>repaint</code> method in
  * <code>GObject</code> and is not accessible outside the package.
  *
- * @usage gc.conditionalRepaint();
- * @noshow
+ * Example: gc.conditionalRepaint();
+ *
  */
 	protected void conditionalRepaint() {
 		if (autoRepaint) repaint();
@@ -559,7 +562,7 @@ public class GCanvas extends Container implements GContainer {
 /**
  * Reconstructs the enabledList list in the correct order.
  *
- * @usage gc.updateEnabledList();
+ * Example: gc.updateEnabledList();
  */
 	protected void updateEnabledList() {
 		contents.updateEnabledList();
@@ -600,7 +603,7 @@ class GCanvasListener
  * Creates a new listener object that watches for mouse events in the
  * <code>GCanvas</code>.
  *
- * @usage GCanvasListener listener = new GCanvasListener(gc);
+ * Example: GCanvasListener listener = new GCanvasListener(gc);
  * @param gc The <code>GCanvas</code> object to which this listens
  */
 	public GCanvasListener(GCanvas gc) {

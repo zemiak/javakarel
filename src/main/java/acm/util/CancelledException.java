@@ -33,7 +33,7 @@ public class CancelledException extends RuntimeException {
 /**
  * Creates an <code>CancelledException</code>.
  *
- * @usage throw new CancelledException();
+ * Example: throw new CancelledException();
  */
 	public CancelledException() {
 		/* Empty */

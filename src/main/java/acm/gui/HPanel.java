@@ -40,7 +40,7 @@ public class HPanel extends TablePanel {
  * Creates a new <code>HPanel</code>.  An <code>HPanel</code> uses a
  * <code>TableLayout</code> manager with a single row.
  *
- * @usage HPanel hbox = new HPanel();
+ * Example: HPanel hbox = new HPanel();
  */
 	public HPanel() {
 		this(0, 0);
@@ -53,7 +53,7 @@ public class HPanel extends TablePanel {
  * elements.  For an <code>HPanel</code>, the <code>vgap</code> is used
  * to assign space above and below the row.
  *
- * @usage HPanel hbox = new HPanel(hgap, vgap);
+ * Example: HPanel hbox = new HPanel(hgap, vgap);
  * @param hgap The gap between columns
  * @param vgap The gap between rows
  */

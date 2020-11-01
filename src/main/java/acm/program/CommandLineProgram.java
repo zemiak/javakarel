@@ -80,7 +80,7 @@ public class CommandLineProgram
  * runs it in that form.  If the environment is indeed headless, this call never
  * returns.
  *
- * @usage CommandLineProgram.checkIfHeadless(className);
+ * Example: CommandLineProgram.checkIfHeadless(className);
  * @param className The name of the main class
  */
 	public static void checkIfHeadless(String className) {
@@ -124,7 +124,7 @@ public class CommandLineProgram
  * of application development that have their roots in the applet world;
  * other styles will not ordinarily use or override this method.
  *
- * @usage program.init();
+ * Example: program.init();
  */
 	public void init() {
 		/* Empty */
@@ -136,7 +136,7 @@ public class CommandLineProgram
  * the output.  The <code>print</code> method is overloaded so that
  * <code>value</code> can be of any type.
  *
- * @usage program.print(value);
+ * Example: program.print(value);
  * @param value The value to be displayed
  */
 	public void print(String value) {
@@ -145,7 +145,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>print</code> can display a <code>boolean</code>.
- * @noshow
+ *
  */
 	public final void print(boolean x) {
 		print("" + x);
@@ -153,7 +153,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>print</code> can display a <code>char</code>.
- * @noshow
+ *
  */
 	public final void print(char x) {
 		print("" + x);
@@ -161,7 +161,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>print</code> can display a <code>double</code>.
- * @noshow
+ *
  */
 	public final void print(double x) {
 		print("" + x);
@@ -169,7 +169,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>print</code> can display a <code>float</code>.
- * @noshow
+ *
  */
 	public final void print(float x) {
 		print("" + x);
@@ -177,7 +177,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>print</code> can display an <code>int</code>.
- * @noshow
+ *
  */
 	public final void print(int x) {
 		print("" + x);
@@ -185,7 +185,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>print</code> can display a <code>long</code>.
- * @noshow
+ *
  */
 	public final void print(long x) {
 		print("" + x);
@@ -193,7 +193,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>print</code> can display an <code>Object</code>.
- * @noshow
+ *
  */
 	public final void print(Object x) {
 		print("" + x);
@@ -203,7 +203,7 @@ public class CommandLineProgram
 /**
  * Advances the console cursor to the beginning of the next line.
  *
- * @usage program.println();
+ * Example: program.println();
  */
 	public void println() {
 		getOutputModel().println();
@@ -215,7 +215,7 @@ public class CommandLineProgram
  * to the beginning of the next line.  The <code>println</code> method is
  * overloaded so that <code>value</code> can be of any type.
  *
- * @usage program.println(value);
+ * Example: program.println(value);
  * @param value The value to be displayed
  */
 	public void println(String value) {
@@ -224,7 +224,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>println</code> can display a <code>boolean</code>.
- * @noshow
+ *
  */
 	public final void println(boolean x) {
 		println("" + x);
@@ -232,7 +232,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>println</code> can display a <code>char</code>.
- * @noshow
+ *
  */
 	public final void println(char x) {
 		println("" + x);
@@ -240,7 +240,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>println</code> can display a <code>double</code>.
- * @noshow
+ *
  */
 	public final void println(double x) {
 		println("" + x);
@@ -248,7 +248,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>println</code> can display a <code>float</code>.
- * @noshow
+ *
  */
 	public final void println(float x) {
 		println("" + x);
@@ -256,7 +256,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>println</code> can display an <code>int</code>.
- * @noshow
+ *
  */
 	public final void println(int x) {
 		println("" + x);
@@ -264,7 +264,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>println</code> can display a <code>long</code>.
- * @noshow
+ *
  */
 	public final void println(long x) {
 		println("" + x);
@@ -272,7 +272,7 @@ public class CommandLineProgram
 
 /**
  * Makes sure that <code>println</code> can display an <code>Object</code>.
- * @noshow
+ *
  */
 	public final void println(Object x) {
 		println("" + x);
@@ -282,7 +282,7 @@ public class CommandLineProgram
 /**
  * Displays the error message in the standard output model.
  *
- * @usage showErrorMessage(msg);
+ * Example: showErrorMessage(msg);
  * @param msg The error msg to be displayed
  */
 	public void showErrorMessage(String msg) {
@@ -295,7 +295,7 @@ public class CommandLineProgram
  * characters that terminate the input are not included in the returned
  * string.
  *
- * @usage String str = program.readLine();
+ * Example: String str = program.readLine();
  * @return The next line of input as a <code>String</code>
  */
 	public final String readLine() {
@@ -307,7 +307,7 @@ public class CommandLineProgram
  * Prompts the user for a line of input.  The end-of-line characters
  * that terminate the input are not included in the returned string.
  *
- * @usage String str = program.readLine(prompt);
+ * Example: String str = program.readLine(prompt);
  * @param prompt The prompt string to display to the user
  * @return The next line of input as a <code>String</code>
  */
@@ -323,7 +323,7 @@ public class CommandLineProgram
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = program.readInt();
+ * Example: int n = program.readInt();
  * @return The value of the input interpreted as a decimal integer
  */
 	public final int readInt() {
@@ -338,7 +338,7 @@ public class CommandLineProgram
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = program.readInt(low, high);
+ * Example: int n = program.readInt(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  * @return The value of the input interpreted as a decimal integer
@@ -355,7 +355,7 @@ public class CommandLineProgram
  * although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = program.readInt(prompt);
+ * Example: int n = program.readInt(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a decimal integer
  */
@@ -373,7 +373,7 @@ public class CommandLineProgram
  * although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = console.readInt(prompt, low, high);
+ * Example: int n = console.readInt(prompt, low, high);
  * @param prompt The prompt string to display to the user
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -391,7 +391,7 @@ public class CommandLineProgram
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = program.readDouble();
+ * Example: double d = program.readDouble();
  * @return The value of the input interpreted as a <code>double</code>
  */
 	public final double readDouble() {
@@ -407,7 +407,7 @@ public class CommandLineProgram
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = program.readDouble(low, high);
+ * Example: double d = program.readDouble(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  * @return The value of the input interpreted as a <code>double</code>
@@ -424,7 +424,7 @@ public class CommandLineProgram
  * reenter the data,  although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = program.readDouble(prompt);
+ * Example: double d = program.readDouble(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a <code>double</code>
  */
@@ -441,7 +441,7 @@ public class CommandLineProgram
  * to reenter the data,  although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage d = program.readDouble(prompt, low, high);
+ * Example: d = program.readDouble(prompt, low, high);
  * @param prompt The prompt string to display to the user
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -460,7 +460,7 @@ public class CommandLineProgram
  * can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = program.readBoolean();
+ * Example: boolean flag = program.readBoolean();
  * @return The value of the input interpreted as a boolean value
  */
 	public final boolean readBoolean() {
@@ -475,7 +475,7 @@ public class CommandLineProgram
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = program.readBoolean(prompt);
+ * Example: boolean flag = program.readBoolean(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a boolean value
  */
@@ -491,7 +491,7 @@ public class CommandLineProgram
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = program.readBoolean(prompt);
+ * Example: boolean flag = program.readBoolean(prompt);
  * @param prompt The prompt string to display to the user
  * @param trueLabel The string used to indicate <code>true</code>
  * @param falseLabel The string used to indicate <code>false</code>
@@ -505,9 +505,9 @@ public class CommandLineProgram
 /**
  * Returns <code>true</code> if this program is running as an applet in a browser.
  *
- * @usage if (isAppletMode()) . . .
+ * Example: if (isAppletMode()) . . .
  * @return <code>true</code> if this program is running as an applet, <code>false</code> otherwise
- * @noshow
+ *
  */
 	public boolean isAppletMode() {
 		return false;
@@ -517,7 +517,7 @@ public class CommandLineProgram
 /**
  * Sets the console associated with this program.
  *
- * @usage program.setConsole(console);
+ * Example: program.setConsole(console);
  * @param console The <code>IOConsole</code> object used for this program
  */
 	public void setConsole(IOConsole console) {
@@ -528,7 +528,7 @@ public class CommandLineProgram
 /**
  * Returns the console associated with this program.
  *
- * @usage IOConsole console = program.getConsole();
+ * Example: IOConsole console = program.getConsole();
  * @return The <code>IOConsole</code> object used for this program
  */
 	public IOConsole getConsole() {
@@ -539,7 +539,7 @@ public class CommandLineProgram
 /**
  * Returns the dialog used for user interaction.
  *
- * @usage IODialog dialog = program.getDialog();
+ * Example: IODialog dialog = program.getDialog();
  * @return The <code>IODialog</code> object used for this program
  */
 	public IODialog getDialog() {
@@ -551,7 +551,7 @@ public class CommandLineProgram
  * Returns the <code>IOModel</code> used for program input, which will
  * typically be either the default <code>IOConsole</code> or <code>IODialog</code> object.
  *
- * @usage IOModel io = program.getInputModel();
+ * Example: IOModel io = program.getInputModel();
  * @return The <code>IOModel</code> used for program input
  */
 	public IOModel getInputModel() {
@@ -563,7 +563,7 @@ public class CommandLineProgram
  * Returns the <code>IOModel</code> used for program output, which will
  * typically be either the default <code>IOConsole</code> or <code>IODialog</code> object.
  *
- * @usage IOModel io = program.getOutputModel();
+ * Example: IOModel io = program.getOutputModel();
  * @return The <code>IOModel</code> used for program output
  */
 	public IOModel getOutputModel() {
@@ -574,7 +574,7 @@ public class CommandLineProgram
 /**
  * Returns a <code>BufferedReader</code> whose input comes from the console.
  *
- * @usage BufferedReader rd = getReader();
+ * Example: BufferedReader rd = getReader();
  * @return A <code>Reader</code> for use with this console
  */
 	public BufferedReader getReader() {
@@ -585,7 +585,7 @@ public class CommandLineProgram
 /**
  * Returns a <code>PrintWriter</code> whose output is directed to the console.
  *
- * @usage PrintWriter wr = getWriter();
+ * Example: PrintWriter wr = getWriter();
  * @return A <code>PrintWriter</code> for use with this console
  */
 	public PrintWriter getWriter() {
@@ -596,11 +596,11 @@ public class CommandLineProgram
 /**
  * Gets the <code>JPanel</code> for the specified region.
  *
- * @usage JPanel panel = getRegionPanel(region);
+ * Example: JPanel panel = getRegionPanel(region);
  * @param region The region of the window (<code>NORTH</code>, <code>SOUTH</code>,
  *               <code>EAST</code>, <code>WEST</code>, or <code>CENTER</code>)
  * @return The <code>JPanel</code> for that subregion
- * @noshow
+ *
  */
 	public JPanel getRegionPanel(String region) {
 		if (region != region) /* Avoid unused parameter warning */;
@@ -612,12 +612,12 @@ public class CommandLineProgram
  * Adds the component to the specified border region with the indicated
  * constraints object.
  *
- * @usage add(comp, region, constraints);
+ * Example: add(comp, region, constraints);
  * @param comp The component to be added
  * @param region The region of the window (<code>NORTH</code>, <code>SOUTH</code>,
  *               <code>EAST</code>, <code>WEST</code>, or <code>CENTER</code>)
  * @param constraints The constraints object
- * @noshow
+ *
  */
 	public void add(Component comp, String region, Object constraints) {
 		if (comp != comp) /* Avoid unused parameter warning */;
@@ -631,7 +631,7 @@ public class CommandLineProgram
  * Adds the program as an <code>ActionListener</code> to every button in
  * the structure that does not have a listener already.
  *
- * @usage addActionListeners();
+ * Example: addActionListeners();
  */
 	public void addActionListeners() {
 		throw new ErrorException("No graphics environment");
@@ -642,7 +642,7 @@ public class CommandLineProgram
  * Adds the specified listener to every button in
  * the structure that does not have a listener already.
  *
- * @usage addActionListeners(listener);
+ * Example: addActionListeners(listener);
  * @param listener The <code>ActionListener</code> to be added
  */
 	public void addActionListeners(ActionListener listener) {
@@ -655,7 +655,7 @@ public class CommandLineProgram
  * Sets the title of this program.  The title appears in the title bar
  * when the program is running as an application.
  *
- * @usage setTitle(title);
+ * Example: setTitle(title);
  * @param title The title for this program
  */
 	public void setTitle(String title) {
@@ -666,7 +666,7 @@ public class CommandLineProgram
 /**
  * Gets the title of this program.
  *
- * @usage String title = getTitle();
+ * Example: String title = getTitle();
  * @return The title in use for this program
  */
 	public String getTitle() {
@@ -677,7 +677,7 @@ public class CommandLineProgram
 /**
  * Starts the program using the specified argument list.
  *
- * @usage program.start(args);
+ * Example: program.start(args);
  * @param args An array of strings passed to the program
  */
 	public void start(String[] args) {
@@ -695,7 +695,7 @@ public class CommandLineProgram
  * user to save any unsaved files.  Any clients that do override this method
  * should call <code>super.exit()</code> at the end of their processing.
  *
- * @usage program.exit();
+ * Example: program.exit();
  */
 	public void exit() {
 		int nFinalizers = finalizers.size();
@@ -716,7 +716,8 @@ public class CommandLineProgram
  * Requests that the program call the <code>exit</code> method in the
  * specified object before exiting.
  *
- * @usage program.addExitHook(obj);
+ * Example: program.addExitHook(obj);
+ * @param obj finalizer
  */
 	public void addExitHook(Object obj) {
 		finalizers.add(obj);
@@ -731,18 +732,24 @@ public class CommandLineProgram
  * Called when the mouse is clicked.  A call to <code>mouseClicked</code>
  * is always preceded by both a <code>mousePressed</code> and a
  * <code>mouseReleased</code> event for the same source.
+ *
+ * @param e event
  */
 	public void mouseClicked(MouseEvent e) { }
 
 /* Method: mousePressed (implements MouseListener) */
 /**
  * Called when the mouse button is pressed.
+ *
+ * @param e event
  */
 	public void mousePressed(MouseEvent e) { }
 
 /* Method: mouseReleased (implements MouseListener) */
 /**
  * Called when the mouse button is released.
+ *
+ * @param e event
  */
 	public void mouseReleased(MouseEvent e) { }
 
@@ -750,6 +757,8 @@ public class CommandLineProgram
 /**
  * Called when the mouse enters the source (which may be
  * either a component or a <code>GObject</code>).
+ *
+ * @param e event
  */
 	public void mouseEntered(MouseEvent e) { }
 
@@ -757,12 +766,16 @@ public class CommandLineProgram
 /**
  * Called when the mouse exits the source (which may be
  * either a component or a <code>GObject</code>).
+ *
+ * @param e event
  */
 	public void mouseExited(MouseEvent e) { }
 
 /* Method: mouseMoved (implements MouseMotionListener) */
 /**
  * Called when the mouse is moved.
+ *
+ * @param e event
  */
 	public void mouseMoved(MouseEvent e) { }
 
@@ -778,30 +791,40 @@ public class CommandLineProgram
  * source will receive mouse events until the button goes up.
  * Those events, moreover, are reported even in the mouse
  * travels outside the domain of the object.
+ *
+ * @param e event
  */
 	public void mouseDragged(MouseEvent e) { }
 
 /* Method: keyTyped (implements KeyListener) */
 /**
  * Called when a key is typed (i.e., pressed and released).
+ *
+ * @param e event
  */
 	public void keyTyped(KeyEvent e) { }
 
 /* Method: keyPressed (implements KeyListener) */
 /**
  * Called when a key is pressed.
+ *
+ * @param e event
  */
 	public void keyPressed(KeyEvent e) { }
 
 /* Method: keyReleased (implements KeyListener) */
 /**
  * Called when a key is released.
+ *
+ * @param e event
  */
 	public void keyReleased(KeyEvent e) { }
 
 /* Method: actionPerformed (implements ActionListener) */
 /**
  * Called when a component (typically a button) is activated.
+ *
+ * @param e event
  */
 	public void actionPerformed(ActionEvent e) { }
 
@@ -810,7 +833,7 @@ public class CommandLineProgram
  * Creates the console used by the <code>ConsoleProgram</code>.  Subclasses can
  * override this method to create their own console types.
  *
- * @usage IOConsole console = program.createConsole();
+ * Example: IOConsole console = program.createConsole();
  * @return The console to be used by the program
  */
 	protected IOConsole createConsole() {
@@ -822,7 +845,7 @@ public class CommandLineProgram
  * Creates the dialog used for interaction (primarily by the <code>DialogProgram</code>
  * class).  Subclasses can override this method to create their own dialog types.
  *
- * @usage IODialog dialog = program.createDialogIO();
+ * Example: IODialog dialog = program.createDialogIO();
  * @return The dialog to be used by the program
  */
 	protected IODialog createDialogIO() {
@@ -837,9 +860,9 @@ public class CommandLineProgram
 /**
  * Returns the preferred size of the content pane.
  *
- * @usage Dimension size = getPreferredSize();
+ * Example: Dimension size = getPreferredSize();
  * @return The preferred size of the content pane
- * @noshow
+ *
  */
 	public Dimension getPreferredSize() {
 		return new Dimension(0, 0);
@@ -849,9 +872,9 @@ public class CommandLineProgram
 /**
  * Returns the width of the central region.
  *
- * @usage int width = getWidth();
+ * Example: int width = getWidth();
  * @return The width of the central region
- * @noshow
+ *
  */
 	public int getWidth() {
 		return 0;
@@ -861,9 +884,9 @@ public class CommandLineProgram
 /**
  * Returns the height of the central region.
  *
- * @usage int height = getHeight();
+ * Example: int height = getHeight();
  * @return The height of the central region
- * @noshow
+ *
  */
 	public int getHeight() {
 		return 0;
@@ -873,10 +896,10 @@ public class CommandLineProgram
 /**
  * Returns the parameter associated with name.
  *
- * @usage String value = getParameter(name);
+ * Example: String value = getParameter(name);
  * @param name The name of the parameter
  * @return The value associated with the parameter, or <code>null</code> if none
- * @noshow
+ *
  */
 	public String getParameter(String name) {
 		String value = null;
@@ -890,9 +913,9 @@ public class CommandLineProgram
 /**
  * Sets the layout manager for the central region of the content pane.
  *
- * @usage setLayout(layout);
+ * Example: setLayout(layout);
  * @param layout The layout manager to use
- * @noshow
+ *
  */
 	public void setLayout(LayoutManager layout) {
 		if (layout != layout) /* Avoid unused parameter warning */;
@@ -903,9 +926,9 @@ public class CommandLineProgram
 /**
  * Gets the layout manager for the central region of the content pane.
  *
- * @usage LayoutManager layout = setLayout();
+ * Example: LayoutManager layout = setLayout();
  * @return The active layout manager
- * @noshow
+ *
  */
 	public LayoutManager getLayout() {
 		throw new ErrorException("No graphics environment");
@@ -915,9 +938,9 @@ public class CommandLineProgram
 /**
  * Sets the background for the central region of the content pane.
  *
- * @usage setBackground(color);
+ * Example: setBackground(color);
  * @param color The new background color
- * @noshow
+ *
  */
 	public void setBackground(Color color) {
 		if (color != color) /* Avoid unused parameter warning */;
@@ -927,6 +950,10 @@ public class CommandLineProgram
 /* Overridden method: addImpl(comp, constraints, index) */
 /**
  * Adds the specified component to the content pane using the specified constraints and index.
+ *
+ * @param comp just a dummy param to keep the impl
+ * @param constraints just a dummy param to keep the impl
+ * @param index just a dummy param to keep the impl
  */
 	protected void addImpl(Component comp, Object constraints, int index) {
 		if (comp != comp) /* Avoid unused parameter warning */;
@@ -939,9 +966,9 @@ public class CommandLineProgram
 /**
  * Removes the component at the specified index from the central region.
  *
- * @usage remove(index);
+ * Example: remove(index);
  * @param index The index position of the component to remove
- * @noshow
+ *
  */
 	public void remove(int index) {
 		if (index != index) /* Avoid unused parameter warning */;
@@ -952,9 +979,9 @@ public class CommandLineProgram
 /**
  * Removes the specified component from the central region.
  *
- * @usage remove(comp);
+ * Example: remove(comp);
  * @param comp The component to remove
- * @noshow
+ *
  */
 	public void remove(Component comp) {
 		if (comp != comp) /* Avoid unused parameter warning */;
@@ -965,8 +992,8 @@ public class CommandLineProgram
 /**
  * Removes all components from the central region.
  *
- * @usage removeAll();
- * @noshow
+ * Example: removeAll();
+ *
  */
 	public void removeAll() {
 		throw new ErrorException("No graphics environment");
@@ -976,8 +1003,8 @@ public class CommandLineProgram
 /**
  * Forwards validate to the content pane.
  *
- * @usage validate();
- * @noshow
+ * Example: validate();
+ *
  */
 	public void validate() {
 		throw new ErrorException("No graphics environment");
@@ -987,8 +1014,8 @@ public class CommandLineProgram
 /**
  * Forwards repaint to the content pane.
  *
- * @usage repaint();
- * @noshow
+ * Example: repaint();
+ *
  */
 	public void repaint() {
 		throw new ErrorException("No graphics environment");
@@ -998,8 +1025,8 @@ public class CommandLineProgram
 /**
  * Called when the program has been told to destroy itself.
  *
- * @usage program.destroy();
- * @noshow
+ * Example: program.destroy();
+ *
  */
 	public void destroy() {
 		/* Empty */
@@ -1011,13 +1038,13 @@ public class CommandLineProgram
  * manifest file or include a main method that looks like this, where
  * <code>MyClass</code> is the name of the program class:
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    public static void main(String[] args) {
  * &nbsp;       new MyClass().start();
  * &nbsp;    }
  * </code></pre>
  *
- * <p>If the program needs the command line arguments, the <code>args</code>
+ * <p>&nbsp;</p>If the program needs the command line arguments, the <code>args</code>
  * array can be passed to the <code>start</code> method and then retrieved
  * using the <code>getArgumentArray</code> method.
  *
@@ -1070,6 +1097,8 @@ public class CommandLineProgram
 /**
  * Called whenever an action event is detected in the menu bar.  Most of
  * these actions are simply passed on to the appropriate console.
+ *
+ * @param cmd command
  */
 	public void menuAction(String cmd) {
 		if (cmd != cmd) /* Avoid unused parameter warning */;
@@ -1084,7 +1113,7 @@ public class CommandLineProgram
  * use the same in-window <code>JMenuBar</code> approach used on other
  * platforms.
  *
- * @usage setMacMenuBarFlag(flag);
+ * Example: setMacMenuBarFlag(flag);
  * @param flag <code>true</code> to use Mac menu style; <code>false</code> otherwise
  */
 	protected void setMacMenuBarFlag(boolean flag) {
@@ -1096,7 +1125,7 @@ public class CommandLineProgram
 /**
  * Retrieves the setting of the Mac menu bar flag.
  *
- * @usage boolean flag = getMacMenuBarFlag();
+ * Example: boolean flag = getMacMenuBarFlag();
  * @return <code>true</code> if Mac menu style is supported; <code>false</code> otherwise
  */
 	protected boolean getMacMenuBarFlag() {
@@ -1113,11 +1142,11 @@ public class CommandLineProgram
  * be one of the constants from <code>BorderLayout</code> (<code>NORTH</code>,
  * <code>SOUTH</code>, <code>EAST</code>, <code>WEST</code>).
  *
- * @usage getBorder(side, comp);
+ * Example: getBorder(side, comp);
  * @param side The side (<code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>,
  *             or <code>WEST</code>)
  * @return The component used as a border on the specified side
- * @noshow
+ *
  */
 	protected Component getBorder(String side) {
 		if (side != side) /* Avoid unused parameter warning */;
@@ -1129,9 +1158,9 @@ public class CommandLineProgram
  * Retrieves the array of arguments passed in from the command line, or
  * <code>null</code> if no arguments are available.
  *
- * @usage String[] args = getArgumentArray();
+ * Example: String[] args = getArgumentArray();
  * @return The array of command-line arguments
- * @noshow
+ *
  */
 	protected String[] getArgumentArray() {
 		if (parameterTable == null) return null;
@@ -1148,7 +1177,9 @@ public class CommandLineProgram
  * Checks to see whether this program has started, usually by checking to see
  * whether some pane exists.  Subclasses can override this method to ensure
  * that their structures are visible before proceeding.
- * @noshow
+ *
+ * @return actually not
+ *
  */
 	protected boolean isStarted() {
 		throw new ErrorException("No graphics environment");
@@ -1158,7 +1189,7 @@ public class CommandLineProgram
 /**
  * Performs class-specific initialization for the program just before
  * it starts.
- * @noshow
+ *
  */
 	protected void startHook() {
 		/* Empty */
@@ -1168,7 +1199,7 @@ public class CommandLineProgram
 /**
  * Performs class-specific cleanup for the program just after
  * it finishes.
- * @noshow
+ *
  */
 	protected void endHook() {
 		/* Empty */
@@ -1179,7 +1210,7 @@ public class CommandLineProgram
  * Sets the applet stub for this program in a way that makes it possible for
  * clients to retrieve it.
  *
- * @usage setAppletStub(stub);
+ * Example: setAppletStub(stub);
  * @param stub The applet stub
  */
 	protected void setAppletStub(AppletStub stub) {
@@ -1190,7 +1221,7 @@ public class CommandLineProgram
 /**
  * Retrieves the applet stub.
  *
- * @usage AppletStub stub = getAppletStub();
+ * Example: AppletStub stub = getAppletStub();
  * @return The applet stub
  */
 	protected AppletStub getAppletStub() {
@@ -1201,7 +1232,7 @@ public class CommandLineProgram
 /**
  * Sets the parameter table for this program.
  *
- * @usage setParameterTable(ht);
+ * Example: setParameterTable(ht);
  * @param ht The parameter table
  */
 	protected void setParameterTable(HashMap<String,String> ht) {
@@ -1212,7 +1243,7 @@ public class CommandLineProgram
 /**
  * Retrieves the parameter table.
  *
- * @usage ParameterTable ht = getParameterTable();
+ * Example: ParameterTable ht = getParameterTable();
  * @return The parameter table
  */
 	protected HashMap<String,String> getParameterTable() {
@@ -1225,14 +1256,14 @@ public class CommandLineProgram
  * argument list.  Parameters are taken to be any argument that matches
  * the template
  *
- * <p>   <i>name</i><code>=</code><i>value</i>
+ * <p>&nbsp;</p>   <i>name</i><code>=</code><i>value</i>
  *
  * All other arguments are collected as a tab-separated string and placed
  * in an entry under the key <code>"ARGS"</code>.  All named parameters
  * are converted to lower case to preserve the case-insensitive semantics
  * of <code>getParameter</code>.
  *
- * @usage HashMap<String,String> ht = createParameterTable(args);
+ * Example: HashMap ht = createParameterTable(args);
  * @param args The array of strings passed to the application
  * @return A <code>HashMap</code> containing the parameter bindings
  */

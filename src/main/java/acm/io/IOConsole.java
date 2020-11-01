@@ -60,7 +60,7 @@ import javax.swing.text.*;
  * <li><a href="#readLine()"><code>readLine</code></a>
  * </ul>
  *
- * <p>A <code>IOConsole</code> object is a lightweight component and must be
+ * <p>&nbsp;</p>A <code>IOConsole</code> object is a lightweight component and must be
  * added to an installed <code>Frame</code> or <code>JFrame</code> before it becomes
  * visible on the screen.  The usual strategy for including a console in a frame is
  * to use the <a href="../program/ConsoleProgram.html"><code>ConsoleProgram</code></a>
@@ -68,10 +68,10 @@ import javax.swing.text.*;
  *
  * The operation of the <code>IOConsole</code> class is illustrated by
  * the following <code>test</code> method, which generates the session shown on
- * the right.  The user input appears in <font color=blue>blue</font>,
+ * the right.  The user input appears in blue,
  * just as it does in the console window.
  *
- * <p><table><tr><td><pre><code>
+ * <p>&nbsp;</p><table><caption>Console example</caption><tr><td><pre><code>
  * &nbsp;    public void test(IOConsole console) {
  * &nbsp;       console.println("IOConsole class test");
  * &nbsp;       int n = console.readInt("Enter an integer: ");
@@ -84,8 +84,8 @@ import javax.swing.text.*;
  * &nbsp;       console.println("That line was \"" + line + "\"");
  * &nbsp;    }
  * </code></pre></td>
- * <td width=260 align=right valign=top>
- * <img src="../../../../images/ConsoleTest.gif">
+ * <td>
+ * <img alt="Console Test" src="../../../../images/ConsoleTest.gif">
  * </td></tr></table>
  */
 public class IOConsole extends Container implements IOModel {
@@ -102,7 +102,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Creates a new <code>IOConsole</code> object.
  *
- * @usage IOConsole console = new IOConsole();
+ * Example: IOConsole console = new IOConsole();
  */
 	public IOConsole() {
 		consoleModel = createConsoleModel();
@@ -127,7 +127,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Clears the console display.
  *
- * @usage console.clear();
+ * Example: console.clear();
  */
 	public void clear() {
 		consoleModel.clear();
@@ -139,7 +139,7 @@ public class IOConsole extends Container implements IOModel {
  * the output.  The <code>print</code> method is overloaded so that
  * <code>value</code> can be of any type.
  *
- * @usage console.print(value);
+ * Example: console.print(value);
  * @param value The value to be displayed
  */
 	public void print(String value) {
@@ -148,7 +148,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>boolean</code>.
- * @noshow
+ *
  */
 	public final void print(boolean x) {
 		print("" + x);
@@ -156,7 +156,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>char</code>.
- * @noshow
+ *
  */
 	public final void print(char x) {
 		print("" + x);
@@ -164,7 +164,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>double</code>.
- * @noshow
+ *
  */
 	public final void print(double x) {
 		print("" + x);
@@ -172,7 +172,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>float</code>.
- * @noshow
+ *
  */
 	public final void print(float x) {
 		print("" + x);
@@ -180,7 +180,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display an <code>int</code>.
- * @noshow
+ *
  */
 	public final void print(int x) {
 		print("" + x);
@@ -188,7 +188,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>long</code>.
- * @noshow
+ *
  */
 	public final void print(long x) {
 		print("" + x);
@@ -196,7 +196,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display an <code>Object</code>.
- * @noshow
+ *
  */
 	public final void print(Object x) {
 		print("" + x);
@@ -206,7 +206,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Advances the console cursor to the beginning of the next line.
  *
- * @usage console.println();
+ * Example: console.println();
  */
 	public void println() {
 		getWriter().println();
@@ -218,7 +218,7 @@ public class IOConsole extends Container implements IOModel {
  * to the beginning of the next line.  The <code>println</code> method is
  * overloaded so that <code>value</code> can be of any type.
  *
- * @usage console.println(value);
+ * Example: console.println(value);
  * @param value The value to be displayed
  */
 	public void println(String value) {
@@ -227,7 +227,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>boolean</code>.
- * @noshow
+ *
  */
 	public final void println(boolean x) {
 		println("" + x);
@@ -235,7 +235,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>char</code>.
- * @noshow
+ *
  */
 	public final void println(char x) {
 		println("" + x);
@@ -243,7 +243,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>double</code>.
- * @noshow
+ *
  */
 	public final void println(double x) {
 		println("" + x);
@@ -251,7 +251,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>float</code>.
- * @noshow
+ *
  */
 	public final void println(float x) {
 		println("" + x);
@@ -259,7 +259,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display an <code>int</code>.
- * @noshow
+ *
  */
 	public final void println(int x) {
 		println("" + x);
@@ -267,7 +267,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>long</code>.
- * @noshow
+ *
  */
 	public final void println(long x) {
 		println("" + x);
@@ -275,7 +275,7 @@ public class IOConsole extends Container implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display an <code>Object</code>.
- * @noshow
+ *
  */
 	public final void println(Object x) {
 		println("" + x);
@@ -285,7 +285,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Displays the error message on the console.
  *
- * @usage console.showErrorMessage(msg);
+ * Example: console.showErrorMessage(msg);
  * @param msg The error msg to be displayed
  */
 	public void showErrorMessage(String msg) {
@@ -298,7 +298,7 @@ public class IOConsole extends Container implements IOModel {
  * Reads and returns a line of input from the console, without
  * including the end-of-line characters that terminate the input.
  *
- * @usage String str = console.readLine();
+ * Example: String str = console.readLine();
  * @return The next line of input as a <code>String</code>
  */
 	public final String readLine() {
@@ -311,7 +311,7 @@ public class IOConsole extends Container implements IOModel {
  * as the value of this method.  The end-of-line characters that terminate
  * the input are not included in the returned string.
  *
- * @usage String str = console.readLine(prompt);
+ * Example: String str = console.readLine(prompt);
  * @param prompt The prompt string to display to the user
  * @return The next line of input as a <code>String</code>
  */
@@ -334,7 +334,7 @@ public class IOConsole extends Container implements IOModel {
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = console.readInt();
+ * Example: int n = console.readInt();
  * @return The value of the input interpreted as a decimal integer
  */
 	public final int readInt() {
@@ -349,7 +349,7 @@ public class IOConsole extends Container implements IOModel {
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = console.readInt(low, high);
+ * Example: int n = console.readInt(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  * @return The value of the input interpreted as a decimal integer
@@ -366,7 +366,7 @@ public class IOConsole extends Container implements IOModel {
  * although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = console.readInt(prompt);
+ * Example: int n = console.readInt(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a decimal integer
  */
@@ -384,7 +384,7 @@ public class IOConsole extends Container implements IOModel {
  * although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = console.readInt(prompt, low, high);
+ * Example: int n = console.readInt(prompt, low, high);
  * @param prompt The prompt string to display to the user
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -414,7 +414,7 @@ public class IOConsole extends Container implements IOModel {
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = console.readDouble();
+ * Example: double d = console.readDouble();
  * @return The value of the input interpreted as a <code>double</code>
  */
 	public final double readDouble() {
@@ -430,7 +430,7 @@ public class IOConsole extends Container implements IOModel {
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = console.readDouble(low, high);
+ * Example: double d = console.readDouble(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  * @return The value of the input interpreted as a <code>double</code>
@@ -447,7 +447,7 @@ public class IOConsole extends Container implements IOModel {
  * reenter the data,  although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = console.readDouble(prompt);
+ * Example: double d = console.readDouble(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a <code>double</code>
  */
@@ -464,7 +464,7 @@ public class IOConsole extends Container implements IOModel {
  * to reenter the data,  although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage d = console.readDouble(prompt, low, high);
+ * Example: d = console.readDouble(prompt, low, high);
  * @param prompt The prompt string to display to the user
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -495,7 +495,7 @@ public class IOConsole extends Container implements IOModel {
  * although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = console.readBoolean();
+ * Example: boolean flag = console.readBoolean();
  * @return The value of the input interpreted as a boolean value
  */
 	public final boolean readBoolean() {
@@ -510,7 +510,7 @@ public class IOConsole extends Container implements IOModel {
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = console.readBoolean(prompt);
+ * Example: boolean flag = console.readBoolean(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a boolean value
  */
@@ -527,7 +527,7 @@ public class IOConsole extends Container implements IOModel {
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = console.readBoolean(prompt);
+ * Example: boolean flag = console.readBoolean(prompt);
  * @param prompt The prompt string to display to the user
  * @param trueLabel The string used to indicate <code>true</code>
  * @param falseLabel The string used to indicate <code>false</code>
@@ -557,7 +557,7 @@ public class IOConsole extends Container implements IOModel {
  * Returns a <code>BufferedReader</code> object that can be used to read
  * from the console.
  *
- * @usage BufferedReader rd = console.getReader();
+ * Example: BufferedReader rd = console.getReader();
  * @return A <code>BufferedReader</code> that reads from this console
  */
 	public BufferedReader getReader() {
@@ -572,7 +572,7 @@ public class IOConsole extends Container implements IOModel {
  * Returns a <code>PrintWriter</code> object that can be used to send
  * output to the console.
  *
- * @usage PrintWriter wr = console.getWriter();
+ * Example: PrintWriter wr = console.getWriter();
  * @return A <code>PrintWriter</code> that writes to this console
  */
 	public PrintWriter getWriter() {
@@ -590,7 +590,7 @@ public class IOConsole extends Container implements IOModel {
  * value is set to <code>true</code>, illegal input raises an
  * <a href="../util/ErrorException.html"><code>ErrorException</code></a> instead.
  *
- * @usage console.setExceptionOnError(flag);
+ * Example: console.setExceptionOnError(flag);
  * @param flag <code>false</code> to retry on errors; <code>true</code> to raise an exception
  */
 	public void setExceptionOnError(boolean flag) {
@@ -601,7 +601,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Returns the state of the error-handling flag.
  *
- * @usage boolean flag = console.getExceptionOnError();
+ * Example: boolean flag = console.getExceptionOnError();
  * @return The current setting of the error-handling mode (<code>false</code> to retry
  *         on errors; <code>true</code> to raise an exception)
  */
@@ -615,9 +615,9 @@ public class IOConsole extends Container implements IOModel {
  * is either <code>Font.PLAIN</code> or a sum of one or more of the attributes
  * <code>Font.BOLD</code> and <code>Font.ITALIC</code>.
  *
- * @usage console.setInputStyle(style);
+ * Example: console.setInputStyle(style);
  * @param style The style attributes to be used for console input
- * @noshow
+ *
  */
 	public void setInputStyle(int style) {
 		inputStyle = style;
@@ -628,9 +628,9 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Returns the current style parameters for console input.
  *
- * @usage int style = console.getInputStyle();
+ * Example: int style = console.getInputStyle();
  * @return The current input style
- * @noshow
+ *
  */
 	public int getInputStyle() {
 		return inputStyle;
@@ -640,9 +640,9 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Sets the color used for console input.
  *
- * @usage console.setInputColor(color);
+ * Example: console.setInputColor(color);
  * @param color The color used for console input
- * @noshow
+ *
  */
 	public void setInputColor(Color color) {
 		inputColor = color;
@@ -653,9 +653,9 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Returns the color currently in use for console input.
  *
- * @usage Color color = console.getInputColor();
+ * Example: Color color = console.getInputColor();
  * @return The current input color
- * @noshow
+ *
  */
 	public Color getInputColor() {
 		return inputColor;
@@ -667,9 +667,9 @@ public class IOConsole extends Container implements IOModel {
  * is either <code>Font.PLAIN</code> or a sum of one or more of the attributes
  * <code>Font.BOLD</code> and <code>Font.ITALIC</code>.
  *
- * @usage console.setErrorStyle(style);
+ * Example: console.setErrorStyle(style);
  * @param style The style attributes to be used for console error messages
- * @noshow
+ *
  */
 	public void setErrorStyle(int style) {
 		errorStyle = style;
@@ -680,9 +680,9 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Returns the current style parameters for console error messages.
  *
- * @usage int style = console.getErrorStyle();
+ * Example: int style = console.getErrorStyle();
  * @return The current error message style
- * @noshow
+ *
  */
 	public int getErrorStyle() {
 		return errorStyle;
@@ -692,9 +692,9 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Sets the color used for console error messages.
  *
- * @usage console.setErrorColor(color);
+ * Example: console.setErrorColor(color);
  * @param color The color used for console error messages
- * @noshow
+ *
  */
 	public void setErrorColor(Color color) {
 		errorColor = color;
@@ -705,9 +705,9 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Returns the color currently in use for console error messages.
  *
- * @usage Color color = console.getErrorColor();
+ * Example: Color color = console.getErrorColor();
  * @return The current error message color
- * @noshow
+ *
  */
 	public Color getErrorColor() {
 		return errorColor;
@@ -719,12 +719,12 @@ public class IOConsole extends Container implements IOModel {
  * the string <code>str</code>, which is interpreted in the style of
  * <code>Font.decode</code>.  The usual format of the font string is
  *
- * <p>   <i>family</i><code>-</code><i>style</i><code>-</code><i>size</i><p>
+ * <p>&nbsp;</p>   <i>family</i><code>-</code><i>style</i><code>-</code><i>size</i><p>&nbsp;</p>
  *
  * where both <i>style</i> and <i>size</i> are optional.  If any of these parts
  * are specified as an asterisk, the existing value is retained.
  *
- * @usage console.setFont(str);
+ * Example: console.setFont(str);
  * @param str A <code>String</code> specifying the new font
  */
 	public void setFont(String str) {
@@ -739,9 +739,9 @@ public class IOConsole extends Container implements IOModel {
  * method is primarily useful for demonstrations and test suites, and is
  * not ordinarily invoked by students.
  *
- * @usage console.setInputScript(rd);
+ * Example: console.setInputScript(rd);
  * @param rd The reader from which console input is taken
- * @noshow
+ *
  */
 	public void setInputScript(BufferedReader rd) {
 		consoleModel.setInputScript(rd);
@@ -752,7 +752,7 @@ public class IOConsole extends Container implements IOModel {
  * Retrieves the input script.  After the end of the input script has been
  * reached, this method will return <code>null</code>.
  *
- * @usage BufferedReader rd = console.getInputScript();
+ * Example: BufferedReader rd = console.getInputScript();
  * @return The reader representing the current input script
  */
 	public BufferedReader getInputScript() {
@@ -763,8 +763,8 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Implements the "Cut" menu operation.
  *
- * @usage console.cut();
- * @noshow
+ * Example: console.cut();
+ *
  */
 	public void cut() {
 		consoleModel.cut();
@@ -774,8 +774,8 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Implements the "Copy" menu operation.
  *
- * @usage console.copy();
- * @noshow
+ * Example: console.copy();
+ *
  */
 	public void copy() {
 		consoleModel.copy();
@@ -785,8 +785,8 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Implements the "Paste" menu operation.
  *
- * @usage console.paste();
- * @noshow
+ * Example: console.paste();
+ *
  */
 	public void paste() {
 		consoleModel.paste();
@@ -796,8 +796,8 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Implements the "Select All" menu operation.
  *
- * @usage console.selectAll();
- * @noshow
+ * Example: console.selectAll();
+ *
  */
 	public void selectAll() {
 		consoleModel.selectAll();
@@ -807,8 +807,8 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Implements the "Save" menu operation.
  *
- * @usage console.save();
- * @noshow
+ * Example: console.save();
+ *
  */
 	public void save() {
 		Writer wr = null;
@@ -840,8 +840,8 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Implements the "Save As" menu operation.
  *
- * @usage console.saveAs();
- * @noshow
+ * Example: console.saveAs();
+ *
  */
 	public void saveAs() {
 		file = null;
@@ -852,9 +852,9 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Copies the console output to the specified writer.
  *
- * @usage console.save(wr);
+ * Example: console.save(wr);
  * @param wr A <code>Writer</code> to which the console output is sent
- * @noshow
+ *
  */
 	public void save(Writer wr) {
 		try {
@@ -868,8 +868,8 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Implements the "Print Console" menu operation.
  *
- * @usage console.printConsole();
- * @noshow
+ * Example: console.printConsole();
+ *
  */
 	public void printConsole() {
 		Frame frame = JTFTools.getEnclosingFrame(this);
@@ -886,9 +886,9 @@ public class IOConsole extends Container implements IOModel {
  * This method is usually invoked from the <code>Print</code> menu item in
  * the <code>ProgramMenuBar</code> class and is not ordinarily called by clients.
  *
- * @usage console.printConsole(pj);
+ * Example: console.printConsole(pj);
  * @param pj <code>PrintJob</code> object to which the output is sent
- * @noshow
+ *
  */
 	public void printConsole(PrintJob pj) {
 		consoleModel.print(pj);
@@ -898,8 +898,8 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Implements the "Script" menu operation.
  *
- * @usage console.script();
- * @noshow
+ * Example: console.script();
+ *
  */
 	public void script() {
 		Frame frame = JTFTools.getEnclosingFrame(this);
@@ -922,7 +922,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Sets the menu bar that controls this console.
  *
- * @usage console.setMenuBar(mbar);
+ * Example: console.setMenuBar(mbar);
  * @param mbar The menu bar
  */
 	public void setMenuBar(ProgramMenuBar mbar) {
@@ -934,7 +934,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Returns the menu bar that controls this console.
  *
- * @usage ProgramMenuBar mbar = console.getMenuBar();
+ * Example: ProgramMenuBar mbar = console.getMenuBar();
  * @return The menu bar
  */
 	public ProgramMenuBar getMenuBar() {
@@ -946,6 +946,9 @@ public class IOConsole extends Container implements IOModel {
  * Called whenever a relevant action is detected in the menu bar.
  * Subclasses can override this method to extend the set of menu
  * commands recognized by the console.
+ *
+ * @param e event
+ * @return true if handled
  */
 	public boolean menuAction(ActionEvent e) {
 		String cmd = e.getActionCommand();
@@ -979,7 +982,8 @@ public class IOConsole extends Container implements IOModel {
 
 /* Method: isConsoleMenuItem(item) */
 /**
- * Returns <code>true</code> if the item is one that the console recognizes.
+ * @param item menu item
+ * @return Returns <code>true</code> if the item is one that the console recognizes.
  */
 	public boolean isConsoleMenuItem(JMenuItem item) {
 		String cmd = item.getActionCommand();
@@ -992,7 +996,7 @@ public class IOConsole extends Container implements IOModel {
 
 /* Method: updateMenuBar(mbar) */
 /**
- * Updates the menu bar to enable the appropriate menu items.
+ * @param mbar Updates the menu bar to enable the appropriate menu items.
  */
 	public void updateMenuBar(ProgramMenuBar mbar) {
 		Iterator<JMenuItem> iterator = mbar.iterator();
@@ -1010,7 +1014,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Sets the background color used for the console.
  *
- * @usage console.setBackground(color);
+ * Example: console.setBackground(color);
  * @param color The new background color
  */
 	public void setBackground(Color color) {
@@ -1023,7 +1027,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Sets the foreground color used for the output text.
  *
- * @usage console.setForeground(color);
+ * Example: console.setForeground(color);
  * @param color The color to use for the output text
  */
 	public void setForeground(Color color) {
@@ -1036,7 +1040,7 @@ public class IOConsole extends Container implements IOModel {
 /**
  * Sets the font for the console.
  *
- * @usage console.setFont(font);
+ * Example: console.setFont(font);
  * @param font The font to use for the console
  */
 	public void setFont(Font font) {
@@ -1051,8 +1055,8 @@ public class IOConsole extends Container implements IOModel {
  * Overrides the <code>requestFocus</code> method so that it forwards to the
  * console model.
  *
- * @usage console.requestFocus();
- * @noshow
+ * Example: console.requestFocus();
+ *
  */
 	public void requestFocus() {
 		consoleModel.requestFocus();
@@ -1063,8 +1067,8 @@ public class IOConsole extends Container implements IOModel {
  * Overrides the <code>getPreferredSize</code> method to ensure that an
  * <code>IOConsole</code> is not too large.
  *
- * @usage Dimension size = console.getPreferredSize();
- * @noshow
+ * Example: Dimension size = console.getPreferredSize();
+ *
  */
 	public Dimension getPreferredSize() {
 		return getMinimumSize();
@@ -1075,8 +1079,8 @@ public class IOConsole extends Container implements IOModel {
  * Overrides the <code>getMinimumSize</code> method to ensure that an
  * <code>IOConsole</code> is not too large.
  *
- * @usage Dimension size = console.getMinimumSize();
- * @noshow
+ * Example: Dimension size = console.getMinimumSize();
+ *
  */
 	public Dimension getMinimumSize() {
 		return new Dimension(MINIMUM_CONSOLE_WIDTH, MINIMUM_CONSOLE_HEIGHT);
@@ -1084,7 +1088,7 @@ public class IOConsole extends Container implements IOModel {
 
 /* Protected method: createConsoleModel() */
 /**
- * Creates the console model used by this console.
+ * @return Creates the console model used by this console.
  */
 	protected ConsoleModel createConsoleModel() {
 		return new StandardConsoleModel();
@@ -1478,7 +1482,7 @@ class StandardConsoleModel
 /* Method: requestFocus() */
 /**
  * Forwards the request focus to the text pane.
- * @noshow
+ *
  */
 	public void requestFocus() {
 		if (textPane != null) textPane.requestFocus();
@@ -1487,7 +1491,7 @@ class StandardConsoleModel
 /* Method: setMenuBar(mbar) */
 /**
  * Sets the menu bar that controls this console.
- * @noshow
+ *
  */
 	public void setMenuBar(ProgramMenuBar mbar) {
 		menuBar = mbar;
@@ -1555,7 +1559,7 @@ class StandardConsoleModel
 /* Method: keyReleased(e) */
 /**
  * Responds to the release of a key.  Implements <code>KeyListener</code>.
- * @noshow
+ *
  */
 	public void keyReleased(KeyEvent e) {
 		e.consume();
@@ -1881,7 +1885,7 @@ class SystemConsole extends IOConsole {
 /* Package class: ConsoleWriter */
 /**
  * This class defines the underlying writer for the console.
- * @noshow
+ *
  */
 class ConsoleWriter extends Writer {
 
@@ -2111,7 +2115,7 @@ class SystemConsoleModel implements ConsoleModel {
 /**
  * Sets the font for the console.
  *
- * @usage consoleModel.setFont(font);
+ * Example: consoleModel.setFont(font);
  * @param font The new font for the console
  */
 	public void setFont(Font font) {
@@ -2229,7 +2233,7 @@ class SystemConsoleModel implements ConsoleModel {
 /* Method: requestFocus() */
 /**
  * Forwards the request focus to the text pane.
- * @noshow
+ *
  */
 	public void requestFocus() {
 		/* Empty */
@@ -2238,7 +2242,7 @@ class SystemConsoleModel implements ConsoleModel {
 /* Method: setMenuBar(mbar) */
 /**
  * Sets the menu bar that controls this console.
- * @noshow
+ *
  */
 	public void setMenuBar(ProgramMenuBar mbar) {
 		/* Empty */

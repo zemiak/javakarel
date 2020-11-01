@@ -39,7 +39,7 @@ public abstract class DialogProgram extends Program {
 /**
  * Creates a new dialog program.
  *
- * @usage DialogProgram program = new DialogProgram();
+ * Example: DialogProgram program = new DialogProgram();
  */
 	public DialogProgram() {
 		IODialog dialog = getDialog();
@@ -74,7 +74,7 @@ public abstract class DialogProgram extends Program {
  * for applications in which there needs to be some control thread
  * while the program runs, as in a typical animation.
  *
- * @usage program.init();
+ * Example: program.init();
  */
 	public void init() {
 		/* Empty */

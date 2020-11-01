@@ -43,7 +43,7 @@ public class GDimension implements Serializable {
 /**
  * Constructs a new dimension object with zero values for width and height.
  *
- * @usage dim = new GDimension();
+ * Example: dim = new GDimension();
  */
 	public GDimension() {
 		this(0, 0);
@@ -53,7 +53,7 @@ public class GDimension implements Serializable {
 /**
  * Constructs a new dimension object with the specified components.
  *
- * @usage dim = new GDimension(width, height);
+ * Example: dim = new GDimension(width, height);
  * @param width The width of the dimension object
  * @param height The height of the dimension object
  */
@@ -66,7 +66,7 @@ public class GDimension implements Serializable {
 /**
  * Constructs a new <code>GDimension</code> object from an existing one.
  *
- * @usage dim = new GDimension(size);
+ * Example: dim = new GDimension(size);
  * @param size An existing <code>GDimension</code> object specifying the size
  */
 	public GDimension(GDimension size) {
@@ -77,7 +77,7 @@ public class GDimension implements Serializable {
 /**
  * Constructs a new <code>GDimension</code> object from an AWT <code>Dimension</code>.
  *
- * @usage dim = new GDimension(size);
+ * Example: dim = new GDimension(size);
  * @param size An AWT <code>Dimension</code> object specifying the size
  */
 	public GDimension(Dimension size) {
@@ -88,7 +88,7 @@ public class GDimension implements Serializable {
 /**
  * Returns the width of this <code>GDimension</code>.
  *
- * @usage width = dim.getWidth();
+ * Example: width = dim.getWidth();
  * @return The width of this <code>GDimension</code>
  */
 	public double getWidth() {
@@ -99,7 +99,7 @@ public class GDimension implements Serializable {
 /**
  * Returns the height of this <code>GDimension</code>.
  *
- * @usage height = dim.getHeight();
+ * Example: height = dim.getHeight();
  * @return The height of this <code>GDimension</code>
  */
 	public double getHeight() {
@@ -110,7 +110,7 @@ public class GDimension implements Serializable {
 /**
  * Sets the components of the dimension object from the specified parameters.
  *
- * @usage dim.setSize(width, height);
+ * Example: dim.setSize(width, height);
  * @param width The new width of the dimension object
  * @param height The new height of the dimension object
  */
@@ -123,7 +123,7 @@ public class GDimension implements Serializable {
 /**
  * Sets the width and height of one <code>GDimension</code> object equal to that of another.
  *
- * @usage dim.setSize(size);
+ * Example: dim.setSize(size);
  * @param size A <code>GDimension</code> object specifying the new size
  */
 	public void setSize(GDimension size) {
@@ -134,7 +134,7 @@ public class GDimension implements Serializable {
 /**
  * Returns a new <code>GDimension</code> object equal to this one.
  *
- * @usage size = dim.getSize();
+ * Example: size = dim.getSize();
  * @return A new <code>GDimension</code> object with the same size
  */
 	public GDimension getSize() {
@@ -146,7 +146,7 @@ public class GDimension implements Serializable {
  * Converts this <code>GDimension</code> to the nearest integer-based
  * <code>Dimension</code>.
  *
- * @usage size = dim.toDimension();
+ * Example: size = dim.toDimension();
  * @return The closest integer-based <code>Dimension</code> object
  */
 	public Dimension toDimension() {
@@ -160,9 +160,9 @@ public class GDimension implements Serializable {
  * <code>float</code> values of the width and height, which are the ones used in the
  * <code>equals</code> method.
  *
- * @usage hash = dim.hashCode();
+ * Example: hash = dim.hashCode();
  * @return The hash code for this dimension object
- * @noshow
+ *
  */
 	public int hashCode() {
 		return new Float((float) myWidth).hashCode() ^ (37 * new Float((float) myHeight).hashCode());
@@ -175,11 +175,11 @@ public class GDimension implements Serializable {
  * equality by comparing the <code>float</code> values (rather than the
  * <code>double</code> values) of the coordinates.
  *
- * @usage if (dim.equals(obj)) . . .
+ * Example: if (dim.equals(obj)) . . .
  * @param obj Any object
  * @return <code>true</code> if the <code>obj</code> is a <code>GDimension</code>
  *         equal to this one, and <code>false</code> otherwise
- * @noshow
+ *
  */
 	public boolean equals(Object obj) {
 		if (!(obj instanceof GDimension)) return false;
@@ -191,9 +191,9 @@ public class GDimension implements Serializable {
 /**
  * Converts this <code>GDimension</code> to its string representation.
  *
- * @usage str = dim.toString();
+ * Example: str = dim.toString();
  * @return A string representation of this dimension object
- * @noshow
+ *
  */
 	public String toString() {
 		return "(" + (float) myWidth + "x" + (float) myHeight + ")";

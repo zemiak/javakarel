@@ -45,7 +45,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Creates a new graphics program.
  *
- * @usage GraphicsProgram program = new GraphicsProgram();
+ * Example: GraphicsProgram program = new GraphicsProgram();
  */
 	protected GraphicsProgram() {
 		eventListener = new GProgramListener(this);
@@ -85,7 +85,7 @@ public abstract class GraphicsProgram extends Program {
  * for applications in which there needs to be some control thread
  * while the program runs, as in a typical animation.
  *
- * @usage program.init();
+ * Example: program.init();
  */
 	public void init() {
 		/* Empty */
@@ -95,7 +95,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Returns the <code>GCanvas</code> object used by this program.
  *
- * @usage GCanvas gc = getGCanvas();
+ * Example: GCanvas gc = getGCanvas();
  * @return The <code>GCanvas</code> object used by the program
  */
 	public GCanvas getGCanvas() {
@@ -106,7 +106,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Adds a new graphical object to this container.
  *
- * @usage add(gobj);
+ * Example: add(gobj);
  * @param gobj The graphical object to add
  */
 	public void add(GObject gobj) {
@@ -118,7 +118,7 @@ public abstract class GraphicsProgram extends Program {
  * Adds the graphical object to the canvas and sets its location
  * to the point (<code>x</code>,&nbsp;<code>y</code>).
  *
- * @usage add(gobj, x, y);
+ * Example: add(gobj, x, y);
  * @param gobj The graphical object to add
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
@@ -132,7 +132,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Adds the graphical object to the canvas and sets its location to the specified point.
  *
- * @usage add(gobj, pt);
+ * Example: add(gobj, pt);
  * @param gobj The graphical object to add
  * @param pt The new coordinates of the point
  */
@@ -146,7 +146,7 @@ public abstract class GraphicsProgram extends Program {
  * Adds the component to the canvas and sets its location
  * to the point (<code>x</code>,&nbsp;<code>y</code>).
  *
- * @usage add(comp, x, y);
+ * Example: add(comp, x, y);
  * @param comp The component to add
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
@@ -160,7 +160,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Adds the component to the canvas and sets its location to the specified point.
  *
- * @usage add(comp, pt);
+ * Example: add(comp, pt);
  * @param comp The component to add
  * @param pt A <code>GPoint</code> object giving the coordinates of the point
  */
@@ -172,7 +172,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Removes a graphical object from this container.
  *
- * @usage remove(gobj);
+ * Example: remove(gobj);
  * @param gobj The graphical object to remove
  */
 	public void remove(GObject gobj) {
@@ -186,7 +186,7 @@ public abstract class GraphicsProgram extends Program {
  * <code>removeAll</code>, which is replaced by
  * <a href="#removeAllComponents()"><code>removeAllComponents</code></a>.
  *
- * @usage removeAll();
+ * Example: removeAll();
  */
 	public void removeAll() {
 		gc.removeAll();
@@ -196,7 +196,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Returns the number of graphical objects stored in this <code>GCanvas</code>.
  *
- * @usage int n = getElementCount();
+ * Example: int n = getElementCount();
  * @return The number of graphical objects in this <code>GCanvas</code>
  */
 	public int getElementCount() {
@@ -208,7 +208,7 @@ public abstract class GraphicsProgram extends Program {
  * Returns the graphical object at the specified index, numbering from back
  * to front in the the <i>z</i> dimension.
  *
- * @usage GObject gobj = getElement(index);
+ * Example: GObject gobj = getElement(index);
  * @param index The index of the component to return
  * @return The graphical object at the specified index
  */
@@ -222,7 +222,7 @@ public abstract class GraphicsProgram extends Program {
  * (<code>x</code>, <code>y</code>), or <code>null</code> if no such
  * object exists.
  *
- * @usage GObject gobj = program.getElementAt(x, y);
+ * Example: GObject gobj = program.getElementAt(x, y);
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return The graphical object at the specified location, or <code>null</code>
@@ -237,7 +237,7 @@ public abstract class GraphicsProgram extends Program {
  * Returns the topmost graphical object that contains the specified point,
  * or <code>null</code> if no such object exists.
  *
- * @usage GObject gobj = program.getElementAt(pt);
+ * Example: GObject gobj = program.getElementAt(pt);
  * @param pt The coordinates being tested
  * @return The graphical object at the specified location, or <code>null</code>
  *         if no such object exists
@@ -251,8 +251,8 @@ public abstract class GraphicsProgram extends Program {
  * Returns an <code>Iterator</code> that cycles through the elements within
  * this container in the default direction, which is from back to front.
  * You can also run the iterator in the opposite direction by using the
- * <a href="#iterator(int)"><code>iterator</code></a><code>(</code><font
- * size=-1><i>direction</i></font><code>)</code> form of this method.
+ * <a href="#iterator(int)"><code>iterator</code></a><code>(</code><font>
+ * <i>direction</i></font><code>)</code> form of this method.
  *
  * <p>Applets that want to run in browsers, however, should avoid using
  * this method, because <code>Iterator</code> is not supported on 1.1 browsers.
@@ -261,7 +261,7 @@ public abstract class GraphicsProgram extends Program {
  * and <a href="GContainer.html#getElement(int)"><code>getElement</code></a> methods,
  * which provide the same functionality in a browser-compatible way.
  *
- * @usage Iterator<GObject> i = iterator();
+ * Example: Iterator i = iterator();
  * @return An <code>Iterator</code> ranging over the elements of the
  *         container from back to front
  */
@@ -286,7 +286,8 @@ public abstract class GraphicsProgram extends Program {
  * and <a href="GContainer.html#getElement(int)"><code>getElement</code></a> methods,
  * which provide the same functionality in a browser-compatible way.
  *
- * @usage Iterator<GObject> i = iterator(direction);
+ * Example: Iterator i = iterator(direction);
+ * @param direction direction no idea
  * @return An <code>Iterator</code> ranging over the elements of the
  *         container in the specified direction
  */
@@ -299,7 +300,7 @@ public abstract class GraphicsProgram extends Program {
  * Adds the program as both a <code>MouseListener</code> and <code>MouseMotionListener</code>
  * to the canvas.
  *
- * @usage addMouseListeners();
+ * Example: addMouseListeners();
  */
 	public void addMouseListeners() {
 		gc.addMouseListener(this);
@@ -311,7 +312,7 @@ public abstract class GraphicsProgram extends Program {
  * Adds the specified listener as a <code>MouseListener</code> and/or
  * <code>MouseMotionListener</code>, as appropriate, to the canvas.
  *
- * @usage addMouseListeners(listener);
+ * Example: addMouseListeners(listener);
  * @param listener A listener object that is either a <code>MouseListener</code>, a
  *        <code>MouseMotionListener</code>, or both
  */
@@ -332,7 +333,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Adds the program as a <code>KeyListener</code> to the canvas.
  *
- * @usage addKeyListeners();
+ * Example: addKeyListeners();
  */
 	public void addKeyListeners() {
 		gc.addKeyListener(this);
@@ -342,7 +343,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Adds the specified listener as a <code>KeyListener</code> to the canvas.
  *
- * @usage addKeyListeners(listener);
+ * Example: addKeyListeners(listener);
  * @param listener A <code>KeyListener</code> object
  */
 	public void addKeyListeners(KeyListener listener) {
@@ -353,7 +354,7 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Waits for a mouse click in the window before proceeding.
  *
- * @usage waitForClick();
+ * Example: waitForClick();
  */
 	public void waitForClick() {
 		eventListener.waitForClick();
@@ -362,7 +363,7 @@ public abstract class GraphicsProgram extends Program {
 /* Method: repaint() */
 /**
  * Signals a need to repaint this window.
- * @noshow
+ *
  */
 	public void repaint() {
 		gc.repaint();
@@ -373,8 +374,8 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Removes all components from this container.
  *
- * @usage removeAllComponents();
- * @noshow
+ * Example: removeAllComponents();
+ *
  */
 	public void removeAllComponents() {
 		super.removeAll();
@@ -384,9 +385,9 @@ public abstract class GraphicsProgram extends Program {
 /**
  * Sets the background color of the <code>GCanvas</code>.
  *
- * @usage setBackground(bg);
+ * Example: setBackground(bg);
  * @param bg The new background color
- * @noshow
+ *
  */
 	public void setBackground(Color bg) {
 		super.setBackground(bg);
@@ -399,10 +400,10 @@ public abstract class GraphicsProgram extends Program {
  * and then starts it.  This code is called only by the <code>start</code> method in
  * <code>GObject</code>.
  *
- * @usage startGraphicsProgram(gobj, args);
+ * Example: startGraphicsProgram(gobj, args);
  * @param gobj The object to be inserted into the <code>GraphicsProgram</code>
  * @param args The array of arguments
- * @noshow
+ *
  */
 	public static void startGraphicsProgram(GObject gobj, String[] args) {
 		GraphicsProgram program = new GObjectProgram();
@@ -534,9 +535,9 @@ public abstract class GraphicsProgram extends Program {
  * Creates the <code>GCanvas</code> used by the <code>GraphicsProgram</code>.  Subclasses can
  * override this method to create their own <code>GCanvas</code> types.
  *
- * @usage GCanvas gc = program.createGCanvas();
+ * Example: GCanvas gc = program.createGCanvas();
  * @return The <code>GCanvas</code> to be inserted into the program
- * @noshow
+ *
  */
 	protected GCanvas createGCanvas() {
 		return new GCanvas();
@@ -555,7 +556,7 @@ public abstract class GraphicsProgram extends Program {
  * Checks to see whether this program has started, usually by checking to see
  * whether some pane exists.  Subclasses can override this method to ensure
  * that their structures are visible before proceeding.
- * @noshow
+ *
  */
 	protected boolean isStarted() {
 		if (gc == null || !super.isStarted()) return false;
@@ -718,7 +719,7 @@ class GProgramListener implements MouseListener, MouseMotionListener {
 /**
  * Waits for a mouse click in the window before proceeding.
  *
- * @usage waitForClick();
+ * Example: waitForClick();
  */
 	public synchronized void waitForClick() {
 		clickFlag = false;

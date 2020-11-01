@@ -53,7 +53,7 @@ public class GLine extends GObject implements GScalable {
  * line and the point (<code>x1</code>,&nbsp;<code>y1</code>) defines
  * the end.
  *
- * @usage GLine gline = new GLine(x0, y0, x1, y1);
+ * Example: GLine gline = new GLine(x0, y0, x1, y1);
  * @param x0 The x-coordinate of the start of the line
  * @param y0 The y-coordinate of the start of the line
  * @param x1 The x-coordinate of the end of the line
@@ -69,7 +69,7 @@ public class GLine extends GObject implements GScalable {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		double x = getX();
@@ -81,7 +81,7 @@ public class GLine extends GObject implements GScalable {
 /**
  * Returns the bounding box for this object.
  *
- * @usage GRectangle bounds = gline.getBounds();
+ * Example: GRectangle bounds = gline.getBounds();
  * @return The bounding box for this object
  */
 	public GRectangle getBounds() {
@@ -94,10 +94,10 @@ public class GLine extends GObject implements GScalable {
 /**
  * Sets the initial point in the line to (<code>x</code>,&nbsp;<code>y</code>),
  * leaving the end point unchanged.  This method is therefore different from
- * <a href="#setLocation(double, double)"><code>setLocation</code></a>, which
+ * <code>setLocation</code>, which
  * moves both components of the line segment.
  *
- * @usage gline.setStartPoint(x, y);
+ * Example: gline.setStartPoint(x, y);
  * @param x The new x-coordinate of the origin
  * @param y The new y-coordinate of the origin
  */
@@ -110,10 +110,10 @@ public class GLine extends GObject implements GScalable {
 /* Method: getStartPoint() */
 /**
  * Returns the coordinates of the initial point in the line.  This method is
- * identical to <a href="#getLocation()"><code>getLocation</code></a> and exists only to
- * provide symmetry with <a href="#setStartPoint(double, double)"><code>setStartPoint</code></a>.
+ * identical to <code>getLocation</code> and exists only to
+ * provide symmetry with <code>setStartPoint</code>.
  *
- * @usage GPoint pt = gline.getStartPoint();
+ * Example: GPoint pt = gline.getStartPoint();
  * @return The coordinates of the origin of the line
  */
 	public GPoint getStartPoint() {
@@ -125,7 +125,7 @@ public class GLine extends GObject implements GScalable {
  * Sets the end point of the line to the point (<code>x</code>,&nbsp;<code>y</code>).
  * The origin of the line remains unchanged.
  *
- * @usage gline.setEndPoint(x, y);
+ * Example: gline.setEndPoint(x, y);
  * @param x The new x-coordinate of the end point
  * @param y The new y-coordinate of the end point
  */
@@ -139,7 +139,7 @@ public class GLine extends GObject implements GScalable {
 /**
  * Returns the end point of the line as a <code>GPoint</code> object.
  *
- * @usage GPoint pt = gline.getEndPoint();
+ * Example: GPoint pt = gline.getEndPoint();
  * @return The coordinates of the end point of the line
  */
 	public GPoint getEndPoint() {
@@ -151,7 +151,7 @@ public class GLine extends GObject implements GScalable {
  * Scales the line on the screen by the scale factors <code>sx</code> and <code>sy</code>.
  * This method changes only the end point of the line, leaving the start of the line fixed.
  *
- * @usage gline.scale(sx, sy);
+ * Example: gline.scale(sx, sy);
  * @param sx The factor used to scale all coordinates in the x direction
  * @param sy The factor used to scale all coordinates in the y direction
  */
@@ -166,7 +166,7 @@ public class GLine extends GObject implements GScalable {
  * Scales the object on the screen by the scale factor <code>sf</code>, which applies
  * in both dimensions.
  *
- * @usage gobj.scale(sf);
+ * Example: gobj.scale(sf);
  * @param sf The factor used to scale all coordinates in both dimensions
  */
 	public final void scale(double sf) {
@@ -177,10 +177,10 @@ public class GLine extends GObject implements GScalable {
 /**
  * Checks to see whether a point is inside the object.  For the <code>GLine</code>
  * class, containment is defined to mean that the point is within
- * <a href="#LINE_TOLERANCE"><code>LINE_TOLERANCE</code></a> pixels of the
+ * <code>LINE_TOLERANCE</code> pixels of the
  * line.
  *
- * @usage if (gline.contains(x, y)) . . .
+ * Example: if (gline.contains(x, y)) . . .
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return <code>true</code> if the point (<code>x</code>,&nbsp;<code>y</code>) is inside
@@ -202,88 +202,10 @@ public class GLine extends GObject implements GScalable {
 		return distanceSquared(x, y, x0 + u * (x1 - x0), y0 + u * (y1 - y0)) < tSquared;
 	}
 
-/* Inherited method: contains(pt) */
-/**
- * @inherited GObject#boolean contains(GPoint pt)
- * Checks to see whether a point is inside the object.
- */
-
-/* Inherited method: sendToFront() */
-/**
- * @inherited GObject#void sendToFront()
- * Moves this object to the front of the display in the <i>z</i> dimension.
- */
-
-/* Inherited method: sendToBack() */
-/**
- * @inherited GObject#void sendToBack()
- * Moves this object to the back of the display in the <i>z</i> dimension.
- */
-
-/* Inherited method: sendForward() */
-/**
- * @inherited GObject#void sendForward()
- * Moves this object one step toward the front in the <i>z</i> dimension.
- */
-
-/* Inherited method: sendBackward() */
-/**
- * @inherited GObject#void sendBackward()
- * Moves this object one step toward the back in the <i>z</i> dimension.
- */
-
-/* Inherited method: setColor(color) */
-/**
- * @inherited GObject#void setColor(Color color)
- * Sets the color used to display this object.
- */
-
-/* Inherited method: getColor() */
-/**
- * @inherited GObject#Color getColor()
- * Returns the color used to display this object.
- */
-
-/* Inherited method: setVisible(visible) */
-/**
- * @inherited GObject#void setVisible(boolean visible)
- * Sets whether this object is visible.
- */
-
-/* Inherited method: isVisible() */
-/**
- * @inherited GObject#boolean isVisible()
- * Checks to see whether this object is visible.
- */
-
-/* Inherited method: addMouseListener(listener) */
-/**
- * @inherited GObject#void addMouseListener(MouseListener listener)
- * Adds a mouse listener to this graphical object.
- */
-
-/* Inherited method: removeMouseListener(listener) */
-/**
- * @inherited GObject#void removeMouseListener(MouseListener listener)
- * Removes a mouse listener from this graphical object.
- */
-
-/* Inherited method: addMouseMotionListener(listener) */
-/**
- * @inherited GObject#void addMouseMotionListener(MouseMotionListener listener)
- * Adds a mouse motion listener to this graphical object.
- */
-
-/* Inherited method: removeMouseMotionListener(listener) */
-/**
- * @inherited GObject#void removeMouseMotionListener(MouseMotionListener listener)
- * Removes a mouse motion listener from this graphical object.
- */
-
 /* Protected method: paramString() */
 /**
  * Returns a string indicating the parameters of this object.
- * @noshow
+ *
  */
 	public String paramString() {
 		String tail = super.paramString();

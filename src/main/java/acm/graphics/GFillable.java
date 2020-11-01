@@ -32,7 +32,7 @@ public interface GFillable {
 /**
  * Sets whether this object is filled.
  *
- * @usage gobj.setFilled(fill);
+ * Example: gobj.setFilled(fill);
  * @param fill <code>true</code> if the object should be filled, <code>false</code> for an outline
  */
 	public void setFilled(boolean fill);
@@ -41,7 +41,7 @@ public interface GFillable {
 /**
  * Returns whether this object is filled.
  *
- * @usage if (gobj.isFilled()) . . .
+ * Example: if (gobj.isFilled()) . . .
  * @return The color used to display the object
  */
 	public boolean isFilled();
@@ -50,7 +50,7 @@ public interface GFillable {
 /**
  * Sets the color used to display the filled region of this object.
  *
- * @usage gobj.setFillColor(color);
+ * Example: gobj.setFillColor(color);
  * @param color The color used to display the filled region of this object
  */
 	public void setFillColor(Color color);
@@ -61,7 +61,7 @@ public interface GFillable {
  * none has been set, <code>getFillColor</code> returns the color of the
  * object.
  *
- * @usage Color color = gobj.getFillColor();
+ * Example: Color color = gobj.getFillColor();
  * @return The color used to display the filled region of this object
  */
 	public Color getFillColor();

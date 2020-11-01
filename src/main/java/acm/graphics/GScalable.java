@@ -31,7 +31,7 @@ public interface GScalable {
 /**
  * Scales the object on the screen by the scale factors <code>sx</code> and <code>sy</code>.
  *
- * @usage gobj.scale(sx, sy);
+ * Example: gobj.scale(sx, sy);
  * @param sx The factor used to scale all coordinates in the x direction
  * @param sy The factor used to scale all coordinates in the y direction
  */
@@ -42,7 +42,7 @@ public interface GScalable {
  * Scales the object on the screen by the scale factor <code>sf</code>, which applies
  * in both dimensions.
  *
- * @usage gobj.scale(sf);
+ * Example: gobj.scale(sf);
  * @param sf The factor used to scale all coordinates in both dimensions
  */
 	public void scale(double sf);

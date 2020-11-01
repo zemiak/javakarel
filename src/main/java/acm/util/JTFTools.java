@@ -81,7 +81,7 @@ public class JTFTools {
  * milliseconds.  Unlike <code>Thread.sleep</code>, this method never throws an
  * exception.
  *
- * @usage JTFTools.pause(milliseconds);
+ * Example: JTFTools.pause(milliseconds);
  * @param milliseconds The sleep time in milliseconds
  */
 	public static void pause(double milliseconds) {
@@ -105,7 +105,7 @@ public class JTFTools {
  * such components as placeholders.  Defining it in JTFTools gives those
  * pacakges access to a common mechanism.
  *
- * @usage Container comp = JTFTools.createEmptyContainer();
+ * Example: Container comp = JTFTools.createEmptyContainer();
  * @return An empty lightweight container that can be used as a placeholder
  */
 	public static Container createEmptyContainer() {
@@ -116,7 +116,7 @@ public class JTFTools {
 /**
  * Returns the frame that encloses the specified component.
  *
- * @usage Frame frame = JTFTools.getEnclosingFrame(comp);
+ * Example: Frame frame = JTFTools.getEnclosingFrame(comp);
  * @param comp The component at which to start the search
  * @return The nearest enclosing <code>Frame</code> object
  */
@@ -134,7 +134,7 @@ public class JTFTools {
  * This method is required because some browsers do not support the standard
  * fonts <code>Serif</code>, <code>SansSerif</code>, and <code>Monospaced</code>.
  *
- * @usage Font newFont = JTFTools.getStandardFont(font);
+ * Example: Font newFont = JTFTools.getStandardFont(font);
  * @param font The font being checked
  * @return The new font
  */
@@ -160,7 +160,7 @@ public class JTFTools {
 /**
  * Returns an array of the available font family names.
  *
- * @usage String[] fonts = JTFTools.getFontList();
+ * Example: String[] fonts = JTFTools.getFontList();
  * @return An array of the available font family names
  */
 	public static String[] getFontList() {
@@ -174,11 +174,11 @@ public class JTFTools {
  * the current <code>GraphicsEnvironment</code>.  As in HTML font tags, the
  * <code>str</code> consists of a set of font names separated by semicolons.
  * The <code>findFontFamily</code> method returns the first family name that
- * exists in the list of loaded fonts, or <code>null</code> if there are none.
+ * exists in the list of loaded fonts, or null if there are none.
  *
- * @usage String familyName = JTFTools.findFontFamily(str);
+ * Example: String familyName = JTFTools.findFontFamily(str);
  * @param str The list of family names separated by semicolons
- * @return The first family name that exists, or <code>null</code> if none
+ * @return The first family name that exists, or null if none
  */
 	public static String findFontFamily(String str) {
 		if (!fontFamilyTableInitialized) initFontFamilyTable();
@@ -194,7 +194,7 @@ public class JTFTools {
 /**
  * Decodes a font in the style of <code>Font.decode</code>.
  *
- * @usage Font font = JTFTools.decodeFont(str);
+ * Example: Font font = JTFTools.decodeFont(str);
  * @param str The string to decode
  * @return The new font
  */
@@ -209,7 +209,7 @@ public class JTFTools {
  * the different parts of the font.  If the family, size, or style is specified
  * as an asterisk, the corresponding value is taken from the supplied font.
  *
- * @usage Font font = JTFTools.decodeFont(str, oldFont);
+ * Example: Font font = JTFTools.decodeFont(str, oldFont);
  * @param str The string to decode
  * @param oldFont The font whose properties are used as defaults
  * @return The new font
@@ -271,7 +271,7 @@ public class JTFTools {
  * Decodes a color name.  This method is similar to <code>Color.decode</code>
  * except in that it allows named colors and system colors.
  *
- * @usage color = JTFTools.decodeColor(name);
+ * Example: color = JTFTools.decodeColor(name);
  * @param name The string name of the color
  * @return The color corresponding to the specified name
  */
@@ -330,7 +330,7 @@ public class JTFTools {
  * pattern string is interpreted in much the same way that a Unix shell
  * expands filenames and supports the following wildcard options:
  *
- * <table>
+ * <table><caption>Examples</caption>
  * <tr><td align=center><code>?</code></td><td>Matches any single character</td></tr>
  * <tr><td align=center><code>*</code></td><td>Matches any sequence of characters</td></tr>
  * <tr><td align=center><code>[...]</code></td><td>Matches any of the specified characters</td></tr>
@@ -340,7 +340,7 @@ public class JTFTools {
  * The last two options allow a range of characters to be specified in the form
  * <code>a-z</code>.
  *
- * @usage if (JTFTools.matchFilenamePattern(filename, pattern)) . . .
+ * Example: if (JTFTools.matchFilenamePattern(filename, pattern)) . . .
  * @param filename The filename being tested
  * @param pattern The pattern including wildcards
  * @return <code>true</code> if the filename matches the pattern
@@ -353,9 +353,9 @@ public class JTFTools {
 /**
  * Adds this applet to a table indexed by the current thread.
  *
- * @usage JTFTools.registerApplet(applet);
+ * Example: JTFTools.registerApplet(applet);
  * @param applet The applet being registered
- * @noshow
+ *
  */
 	public static void registerApplet(Applet applet) {
 		registerApplet(applet, Thread.currentThread());
@@ -366,10 +366,10 @@ public class JTFTools {
 /**
  * Adds this applet to a table indexed by the specified thread.
  *
- * @usage JTFTools.registerApplet(applet);
+ * Example: JTFTools.registerApplet(applet);
  * @param applet The applet being registered
  * @param thread The thread used as the key
- * @noshow
+ *
  */
 	public static void registerApplet(Applet applet, Thread thread) {
 		appletTable.put(thread, applet);
@@ -383,9 +383,9 @@ public class JTFTools {
  * for example, during the <code>init</code> method of a program,
  * which is the only context in which it is applied in the JTF tools.
  *
- * @usage Applet applet JTFTools.getApplet();
+ * Example: Applet applet JTFTools.getApplet();
  * @return The currently running applet
- * @noshow
+ *
  */
 	public static Applet getApplet() {
 		Applet applet = appletTable.get(Thread.currentThread());
@@ -398,9 +398,9 @@ public class JTFTools {
  * Sets the debugging options in place for this run.  The list of options are
  * a set of strings combined with the <code>+</code> sign character.
  *
- * @usage JTFTools.setDebugOption(options)
+ * Example: JTFTools.setDebugOption(options)
  * @param options The names of the enabled options separated by plus signs
- * @noshow
+ *
  */
 	public static void setDebugOptions(String options) {
 		debugOptions = (options == null) ? null : "+" + options.toLowerCase() + "+";
@@ -412,10 +412,10 @@ public class JTFTools {
  * parameter that contains the specified string as a lexical unit in a string
  * delimited by <code>+</code> signs.
  *
- * @usage if (JTFTools.testDebugOption(option)) . . .
+ * Example: if (JTFTools.testDebugOption(option)) . . .
  * @param option The name of the option
  * @return The constant <code>true</code> if the specified debug option is in effect
- * @noshow
+ *
  */
 	public static boolean testDebugOption(String option) {
 		if (debugOptions == null) return false;
@@ -424,12 +424,12 @@ public class JTFTools {
 
 /* Static method: getCommandLine() */
 /**
- * Returns the command line that invoked this program, or <code>null</code>
+ * Returns the command line that invoked this program, or null
  * if no command line is available.
  *
- * @usage String line = JTFTools.getCommandLine();
+ * Example: String line = JTFTools.getCommandLine();
  * @return The command line that invoked this program
- * @noshow
+ *
  */
 	public static String getCommandLine() {
 		switch (Platform.getPlatform()) {
@@ -446,9 +446,9 @@ public class JTFTools {
 /**
  * Returns the name of the main class.
  *
- * @usage String className = JTFTools.getMainClass();
+ * Example: String className = JTFTools.getMainClass();
  * @return The name of the main class, or null if that class cannot be identified
- * @noshow
+ *
  */
 	public static String getMainClass() {
 		String className = null;
@@ -471,10 +471,10 @@ public class JTFTools {
 /**
  * Returns true if the specified class is already loaded.
  *
- * @usage if (JTFTools.checkIfLoaded(className)) . . .
+ * Example: if (JTFTools.checkIfLoaded(className)) . . .
  * @param className The name of the class
  * @return The boolean value true if the class is already loaded, and false otherwise
- * @noshow
+ *
  */
 	public static boolean checkIfLoaded(String className) {
 		if (Platform.compareVersion("1.2") < 0) return false;
@@ -510,9 +510,9 @@ public class JTFTools {
  * Terminates all of the threads that are registered as belonging to the
  * specified applet.
  *
- * @usage JTFTools.terminateAppletThreads(applet);
+ * Example: JTFTools.terminateAppletThreads(applet);
  * @param applet The applet whose threads are being terminated
- * @noshow
+ *
  */
 	public static void terminateAppletThreads(Applet applet) {
 		try {
@@ -536,9 +536,10 @@ public class JTFTools {
  * Returns <code>true</code> if the supplied thread is an anonymous
  * one created automatically by the system.
  *
- * @usage if (JTFTools.isAnonymous(t)) . . .
+ * Example: if (JTFTools.isAnonymous(t)) . . .
  * @param t The thread being tested
- * @noshow
+ * @return yes or no
+ *
  */
 	public static boolean isAnonymous(Thread t) {
 		String name = t.getName();
@@ -557,12 +558,12 @@ public class JTFTools {
  * in the message, including the headers.  Closing the stream sends the message.
  * To cancel the message without sending it, use the <code>cancelMail</code> method.
  *
- * @usage JTFTools.openMailStream(smtpServer, from, to);
+ * Example: JTFTools.openMailStream(smtpServer, from, to);
  * @param smtpServer A string indicating the host name of the SMTP server
  * @param from A string indicating the e-mail address of the sender
  * @param to A string indicating the e-mail address of this recipient
  * @return A <code>PrintStream</code> suitable for sending the message data
- * @noshow
+ *
  */
 	public static PrintStream openMailStream(String smtpServer, String from, String to) {
 		return new MailStream(smtpServer, from, to);
@@ -573,9 +574,9 @@ public class JTFTools {
  * Cancels the mail-sending process without sending the message.  The output stream
  * is closed after returning.
  *
- * @usage JTFTools.cancelMail(out);
+ * Example: JTFTools.cancelMail(out);
  * @param out The output stream returned by <code>openMailStream</code>
- * @noshow
+ *
  */
 	public static void cancelMail(PrintStream out) {
 		((MailStream) out).cancel();
@@ -585,11 +586,11 @@ public class JTFTools {
 /**
  * Adds the standard "To", "From", "Subject", and "Date" headers to the message.
  *
- * @usage JTFTools.sendStandardHeaders(out, senderName, subject);
+ * Example: JTFTools.sendStandardHeaders(out, senderName, subject);
  * @param out The output stream returned by <code>openMailStream</code>
  * @param senderName The real name of the sender
  * @param subject The subject line
- * @noshow
+ *
  */
 	public static void sendStandardHeaders(PrintStream out, String senderName, String subject) {
 		((MailStream) out).sendStandardHeaders(senderName, subject);
@@ -602,10 +603,10 @@ public class JTFTools {
  * the client can use to which the client can send binary data, which is then
  * written in encoded form to the underlying  <code>PrintStream</code> object.
  *
- * @usage JTFTools.openHexByteOutputStream(printStream);
+ * Example: JTFTools.openHexByteOutputStream(printStream);
  * @param printStream The underlying <code>PrintStream</code> to which data is written
  * @return An <code>OutputStream</code> for writing binary data
- * @noshow
+ *
  */
 	public static OutputStream openHexByteOutputStream(PrintStream printStream) {
 		return new HexByteOutputStream(printStream);
@@ -622,43 +623,41 @@ public class JTFTools {
  * one would need to do for a multi-attachment message, for example), call the
  * <code>padBase64OutputStream</code> method.
  *
- * @usage JTFTools.openBase64OutputStream(printStream);
+ * Example: JTFTools.openBase64OutputStream(printStream);
  * @param printStream The underlying <code>PrintStream</code> to which data is written
  * @return An <code>OutputStream</code> for writing binary data
- * @noshow
+ *
  */
 	public static OutputStream openBase64OutputStream(PrintStream printStream) {
 		return new Base64OutputStream(printStream);
 	}
 
-/* Static method: padBase64OutputStream(out) */
 /**
  * Pads the data in the specified output stream without closing it.  This method
  * is automatically called when the stream is closed, but must be called explicitly
  * if you intend to write additional data to the underlying <code>PrintStream</code>.
  *
- * @usage JTFTools.padBase64OutputStream(out);
+ * Example: JTFTools.padBase64OutputStream(out);
  * @param out The output stream returned by <code>openBase64OutputStream</code>
- * @noshow
+ *
  */
 	public static void padBase64OutputStream(OutputStream out) {
 		((Base64OutputStream) out).pad();
 	}
 
-/* Static method: exportJar(jarFile, dir, libName, transformer) */
 /**
- * Exports a jar file consisting of all the <code>.class<code> files
+ * Exports a jar file consisting of all the <code>.class</code> files
  * in the directory, including those embedded inside jar files.
- * If the <code>transformer</code> method is not <code>null</code>, its
+ * If the <code>transformer</code> method is not null, its
  * <code>transform</code> method is called to dump the bytes of the class
  * instead of simply copying them.
  *
- * @usage exportJar(jarFile, dir, libName, transformer);
+ * Example: exportJar(jarFile, dir, libName, transformer);
  * @param jarFile A <code>File</code> object indicating the destination jar file
  * @param dir The directory being exported
- * @param imports A semicolon-separated list of <code>.jar</code> files to include (or <code>null</code>)
- * @param transformer An object to transform class data (or <code>null</code>)
- * @noshow
+ * @param imports A semicolon-separated list of <code>.jar</code> files to include (or null)
+ * @param transformer An object to transform class data (or null)
+ *
  */
 	public static void exportJar(File jarFile, File dir, String imports, Object transformer) {
 		try {
@@ -676,11 +675,11 @@ public class JTFTools {
  * actions.  If so, it executes the method and returns <code>true</code>;
  * if not, the method returns <code>false</code>.
  *
- * @usage boolean ok = JTFTools.executeExportAction(program, command);
+ * Example: boolean ok = JTFTools.executeExportAction(program, command);
  * @param program The program to which the action is applied
  * @param command The command name being executed
  * @return A flag indicating whether the action was recognized
- * @noshow
+ *
  */
 	public static boolean executeExportAction(Program program, String command) {
 		if (command.equals("Export Applet") || command.equals("Submit Project")) {
@@ -694,9 +693,9 @@ public class JTFTools {
 /**
  * Returns the canonical name of the local host.
  *
- * @usage String hostName = JTFTools.getLocalHostName();
- * @return The fully qualified name of the local host, or <code>null</code> if unavailable
- * @noshow
+ * Example: String hostName = JTFTools.getLocalHostName();
+ * @return The fully qualified name of the local host, or null if unavailable
+ *
  */
 	public static String getLocalHostName() {
 		try {
@@ -713,7 +712,7 @@ public class JTFTools {
 /**
  * Copies a file from <code>oldFile</code> to <code>newFile</code>.
  *
- * @usage JTFTools.copyFile(oldFile, newFile);
+ * Example: JTFTools.copyFile(oldFile, newFile);
  * @param oldFile A <code>File</code> object indicating the existing file
  * @param newFile A <code>File</code> object indicating the new file
  */
@@ -736,6 +735,7 @@ public class JTFTools {
  * @param in The input stream
  * @param out The output stream
  * @param nBytes The number of bytes to copy
+ * @throws IOException when read/write fails
  */
 	public static void copyBytes(InputStream in, OutputStream out, long nBytes) throws IOException {
 		byte[] buffer = new byte[BUFFER_SIZE];
@@ -756,7 +756,7 @@ public class JTFTools {
 /**
  * Returns the last component of the URL path.
  *
- * @usage String suffix = getURLSuffix(path);
+ * Example: String suffix = getURLSuffix(path);
  * @param path The string version of the URL
  * @return The last component of the URL path
  */
@@ -769,7 +769,7 @@ public class JTFTools {
  * Exports an applet version of the specified program.  The directory used for the
  * applet is chosen by a popup dialog.
  *
- * @usage submitProject(program, progress);
+ * Example: submitProject(program, progress);
  * @param program The program being submitted
  * @param progress An optional progress bar to keep track of the operation
  */
@@ -927,8 +927,8 @@ public class JTFTools {
  * This code is adapted from a more general command-line scanner written
  * by Erik Forslin.
  *
- * @usage String line = getShellCommandLine();
- * @return The shell command line that invoked this process, or <code>null</code>
+ * Example: String line = getShellCommandLine();
+ * @return The shell command line that invoked this process, or null
  *         if no command line is available
  */
 	private static String getShellCommandLine() {
@@ -951,9 +951,9 @@ public class JTFTools {
  * Attempts to read the name of the main class from the manifest of
  * the specified JAR file.
  *
- * @usage String className = readMainClassFromManifest(jarName);
+ * Example: String className = readMainClassFromManifest(jarName);
  * @param jarName The name of the JAR file
- * @return The name of the main class, or <code>null</code>
+ * @return The name of the main class, or null
  */
 	private static String readMainClassFromManifest(String jarName) {
 		try {
@@ -988,9 +988,9 @@ public class JTFTools {
  * programs can always avoid the need for this method by supplying their
  * own version of <code>main</code>.
  *
- * @usage String className = readMainClassFromCommandLine(line);
+ * Example: String className = readMainClassFromCommandLine(line);
  * @param line The command line
- * @return The name of the main class, or <code>null</code>
+ * @return The name of the main class, or null
  */
 	private static String readMainClassFromCommandLine(String line) {
 		if (testDebugOption("main")) {
@@ -1048,8 +1048,8 @@ public class JTFTools {
  * the class path to find any classes that are already loaded and that
  * extend Program.
  *
- * @usage String className = readMainClassFromClassPath();
- * @return The name of the main class, or <code>null</code>
+ * Example: String className = readMainClassFromClassPath();
+ * @return The name of the main class, or null
  */
 	private static String readMainClassFromClassPath() {
 		String result = null;
@@ -1113,7 +1113,7 @@ public class JTFTools {
 /**
  * Submits this project as a mail message.
  *
- * @usage submitProject(program, progress);
+ * Example: submitProject(program, progress);
  * @param program The program being submitted
  * @param progress An optional progress bar to keep track of the operation
  */
@@ -1208,10 +1208,10 @@ public class JTFTools {
  * @param dir The directory to be written
  * @param out The <code>ZipOutputStream</code> to which the data is written
  * @param outDir The output directory
- * @param imports A semicolon-separated list of <code>.jar</code> files to include (or <code>null</code>)
+ * @param imports A semicolon-separated list of <code>.jar</code> files to include (or null)
  * @param progress A <code>JProgressBar</code> to keep track of the progress
  * @param exportFiles A flag indicating whether files are to be exported
- * @param transformer An object to transform class data (or <code>null</code>)
+ * @param transformer An object to transform class data (or null)
  */
 	private static void dumpJarAndResources(String path, File dir, ZipOutputStream out,
 	                                        File outDir, String imports, JProgressBar progress,
@@ -1349,7 +1349,7 @@ public class JTFTools {
 /* Private static method: getLibrary(libName) */
 /**
  * Returns a <code>File</code> object for the named library on the
- * class path, or <code>null</code> if no such library is available.
+ * class path, or null if no such library is available.
  */
 	private static File getLibrary(String libName) {
 		if (libName == null) return null;
@@ -2296,7 +2296,7 @@ class MailStream extends PrintStream {
  * Creates a <code>PrintStream</code> subclass that allows the client to send a
  * message.
  *
- * @usage MailStream mail = new MailStream(smtpServer, from, to);
+ * Example: MailStream mail = new MailStream(smtpServer, from, to);
  * @param smtpServer A string indicating the host name of the SMTP server
  * @param from A string indicating the e-mail address of the sender
  * @param to A string indicating the e-mail address of this recipient
@@ -2599,7 +2599,7 @@ class HexByteOutputStream extends OutputStream {
 /**
  * Creates an <code>OutputStream</code> subclass that converts data to hex bytes.
  *
- * @usage HexByteOutputStream out = new HexByteOutputStream(printStream);
+ * Example: HexByteOutputStream out = new HexByteOutputStream(printStream);
  * @param printStream The underlying <code>PrintStream</code> to which data is written
  */
 	public HexByteOutputStream(PrintStream printStream) {
@@ -2654,7 +2654,7 @@ class Base64OutputStream extends OutputStream {
  * Creates an <code>OutputStream</code> subclass that converts data to
  * its Base64 encoding.
  *
- * @usage Base64OutputStream out = new Base64OutputStream(printStream);
+ * Example: Base64OutputStream out = new Base64OutputStream(printStream);
  * @param printStream The underlying <code>PrintStream</code> to which data is written
  */
 	public Base64OutputStream(PrintStream printStream) {

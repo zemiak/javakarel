@@ -48,7 +48,7 @@ public class MovieClip extends Container {
 /**
  * Creates a <code>MovieClip</code> object from the specified movie file.
  *
- * @usage MovieClip movie = new MovieClip(filename);
+ * Example: MovieClip movie = new MovieClip(filename);
  * @param filename The file from which the movie is read
  */
 	public MovieClip(String filename) {
@@ -59,7 +59,7 @@ public class MovieClip extends Container {
 /**
  * Creates a <code>MovieClip</code> object from the specified movie file.
  *
- * @usage MovieClip movie = new MovieClip(file);
+ * Example: MovieClip movie = new MovieClip(file);
  * @param file A <code>File</code> object from which the movie is read
  */
 	public MovieClip(File file) {
@@ -70,7 +70,7 @@ public class MovieClip extends Container {
 /**
  * Creates a <code>MovieClip</code> object from the specified network URL.
  *
- * @usage MovieClip movie = new MovieClip(file);
+ * Example: MovieClip movie = new MovieClip(file);
  * @param url A network URL containing the movie
  */
 	public MovieClip(URL url) {
@@ -81,7 +81,7 @@ public class MovieClip extends Container {
 /**
  * Starts the movie from its current position.
  *
- * @usage movie.play();
+ * Example: movie.play();
  */
 	public void play() {
 		setLooping(false);
@@ -92,7 +92,7 @@ public class MovieClip extends Container {
 /**
  * Plays the movie in a continuous audio loop.
  *
- * @usage movie.loop();
+ * Example: movie.loop();
  */
 	public void loop() {
 		setLooping(true);
@@ -103,7 +103,7 @@ public class MovieClip extends Container {
 /**
  * Stops the playback of the movie.
  *
- * @usage movie.stop();
+ * Example: movie.stop();
  */
 	public synchronized void stop() {
 		stopMovie();
@@ -115,7 +115,7 @@ public class MovieClip extends Container {
  * Returns the name of the movie, which is typically the file name from which it
  * was read.
  *
- * @usage String name = movie.getName();
+ * Example: String name = movie.getName();
  * @return The name of the movie
  */
 	public String getName() {
@@ -126,7 +126,7 @@ public class MovieClip extends Container {
 /**
  * Sets a name to identify the movie.
  *
- * @usage movie.setName(name);
+ * Example: movie.setName(name);
  * @param name The name to use for the movie
  */
 	public void setName(String name) {
@@ -137,7 +137,7 @@ public class MovieClip extends Container {
 /**
  * Returns the number of frames in a movie.
  *
- * @usage int nFrames = movie.getFrameCount();
+ * Example: int nFrames = movie.getFrameCount();
  * @return The number of frames in a movie
  */
 	public int getFrameCount() {
@@ -148,7 +148,7 @@ public class MovieClip extends Container {
 /**
  * Returns the frame rate of the movie.
  *
- * @usage double frameRate = movie.getFrameRate();
+ * Example: double frameRate = movie.getFrameRate();
  * @return The frame rate of the movie (in frames/second)
  */
 	public double getFrameRate() {
@@ -159,7 +159,7 @@ public class MovieClip extends Container {
 /**
  * Returns the duration of a movie (in seconds).
  *
- * @usage double duration = movie.getDuration();
+ * Example: double duration = movie.getDuration();
  * @return The duration of a movie (in seconds)
  */
 	public double getDuration() {
@@ -170,7 +170,7 @@ public class MovieClip extends Container {
 /**
  * Returns the current frame index in the movie.
  *
- * @usage int frameIndex = movie.getFrameIndex();
+ * Example: int frameIndex = movie.getFrameIndex();
  * @return The current frame index in the movie
  */
 	public int getFrameIndex() {
@@ -181,7 +181,7 @@ public class MovieClip extends Container {
 /**
  * Sets the current frame index.
  *
- * @usage movie.setFrameIndex(frameIndex);
+ * Example: movie.setFrameIndex(frameIndex);
  * @param frameIndex The current frame index in the movie
  */
 	public void setFrameIndex(int frameIndex) {
@@ -193,7 +193,7 @@ public class MovieClip extends Container {
  * Rewinds the movie to the beginning.  This method is useful after you have
  * stopped a movie and want to replay it from the beginning.
  *
- * @usage movie.rewind();
+ * Example: movie.rewind();
  */
 	public void rewind() {
 		setFrameIndex(0);
@@ -204,7 +204,7 @@ public class MovieClip extends Container {
  * Returns the playback volume setting for the movie, which is a number
  * between 0 (silent) and 1 (maximum volume).
  *
- * @usage double volume = movie.getVolume();
+ * Example: double volume = movie.getVolume();
  * @return The playback volume setting for the movie
  */
 	public double getVolume() {
@@ -216,7 +216,7 @@ public class MovieClip extends Container {
  * Sets the playback volume setting for the movie, which is a number
  * between 0 (silent) and 1 (maximum volume).
  *
- * @usage movie.setVolume(volume);
+ * Example: movie.setVolume(volume);
  * @param volume The new volume setting for the movie
  */
 	public void setVolume(double volume) {
@@ -233,7 +233,7 @@ public class MovieClip extends Container {
  * should run in reverse, so that a playback rate of -1.0 specifies that the
  * movie should run backwards at normal speed.
  *
- * @usage double rate = movie.getPlaybackRate();
+ * Example: double rate = movie.getPlaybackRate();
  * @return The playback rate for the movie
  */
 	public double getPlaybackRate() {
@@ -248,7 +248,7 @@ public class MovieClip extends Container {
  * should run in reverse, so that a playback rate of -1.0 specifies that the
  * movie should run backwards at normal speed.
  *
- * @usage sound.setPlaybackRate(rate);
+ * Example: sound.setPlaybackRate(rate);
  * @param rate The new playback rate for the movie
  */
 	public void setPlaybackRate(double rate) {
@@ -261,7 +261,7 @@ public class MovieClip extends Container {
  * Enables the QuickTime controller displayed at the bottom of the movie.  This
  * call has no effect if a controller is already enabled.
  *
- * @usage movie.enableController();
+ * Example: movie.enableController();
  */
 	public void enableController() {
 		if (hasQuickTime) setControllerVisible(true);
@@ -273,7 +273,7 @@ public class MovieClip extends Container {
  * disappear from the window.  This call has no effect if no controller is
  * already disabled.
  *
- * @usage movie.disableController();
+ * Example: movie.disableController();
  */
 	public void disableController() {
 		if (hasQuickTime) setControllerVisible(false);
@@ -283,7 +283,7 @@ public class MovieClip extends Container {
 /**
  * Returns <code>true</code> if the QuickTime controller is enabled.
  *
- * @usage if (movie.isControllerEnabled()) . . .
+ * Example: if (movie.isControllerEnabled()) . . .
  * @return <code>true</code> if the controller is enabled
  */
 	public boolean isControllerEnabled() {
@@ -295,7 +295,7 @@ public class MovieClip extends Container {
  * Returns the height of the QuickTime controller, measured in pixels.  If
  * no controller is installed, <code>getControllerHeight</code> returns 0.
  *
- * @usage int height = movie.getControllerHeight();
+ * Example: int height = movie.getControllerHeight();
  * @return The height of the QuickTime controller (in pixels)
  */
 	public int getControllerHeight() {
@@ -311,9 +311,9 @@ public class MovieClip extends Container {
  * Returns the desired height of the movie panel, which is taken from the
  * underlying movie, taking account of the controller, if any.
  *
- * @usage Dimension size = movie.getPreferredSize();
+ * Example: Dimension size = movie.getPreferredSize();
  * @return The desired height of the movie panel
- * @noshow
+ *
  */
 	public Dimension getPreferredSize() {
 		if (movie == null) return DEFAULT_SIZE;

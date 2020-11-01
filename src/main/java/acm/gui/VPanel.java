@@ -40,7 +40,7 @@ public class VPanel extends TablePanel {
  * Creates a new <code>VPanel</code>.  A <code>VPanel</code> uses a
  * <code>TableLayout</code> manager with a single column.
  *
- * @usage VPanel vbox = new VPanel();
+ * Example: VPanel vbox = new VPanel();
  */
 	public VPanel() {
 		this(0, 0);
@@ -53,7 +53,7 @@ public class VPanel extends TablePanel {
  * elements.  For a <code>VPanel</code>, the <code>hgap</code> is used
  * to assign space to the left and right of the column.
  *
- * @usage VPanel vbox = new VPanel(hgap, vgap);
+ * Example: VPanel vbox = new VPanel(hgap, vgap);
  * @param hgap The gap between columns
  * @param vgap The gap between rows
  */

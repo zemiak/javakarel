@@ -51,7 +51,7 @@ public class OptionTable {
  * The first option sets the value associated with the key to
  * the empty string; the second supplies the value explicitly.
  *
- * @usage OptionTable options = new OptionTable(str);
+ * Example: OptionTable options = new OptionTable(str);
  * @param str The option string that is parsed to initialize the table
  */
 	public OptionTable(String str) {
@@ -65,7 +65,7 @@ public class OptionTable {
  * <code>keys</code>.  If <code>keys</code> is <code>null</code>,
  * checking is disabled.
  *
- * @usage OptionTable options = new OptionTable(str, keys);
+ * Example: OptionTable options = new OptionTable(str, keys);
  * @param str The option string that is parsed to initialize the table
  * @param keys An array of strings indicating the legal keys
  */
@@ -104,7 +104,7 @@ public class OptionTable {
  * Creates a new <code>OptionTable</code> from an existing map.
  * Most clients will not need to use this method.
  *
- * @usage OptionTable options = new OptionTable(map);
+ * Example: OptionTable options = new OptionTable(map);
  * @param map An existing key/value mapping
  */
 	public OptionTable(Map<String,String> map) {
@@ -120,7 +120,7 @@ public class OptionTable {
 /**
  * Returns true if the key has been specified in the option table.
  *
- * @usage if (options.isSpecified(key)) . . .
+ * Example: if (options.isSpecified(key)) . . .
  * @param key The key being checked
  * @return <code>true</code> if <code>key</code> was specified in the option string
  */
@@ -133,7 +133,7 @@ public class OptionTable {
  * Returns the value associated with <code>key</code> in the option
  * table, or <code>null</code> if no such value exists.
  *
- * @usage String value = options.getOption(key);
+ * Example: String value = options.getOption(key);
  * @param key The key
  * @return The corresponding option value
  */
@@ -146,7 +146,7 @@ public class OptionTable {
  * Returns the value associated with <code>key</code> in the option
  * table or the specified default value if no such binding exists.
  *
- * @usage String value = options.getOption(key, defValue);
+ * Example: String value = options.getOption(key, defValue);
  * @param key The key
  * @param defValue The default to use if the key is not found
  * @return The corresponding option value
@@ -161,7 +161,7 @@ public class OptionTable {
  * Returns the integer value associated with <code>key</code> in the option
  * table, or 0 if no such value exists.
  *
- * @usage int value = options.getIntOption(key);
+ * Example: int value = options.getIntOption(key);
  * @param key The key
  * @return The corresponding option value parsed as an integer
  */
@@ -174,7 +174,7 @@ public class OptionTable {
  * Returns the integer value associated with <code>key</code> in the option
  * table or the specified default value if no such binding exists.
  *
- * @usage int value = options.getIntOption(key, defValue);
+ * Example: int value = options.getIntOption(key, defValue);
  * @param key The key
  * @param defValue The default to use if the key is not found
  * @return The corresponding option value
@@ -190,7 +190,7 @@ public class OptionTable {
  * Returns the <code>double</code> value associated with <code>key</code>
  * in the option table, or 0.0 if no such value exists.
  *
- * @usage double value = options.getDoubleOption(key);
+ * Example: double value = options.getDoubleOption(key);
  * @param key The key
  * @return The corresponding option value parsed as a <code>double</code>
  */
@@ -204,7 +204,7 @@ public class OptionTable {
  * in the option table or the specified default value if no such binding
  * exists.
  *
- * @usage double value = options.getDoubleOption(key, defValue);
+ * Example: double value = options.getDoubleOption(key, defValue);
  * @param key The key
  * @param defValue The default to use if the key is not found
  * @return The corresponding option value
@@ -219,9 +219,9 @@ public class OptionTable {
 /**
  * Returns the <code>HashMap</code> used to associate keys and options.
  *
- * @usage HashMap<String,String> map = options.getMap();
+ * Example: <code>HashMap map = options.getMap();</code>
  * @return The <code>HashMap</code> used to associate keys and options
- * @noshow
+ *
  */
 	public HashMap<String,String> getMap() {
 		return optionTable;

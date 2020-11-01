@@ -81,7 +81,7 @@ public class Animator extends Thread {
 /**
  * Creates a new <code>Animator</code> object.
  *
- * @usage Animator animator = new Animator();
+ * Example: Animator animator = new Animator();
  */
 	public Animator() {
 		initAnimator();
@@ -92,9 +92,9 @@ public class Animator extends Thread {
  * Creates a new <code>Animator</code> object and assigns it to the
  * specified thread group.
  *
- * @usage Animator animator = new Animator(group);
+ * Example: Animator animator = new Animator(group);
  * @param group The <code>ThreadGroup</code> to which the new thread is assigned
- * @noshow
+ *
  */
 	public Animator(ThreadGroup group) {
 		super(group, (Runnable) null);
@@ -105,9 +105,9 @@ public class Animator extends Thread {
 /**
  * Creates a new <code>Animator</code> object with the specified runnable object.
  *
- * @usage Animator animator = new Animator(runnable);
+ * Example: Animator animator = new Animator(runnable);
  * @param runnable Any object that implements the <code>Runnable</code> interface
- * @noshow
+ *
  */
 	public Animator(Runnable runnable) {
 		super(runnable);
@@ -119,10 +119,10 @@ public class Animator extends Thread {
  * Creates a new <code>Animator</code> object with the specified runnable object
  * and assigns it to the specified thread group.
  *
- * @usage Animator animator = new Animator(group, runnable);
+ * Example: Animator animator = new Animator(group, runnable);
  * @param group The <code>ThreadGroup</code> to which the new thread is assigned
  * @param runnable Any object that implements the <code>Runnable</code> interface
- * @noshow
+ *
  */
 	public Animator(ThreadGroup group, Runnable runnable) {
 		super(group, runnable);
@@ -152,7 +152,7 @@ public class Animator extends Thread {
  * <a href="#TERMINATING"><code>TERMINATING</code></a>,
  * as defined in this class.
  *
- * @usage int state = animator.getAnimatorState();
+ * Example: int state = animator.getAnimatorState();
  * @return The current state of the animator
  */
 	public int getAnimatorState() {
@@ -165,7 +165,7 @@ public class Animator extends Thread {
  * milliseconds.  Unlike <code>Thread.sleep</code>, this method never
  * throws an exception.
  *
- * @usage animator.pause(milliseconds);
+ * Example: animator.pause(milliseconds);
  * @param milliseconds The sleep time in milliseconds
  */
 	public void pause(double milliseconds) {
@@ -178,7 +178,7 @@ public class Animator extends Thread {
  * Triggers a <code>"start"</code> action, as if the <code>Start</code> button
  * is pushed.
  *
- * @usage animator.startAction();
+ * Example: animator.startAction();
  */
 	public void startAction() {
 		start(RUNNING);
@@ -189,7 +189,7 @@ public class Animator extends Thread {
  * Triggers a <code>"stop"</code> action, as if the <code>Stop</code> button
  * is pushed.
  *
- * @usage animator.stopAction();
+ * Example: animator.stopAction();
  */
 	public void stopAction() {
 		switch (animatorState) {
@@ -206,7 +206,7 @@ public class Animator extends Thread {
  * Triggers a <code>"step"</code> action, as if the <code>Step</code> button
  * is pushed.
  *
- * @usage animator.stepAction();
+ * Example: animator.stepAction();
  */
 	public void stepAction() {
 		start(STEPPING);
@@ -217,7 +217,7 @@ public class Animator extends Thread {
  * Triggers a <code>"call"</code> action, as if the <code>Call</code> button
  * is pushed.
  *
- * @usage animator.callAction();
+ * Example: animator.callAction();
  */
 	public void callAction() {
 		callDepth = currentDepth;
@@ -229,7 +229,7 @@ public class Animator extends Thread {
  * Triggers an action for the action specified by the
  * action command.
  *
- * @usage boolean ok = animator.buttonAction(actionCommand);
+ * Example: boolean ok = animator.buttonAction(actionCommand);
  * @param actionCommand The action command from the button
  * @return <code>true</code> if the action command is recognized
  */
@@ -254,7 +254,7 @@ public class Animator extends Thread {
  * between 0.0 and 1.0, for which 0.0 is very slow and 1.0 is as fast as the
  * system can manage.
  *
- * @usage animator.setSpeed(speed);
+ * Example: animator.setSpeed(speed);
  * @param speed A double between 0.0 (slow) and 1.0 (fast)
  */
 	public void setSpeed(double speed) {
@@ -278,7 +278,7 @@ public class Animator extends Thread {
  * between 0.0 and 1.0, for which 0.0 is very slow and 1.0 is as fast as the
  * system can manage.
  *
- * @usage double speed = animator.getSpeed();
+ * Example: double speed = animator.getSpeed();
  * @return A double between 0.0 (slow) and 1.0 (fast)
  */
 	public double getSpeed() {
@@ -289,7 +289,7 @@ public class Animator extends Thread {
 /**
  * Checks the state of the animator and executes any actions have been requested.
  *
- * @usage animator.trace();
+ * Example: animator.trace();
  */
 	public void trace() {
 		trace(0);
@@ -301,7 +301,7 @@ public class Animator extends Thread {
  * to occur at the specified call stack depth.  This method is useful only to
  * clients who are making use of the <code>Call</code> button functionality.
  *
- * @usage animator.trace(depth);
+ * Example: animator.trace(depth);
  * @param depth The current call stack depth.
  */
 	public void trace(int depth) {
@@ -333,7 +333,7 @@ public class Animator extends Thread {
 /**
  * Suspends the animator until one of the restart actions is triggered.
  *
- * @usage animator.breakpoint();
+ * Example: animator.breakpoint();
  */
 	public void breakpoint() {
 		if (Thread.currentThread() != this) {
@@ -359,7 +359,7 @@ public class Animator extends Thread {
 /**
  * Delays the calling thread according to the speed.
  *
- * @usage animator.delay();
+ * Example: animator.delay();
  */
 	public void delay() {
 		boolean yield = true;
@@ -393,7 +393,7 @@ public class Animator extends Thread {
 /**
  * Registers the specified slider as the delay controller for the animator.
  *
- * @usage registerSpeedBar(slider);
+ * Example: registerSpeedBar(slider);
  * @param slider The slider which will serve as the speed bar for this animator
  */
 	public void registerSpeedBar(JSlider slider) {
@@ -405,7 +405,7 @@ public class Animator extends Thread {
 /**
  * Registers the specified scroll bar as the delay controller for the animator.
  *
- * @usage registerSpeedBar(scrollBar);
+ * Example: registerSpeedBar(scrollBar);
  * @param scrollBar The scroll bar which will serve as the speed bar for this animator
  */
 	public void registerSpeedBar(JScrollBar scrollBar) {
@@ -434,7 +434,7 @@ public class Animator extends Thread {
  * ensure that objects are left in a consistent state and thereby
  * avoids the problems that led Sun to deprecate <code>Thread.stop</code>.
  *
- * @usage requestTermination();
+ * Example: requestTermination();
  */
 	public void requestTermination() {
 		animatorState = TERMINATING;
@@ -448,7 +448,7 @@ public class Animator extends Thread {
  * chance to run, after which this <code>Animator</code> will return
  * to the caller.
  *
- * @usage checkForTermination();
+ * Example: checkForTermination();
  */
 	public void checkForTermination() {
 		if (animatorState == TERMINATING) {
@@ -464,9 +464,9 @@ public class Animator extends Thread {
  * ensures that applet cleanup occurs in browsers that refuse to terminate an
  * applet that still has threads running.
  *
- * @usage Animator.shutdown(applet);
+ * Example: Animator.shutdown(applet);
  * @param applet The applet that is ending its execution
- * @noshow
+ *
  */
 	public static void shutdown(Applet applet) {
 		try {
@@ -532,7 +532,7 @@ public class Animator extends Thread {
  * Starts the thread.  The only difference in this method is that it
  * also sets the state.
  *
- * @usage animator.start();
+ * Example: animator.start();
  */
 	public void start() {
 		start(RUNNING);

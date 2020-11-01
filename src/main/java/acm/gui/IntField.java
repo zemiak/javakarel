@@ -51,7 +51,7 @@ public class IntField extends JTextField {
  * Creates a new field object for entering a <code>int</code> value.
  * The contents of the field are initially blank.
  *
- * @usage IntField field = new IntField();
+ * Example: IntField field = new IntField();
  */
 	public IntField() {
 		this("", Integer.MIN_VALUE, Integer.MAX_VALUE);
@@ -62,7 +62,7 @@ public class IntField extends JTextField {
  * Creates a new field object for entering a <code>int</code> value.
  * The contents of the field initially contain the specified value.
  *
- * @usage IntField field = new IntField(value);
+ * Example: IntField field = new IntField(value);
  * @param value The value to store in the field
  */
 	public IntField(int value) {
@@ -75,7 +75,7 @@ public class IntField extends JTextField {
  * which is constrained to be within the specified range. The contents
  * of the field are initially blank.
  *
- * @usage IntField field = new IntField(low, high);
+ * Example: IntField field = new IntField(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  */
@@ -89,7 +89,7 @@ public class IntField extends JTextField {
  * which is constrained to be within the specified range. The contents
  * of the field initially contain the specified value.
  *
- * @usage IntField field = new IntField(value, low, high);
+ * Example: IntField field = new IntField(value, low, high);
  * @param value The value to store in the field
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -122,7 +122,7 @@ public class IntField extends JTextField {
  * <code>ErrorException</code> depending on the state of the <code>exceptionOnError</code>
  * flag.
  *
- * @usage int n = field.getValue();
+ * Example: int n = field.getValue();
  * @return The value stored in the field as a <code>int</code>
  */
 	public int getValue() {
@@ -169,7 +169,7 @@ public class IntField extends JTextField {
 /**
  * Sets the value of a field.
  *
- * @usage field.setValue(n);
+ * Example: field.setValue(n);
  * @param n The value to be stored in the field
  */
 	public void setValue(int n) {
@@ -181,7 +181,7 @@ public class IntField extends JTextField {
  * Returns the format currently in use for this field, or
  * <code>null</code> if no format has been set.
  *
- * @usage String format = field.getFormat();
+ * Example: String format = field.getFormat();
  * @return The format for this field
  */
 	public String getFormat() {
@@ -194,7 +194,7 @@ public class IntField extends JTextField {
  * format string is described in the comments for the DecimalFormat
  * class.
  *
- * @usage field.setFormat(format);
+ * Example: field.setFormat(format);
  * @param format The format to use for the field
  */
 	public void setFormat(String format) {
@@ -229,7 +229,7 @@ public class IntField extends JTextField {
  * value is set to <code>true</code>, illegal input raises an
  * <a href="../util/ErrorException.html"><code>ErrorException</code></a> instead.
  *
- * @usage field.setExceptionOnError(flag);
+ * Example: field.setExceptionOnError(flag);
  * @param flag <code>false</code> to retry on errors; <code>true</code> to raise an exception
  */
 	public void setExceptionOnError(boolean flag) {
@@ -240,7 +240,7 @@ public class IntField extends JTextField {
 /**
  * Returns the state of the error-handling flag.
  *
- * @usage boolean flag = console.getExceptionOnError();
+ * Example: boolean flag = console.getExceptionOnError();
  * @return The current setting of the error-handling mode (<code>false</code> to retry
  *         on errors; <code>true</code> to raise an exception)
  */
@@ -251,7 +251,7 @@ public class IntField extends JTextField {
 /* Override method: getPreferredSize() */
 /**
  * Overrides the standard definition to impose a target size.
- * @noshow
+ *
  */
 	public Dimension getPreferredSize() {
 		Dimension size = super.getPreferredSize();

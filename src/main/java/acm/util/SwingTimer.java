@@ -36,7 +36,7 @@ public class SwingTimer extends Timer {
  * Creates a new timer that ticks at the specified rate.  On each tick,
  * the timer sends an <code>ActionEvent</code> to the listener.
  *
- * @usage SwingTimer timer = new SwingTimer(rate, listener);
+ * Example: SwingTimer timer = new SwingTimer(rate, listener);
  * @param rate The number of milliseconds between ticks
  * @param listener The <code>ActionListener</code> receiving the events
  */

@@ -38,19 +38,17 @@ import java.awt.*;
  * implements all the methods defined for that class.  In addition, the
  * <code>G3DRect</code> class supports the following methods:
  *
- * <p><table cellpadding=0 cellspacing=0 border=0><tr>
- * <td width=20>&nbsp;</td>
- * <td><table cellpadding=2 cellspacing=0 border=1>
- * <tr><td><code>void setRaised(boolean raised)</code><br>
- * <code>&nbsp;&nbsp;&nbsp;</code>Sets the <code>G3DRect</code> to appear
- * raised or lowered as specified by the parameter</td></tr>
- * <tr><td><code>boolean isRaised()</code><br>
- * <code>&nbsp;&nbsp;&nbsp;</code>Returns <code>true</code> if this
- * <code>G3DRect</code> is raised.</td></tr>
- * </table></td></tr></table>
- * <p>The appearance of a <code>G3DRect</code> object depends on the system on
+ * <code>
+ * void setRaised(boolean raised)
+ * Sets the G3DRect to appear
+ * raised or lowered as specified by the parameter
+ * boolean isRaised()
+ * Returns true if this
+ * G3DRect is raised.
+ * The appearance of a G3DRect object depends on the system on
  * which it is displayed and is typically more effective if the
- * <code>G3DRect</code> is filled.
+ * G3DRect is filled.
+ * </code>
  */
 public class G3DRect extends GRect {
 
@@ -59,7 +57,7 @@ public class G3DRect extends GRect {
  * Constructs a new 3D rectangle with the specified width and height,
  * positioned at the origin.
  *
- * @usage G3DRect grect = new G3DRect(width, height);
+ * Example: G3DRect grect = new G3DRect(width, height);
  * @param width The width of the rectangle in pixels
  * @param height The height of the rectangle in pixels
  */
@@ -71,7 +69,7 @@ public class G3DRect extends GRect {
 /**
  * Constructs a new 3D rectangle with the specified bounds.
  *
- * @usage G3DRect grect = new G3DRect(x, y, width, height);
+ * Example: G3DRect grect = new G3DRect(x, y, width, height);
  * @param x The x-coordinate of the upper left corner
  * @param y The y-coordinate of the upper left corner
  * @param width The width of the rectangle in pixels
@@ -86,7 +84,7 @@ public class G3DRect extends GRect {
  * Constructs a new 3D rectangle with the specified bounds which is
  * raised if the final parameter is <code>true</code>.
  *
- * @usage G3DRect grect = new G3DRect(x, y, width, height, raised);
+ * Example: G3DRect grect = new G3DRect(x, y, width, height, raised);
  * @param x The x-coordinate of the upper left corner
  * @param y The y-coordinate of the upper left corner
  * @param width The width of the rectangle in pixels
@@ -102,7 +100,7 @@ public class G3DRect extends GRect {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		Rectangle r = getAWTBounds();
@@ -331,7 +329,7 @@ public class G3DRect extends GRect {
 /**
  * Sets whether this object appears raised.
  *
- * @usage grect.setRaised(raised);
+ * Example: grect.setRaised(raised);
  * @param raised <code>true</code> if the object appears raised, <code>false</code> otherwise
  */
 	public void setRaised(boolean raised) {
@@ -342,7 +340,7 @@ public class G3DRect extends GRect {
 /**
  * Tests whether this object appears raised.
  *
- * @usage if (grect.isRaised()) . . .
+ * Example: if (grect.isRaised()) . . .
  * @return <code>true</code> if the object appears raised, <code>false</code> otherwise
  */
 	public boolean isRaised() {

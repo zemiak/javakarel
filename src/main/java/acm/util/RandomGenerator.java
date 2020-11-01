@@ -36,11 +36,11 @@ import java.util.*;
  * colors.  To use it, the first step is to declare an instance variable
  * to hold the random generator as follows:
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    private RandomGenerator rgen = RandomGenerator.getInstance();
  * </code></pre>
  *
- * <p>By default, the <code>RandomGenerator</code> object is initialized
+ * <p>&nbsp;</p>By default, the <code>RandomGenerator</code> object is initialized
  * to begin at an unpredictable point in a pseudorandom sequence.  During
  * debugging, it is often useful to set the internal seed for the random
  * generator explicitly so that it always returns the same sequence.
@@ -48,7 +48,7 @@ import java.util.*;
  * <a href="http://com/j2se/1.4.2/docs/api/java/util/Random.html#setSeed(int)"><code>setSeed</code></a>
  * method.
  *
- * <p>The <code>RandomGenerator</code> object returned by <code>getInstance</code>
+ * <p>&nbsp;</p>The <code>RandomGenerator</code> object returned by <code>getInstance</code>
  * is shared across all classes in an application.  Using this shared instance of
  * the generator is preferable to allocating new instances of <code>RandomGenerator</code>.
  * If you create several random generators in succession, they will
@@ -63,7 +63,7 @@ public class RandomGenerator extends Random {
  * to obtain a <code>RandomGenerator</code> object that is shared by all classes
  * in the application.
  *
- * @usage RandomGenerator rgen = new RandomGenerator();
+ * Example: RandomGenerator rgen = new RandomGenerator();
  */
 	public RandomGenerator() {
 		/* Empty */
@@ -74,7 +74,7 @@ public class RandomGenerator extends Random {
  * Returns the next random integer between 0 and <code>n</code>-1, inclusive.
  * This method is in modern implementations of the <code>Random</code> class,
  * but is missing from JDK 1.1.
- * @noshow
+ *
  */
 	public int nextInt(int n) {
 		return nextInt(0, n - 1);
@@ -85,7 +85,7 @@ public class RandomGenerator extends Random {
  * Returns a random <code>boolean</code> value that is <code>true</code> or
  * <code>false</code> with equal probability.  This method is in modern
  * implementations of the <code>Random</code> class, but is missing from JDK 1.1.
- * @noshow
+ *
  */
 	public boolean nextBoolean() {
 		return nextBoolean(0.5);
@@ -96,17 +96,17 @@ public class RandomGenerator extends Random {
  * Returns the next random integer in the specified range.  For example, you
  * can generate the roll of a six-sided die by calling
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    rgen.nextInt(1, 6);
  * </code></pre>
  *
- * <p>or a random decimal digit by calling
+ * <p>&nbsp;</p>or a random decimal digit by calling
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    rgen.nextInt(0, 9);
  * </code></pre>
  *
- * @usage int k = rgen.nextInt(low, high)
+ * Example: int k = rgen.nextInt(low, high)
  * @param low The low end of the range
  * @param high The high end of the range
  * @return The next random <code>int</code> between <code>low</code> and <code>high</code>, inclusive
@@ -123,12 +123,12 @@ public class RandomGenerator extends Random {
  * can set the variables <code>x</code> and <code>y</code> to specify a random
  * point inside the unit square as follows:
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    double x = rgen.nextDouble(0.0, 1.0);
  * &nbsp;    double y = rgen.nextDouble(0.0, 1.0);
  * </code></pre>
  *
- * @usage double d = rgen.nextDouble(low, high)
+ * Example: double d = rgen.nextDouble(low, high)
  * @param low The low end of the range
  * @param high The high end of the range
  * @return A random <code>double</code> value <i>d</i> in the range <code>low</code> &le; <i>d</i> &lt; <code>high</code>
@@ -143,11 +143,11 @@ public class RandomGenerator extends Random {
  * this method to simulate an event that occurs with a particular probability.  For example,
  * you could simulate the result of tossing a coin like this:
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    String coinFlip = rgen.nextBoolean(0.5) ? "HEADS" : "TAILS";
  * </code></pre>
  *
- * @usage if (rgen.nextBoolean(p)) . . .
+ * Example: if (rgen.nextBoolean(p)) . . .
  * @param p A value between 0 (impossible) and 1 (certain) indicating the probability
  * @return The value <code>true</code> with probability <code>p</code>
  */
@@ -160,7 +160,7 @@ public class RandomGenerator extends Random {
  * Returns a random opaque color whose components are chosen uniformly
  * in the 0-255 range.
  *
- * @usage Color color = rgen.newColor()
+ * Example: Color color = rgen.newColor()
  * @return A random opaque <a href="http://com/j2se/1.4.2/docs/api/java/awt/Color.html"><code>Color</code></a>
  */
 	public Color nextColor() {
@@ -172,7 +172,7 @@ public class RandomGenerator extends Random {
  * Returns a <code>RandomGenerator</code> instance that can
  * be shared among several classes.
  *
- * @usage RandomGenerator rgen = RandomGenerator.getInstance();
+ * Example: RandomGenerator rgen = RandomGenerator.getInstance();
  * @return A shared <code>RandomGenerator</code> object
  */
 	public static RandomGenerator getInstance() {

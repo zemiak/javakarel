@@ -49,7 +49,7 @@ public class GTurtle extends GObject {
 /**
  * Creates a new <code>GTurtle</code> object.
  *
- * @usage GTurtle turtle = new GTurtle();
+ * Example: GTurtle turtle = new GTurtle();
  */
 	public GTurtle() {
 		setSize(TURTLE_IMAGE_SIZE);
@@ -66,7 +66,7 @@ public class GTurtle extends GObject {
  * Creates a new <code>GTurtle</code> positioned at the point
  * (<code>x</code>, <code>y</code>).
  *
- * @usage GTurtle turtle = new GTurtle(x, y);
+ * Example: GTurtle turtle = new GTurtle(x, y);
  * @param x The initial x coordinate of the turtle
  * @param y The initial y coordinate of the turtle
  */
@@ -79,7 +79,7 @@ public class GTurtle extends GObject {
 /**
  * Erases the entire path drawn by the turtle but does not change its position.
  *
- * @usage turtle.erasePath();
+ * Example: turtle.erasePath();
  */
 	public void erasePath() {
 		pen.erasePath();
@@ -90,7 +90,7 @@ public class GTurtle extends GObject {
 /**
  * Moves the turtle to the point (<code>x</code>, <code>y</code>) without drawing a line.
  *
- * @usage turtle.setLocation(x, y);
+ * Example: turtle.setLocation(x, y);
  * @param x The x-coordinate of the new position
  * @param y The y-coordinate of the new position
  */
@@ -104,10 +104,10 @@ public class GTurtle extends GObject {
  * Moves the turtle by the specified displacements.  The turtle draws a line if its
  * pen is down, but otherwise simply moves.
  *
- * @usage turtle.move(dx, dy);
+ * Example: turtle.move(dx, dy);
  * @param dx The distance to move the object in the x direction (positive is rightward)
  * @param dy The distance to move the object in the y direction (positive is downward)
- * @noshow
+ *
  */
 	public void move(double dx, double dy) {
 		if (penDown) {
@@ -123,7 +123,7 @@ public class GTurtle extends GObject {
  * Moves the turtle forward in its current direction by the specified distance.
  * The turtle draws a line if its pen is down, but otherwise simply moves.
  *
- * @usage turtle.forward(distance);
+ * Example: turtle.forward(distance);
  * @param distance The distance to move in the current direction
  */
 	public void forward(double distance) {
@@ -136,7 +136,7 @@ public class GTurtle extends GObject {
 /**
  * Moves the turtle forward by its own size.
  *
- * @usage turtle.forward();
+ * Example: turtle.forward();
  */
 	public final void forward() {
 		forward(getTurtleSize());
@@ -146,7 +146,7 @@ public class GTurtle extends GObject {
 /**
  * Sets the direction in which the turtle is moving.
  *
- * @usage turtle.setDirection(dir);
+ * Example: turtle.setDirection(dir);
  * @param dir The direction in which the turtle is moving
  */
 	public void setDirection(double dir) {
@@ -157,7 +157,7 @@ public class GTurtle extends GObject {
 /**
  * Returns the direction specified by <code><a href="#setDirection(double)">setDirection</a></code>.
  *
- * @usage double dir = turtle.getDirection();
+ * Example: double dir = turtle.getDirection();
  * @return The direction in which the turtle is moving
  */
 	public double getDirection() {
@@ -169,7 +169,7 @@ public class GTurtle extends GObject {
  * Changes the direction of the turtle so that it moves the specified number
  * of degrees to the left.
  *
- * @usage turtle.left(angle);
+ * Example: turtle.left(angle);
  * @param angle The angle to turn, measured in degrees
  */
 	public final void left(double angle) {
@@ -181,7 +181,7 @@ public class GTurtle extends GObject {
  * Changes the direction of the turtle so that it moves the specified number
  * of degrees to the right.
  *
- * @usage turtle.right(angle);
+ * Example: turtle.right(angle);
  * @param angle The angle to turn, measured in degrees
  */
 	public final void right(double angle) {
@@ -193,7 +193,7 @@ public class GTurtle extends GObject {
  * Returns whether the pen is down, as described in
  * <a href="#setPenDown(boolean)"><code>setPenDown</code></a>.
  *
- * @usage if (turtle.isPenDown()) . . .
+ * Example: if (turtle.isPenDown()) . . .
  * @return <code>true</code> if the pen is down, <code>false</code> otherwise
  */
 	public boolean isPenDown() {
@@ -204,7 +204,7 @@ public class GTurtle extends GObject {
 /**
  * Lowers the pen.
  *
- * @usage turtle.penDown();
+ * Example: turtle.penDown();
  */
 	public final void penDown() {
 		penDown = true;
@@ -214,7 +214,7 @@ public class GTurtle extends GObject {
 /**
  * Raises the pen.
  *
- * @usage turtle.penUp();
+ * Example: turtle.penUp();
  */
 	public final void penUp() {
 		penDown = false;
@@ -224,7 +224,7 @@ public class GTurtle extends GObject {
 /**
  * Sets the color of the turtle's pen.
  *
- * @usage turtle.setColor(color);
+ * Example: turtle.setColor(color);
  * @param color The new color for the pen
  */
 	public void setColor(Color color) {
@@ -236,7 +236,7 @@ public class GTurtle extends GObject {
 /**
  * Returns whether the turtle is visible.
  *
- * @usage if (turtle.isTurtleVisible()) . . .
+ * Example: if (turtle.isTurtleVisible()) . . .
  * @return <code>true</code> if the turtle is visible, otherwise <code>false</code>
  */
 	public boolean isTurtleVisible() {
@@ -247,7 +247,7 @@ public class GTurtle extends GObject {
 /**
  * Makes the turtle visible.
  *
- * @usage turtle.showTurtle();
+ * Example: turtle.showTurtle();
  */
 	public final void showTurtle() {
 		setTurtleVisible(true);
@@ -257,7 +257,7 @@ public class GTurtle extends GObject {
 /**
  * Hides the turtle.
  *
- * @usage turtle.hideTurtle();
+ * Example: turtle.hideTurtle();
  */
 	public final void hideTurtle() {
 		setTurtleVisible(false);
@@ -269,7 +269,7 @@ public class GTurtle extends GObject {
  * and 1 (fastest).  Setting speed to a value less than one makes the turtle
  * move slowly, thereby making it easy to see exactly how a figure is being drawn.
  *
- * @usage turtle.setSpeed(speed);
+ * Example: turtle.setSpeed(speed);
  * @param speed The speed of the turtle (0 is slowest, 1 is fastest)
  */
 	public void setSpeed(double speed) {
@@ -280,7 +280,7 @@ public class GTurtle extends GObject {
 /**
  * Returns the current speed of the turtle.
  *
- * @usage double speed = turtle.getSpeed();
+ * Example: double speed = turtle.getSpeed();
  * @return The current speed of the turtle (0 is slowest, 1 is fastest)
  */
 	public double getSpeed() {
@@ -291,7 +291,7 @@ public class GTurtle extends GObject {
 /**
  * Sets the size of the turtle.
  *
- * @usage turtle.setSize(size);
+ * Example: turtle.setSize(size);
  * @param size The size of the turtle image in pixels
  */
 	public void setSize(int size) {
@@ -302,7 +302,7 @@ public class GTurtle extends GObject {
 /**
  * Returns the size of the turtle.
  *
- * @usage int size = turtle.getSize();
+ * Example: int size = turtle.getSize();
  * @return The size of the turtle image in pixels
  */
 	public int getTurtleSize() {
@@ -313,7 +313,7 @@ public class GTurtle extends GObject {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		pen.paint(g);
@@ -324,7 +324,7 @@ public class GTurtle extends GObject {
 /**
  * Returns the bounding box for the entire figure traced by the turtle.
  *
- * @usage bounds = getBounds();
+ * Example: bounds = getBounds();
  * @return A <code>GRectangle</code> representing the bounding box
  */
 	public GRectangle getBounds() {
@@ -336,7 +336,7 @@ public class GTurtle extends GObject {
  * Contains is defined to be false for the <code>GTurtle</code> object to avoid having the
  * trace intercept mouse clicks.
  *
- * @noshow
+ *
  */
 	public boolean contains(double x, double y) {
 		return false;
@@ -347,7 +347,7 @@ public class GTurtle extends GObject {
  * Makes it possible for a <code>GTurtle</code> to be run under the control
  * of a <code>GraphicsProgram</code> object.
  *
- * @usage main(args);
+ * Example: main(args);
  * @param args An array of string arguments
  */
 	public static void main(String[] args) {
@@ -441,8 +441,8 @@ public class GTurtle extends GObject {
 /**
  * Starts a <code>GraphicsProgram</code> containing this object.
  *
- * @usage gobj.start();
- * @noshow
+ * Example: gobj.start();
+ *
  */
 	protected void start() {
 		start(null);
@@ -453,9 +453,9 @@ public class GTurtle extends GObject {
  * Starts a <code>GraphicsProgram</code> containing this object, passing
  * it the specified arguments.
  *
- * @usage gobj.start();
+ * Example: gobj.start();
  * @param args The array of arguments
- * @noshow
+ *
  */
 	protected void start(String[] args) {
 		GraphicsProgram.startGraphicsProgram(this, args);
@@ -466,7 +466,7 @@ public class GTurtle extends GObject {
  * This method draws a representation of the turtle at the current location.
  * Subclasses can override this method to draw fancier turtles.
  *
- * @usage drawTurtle(g);
+ * Example: drawTurtle(g);
  * @param g The graphics context in which to draw the turtle
  */
 	protected void drawTurtle(Graphics g) {
@@ -485,9 +485,9 @@ public class GTurtle extends GObject {
 
 /* Protected method: getTurtleBounds() */
 /**
- * This method returns the bounds that the turtle occupies.
+ * @return This method returns the bounds that the turtle occupies.
  *
- * @usage Rectangle r = getTurtleBounds();
+ * Example: Rectangle r = getTurtleBounds();
  */
 	protected Rectangle getTurtleBounds() {
 		Component comp = getComponent();
@@ -506,7 +506,7 @@ public class GTurtle extends GObject {
  * direction.  Subclasses can change this method to create different images, but
  * the images must be square.
  *
- * @usage Image image = createTurtleImage(dir);
+ * Example: Image image = createTurtleImage(dir);
  * @param dir The direction in which the turtle is heading
  * @return The image used to draw the turtle
  */
@@ -525,7 +525,7 @@ public class GTurtle extends GObject {
  * Changes the direction in which the turtle is moving by rotating it <code>angle</code>
  * degrees counterclockwise.
  *
- * @usage turn(angle);
+ * Example: turn(angle);
  * @param The angle to turn, measured in degrees
  */
 	private void turn(double angle) {
@@ -538,7 +538,7 @@ public class GTurtle extends GObject {
  * Sets whether the turtle itself is visible.  If the turtle is visible, the <code>drawTurtle</code>
  * method will be called at the end of painting the path to show the current location.
  *
- * @usage turtle.setTurtleVisible(visible);
+ * Example: turtle.setTurtleVisible(visible);
  * @param visible <code>true</code> to show the turtle, <code>false</code> to hide it
  */
 	private void setTurtleVisible(boolean visible) {

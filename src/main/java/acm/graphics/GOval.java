@@ -44,7 +44,7 @@ public class GOval extends GObject
  * Constructs a new oval with the specified width and height,
  * positioned at the origin.
  *
- * @usage GOval goval = new GOval(width, height);
+ * Example: GOval goval = new GOval(width, height);
  * @param width The width of the oval in pixels
  * @param height The height of the oval in pixels
  */
@@ -56,7 +56,7 @@ public class GOval extends GObject
 /**
  * Constructs a new oval with the specified bounds.
  *
- * @usage GOval goval = new GOval(x, y, width, height);
+ * Example: GOval goval = new GOval(x, y, width, height);
  * @param x The x-coordinate of the upper left corner
  * @param y The y-coordinate of the upper left corner
  * @param width The width of the oval in pixels
@@ -74,7 +74,7 @@ public class GOval extends GObject
 /**
  * Checks to see whether a point is inside the object.
  *
- * @usage if (goval.contains(x, y)) . . .
+ * Example: if (goval.contains(x, y)) . . .
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return <code>true</code> if the point (<code>x</code>,&nbsp;<code>y</code>) is inside
@@ -93,7 +93,7 @@ public class GOval extends GObject
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		Component comp = getComponent();
@@ -123,7 +123,7 @@ public class GOval extends GObject
 /**
  * Sets whether this object is filled.
  *
- * @usage gobj.setFilled(fill);
+ * Example: gobj.setFilled(fill);
  * @param fill <code>true</code> if the object should be filled, <code>false</code> for an outline
  */
 	public void setFilled(boolean fill) {
@@ -135,7 +135,7 @@ public class GOval extends GObject
 /**
  * Returns whether this object is filled.
  *
- * @usage if (gobj.isFilled()) . . .
+ * Example: if (gobj.isFilled()) . . .
  * @return The color used to display the object
  */
 	public boolean isFilled() {
@@ -146,7 +146,7 @@ public class GOval extends GObject
 /**
  * Sets the color used to display the filled region of this object.
  *
- * @usage gobj.setFillColor(color);
+ * Example: gobj.setFillColor(color);
  * @param color The color used to display the filled region of this object
  */
 	public void setFillColor(Color color) {
@@ -160,7 +160,7 @@ public class GOval extends GObject
  * none has been set, <code>getFillColor</code> returns the color of the
  * object.
  *
- * @usage Color color = gobj.getFillColor();
+ * Example: Color color = gobj.getFillColor();
  * @return The color used to display the filled region of this object
  */
 	public Color getFillColor() {
@@ -171,7 +171,7 @@ public class GOval extends GObject
 /**
  * Changes the size of this object to the specified width and height.
  *
- * @usage gobj.setSize(width, height);
+ * Example: gobj.setSize(width, height);
  * @param width The new width of the object
  * @param height The new height of the object
  */
@@ -185,9 +185,9 @@ public class GOval extends GObject
 /**
  * Changes the size of this object to the specified <code>GDimension</code>.
  *
- * @usage gobj.setSize(size);
+ * Example: gobj.setSize(size);
  * @param size A <code>GDimension</code> object specifying the size
- * @noshow
+ *
  */
 	public final void setSize(GDimension size) {
 		setSize(size.getWidth(), size.getHeight());
@@ -197,7 +197,7 @@ public class GOval extends GObject
 /**
  * Returns the size of this object as a <code>GDimension</code>.
  *
- * @usage GDimension size = gobj.getSize();
+ * Example: GDimension size = gobj.getSize();
  * @return The size of this object
  */
 	public GDimension getSize() {
@@ -208,7 +208,7 @@ public class GOval extends GObject
 /**
  * Changes the bounds of this object to the specified values.
  *
- * @usage gobj.setBounds(x, y, width, height);
+ * Example: gobj.setBounds(x, y, width, height);
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
  * @param width The new width of the object
@@ -225,7 +225,7 @@ public class GOval extends GObject
  * Changes the bounds of this object to the values from the specified
  * <code>Rectangle</code>.
  *
- * @usage gobj.setBounds(bounds);
+ * Example: gobj.setBounds(bounds);
  * @param bounds A <code>GRectangle</code> specifying the new bounds
  */
 	public final void setBounds(GRectangle bounds) {
@@ -236,7 +236,7 @@ public class GOval extends GObject
 /**
  * Returns the bounding box of this object.
  *
- * @usage GRectangle bounds = gobj.getBounds();
+ * Example: GRectangle bounds = gobj.getBounds();
  * @return The bounding box for this object
  */
 	public GRectangle getBounds() {
@@ -248,7 +248,7 @@ public class GOval extends GObject
  * Returns the width of this object as a double-precision value, which
  * is defined to be the width of the bounding box.
  *
- * @usage double width = gobj.getWidth();
+ * Example: double width = gobj.getWidth();
  * @return The width of this object on the screen
  */
 	public double getWidth() {
@@ -260,7 +260,7 @@ public class GOval extends GObject
  * Returns the height of this object as a double-precision value, which
  * is defined to be the height of the bounding box.
  *
- * @usage double height = gobj.getHeight();
+ * Example: double height = gobj.getHeight();
  * @return The height of this object on the screen
  */
 	public double getHeight() {
@@ -271,7 +271,7 @@ public class GOval extends GObject
 /**
  * Scales the object on the screen by the scale factors <code>sx</code> and <code>sy</code>.
  *
- * @usage gobj.scale(sx, sy);
+ * Example: gobj.scale(sx, sy);
  * @param sx The factor used to scale all coordinates in the x direction
  * @param sy The factor used to scale all coordinates in the y direction
  */
@@ -286,7 +286,7 @@ public class GOval extends GObject
  * Scales the object on the screen by the scale factor <code>sf</code>, which applies
  * in both dimensions.
  *
- * @usage gobj.scale(sf);
+ * Example: gobj.scale(sf);
  * @param sf The factor used to scale all coordinates in both dimensions
  */
 	public final void scale(double sf) {
@@ -441,7 +441,7 @@ public class GOval extends GObject
 /**
  * Returns an AWT <code>Rectangle</code> that specifies the bounds of this object.
  *
- * @usage Rectangle r = grect.getAWTBounds();
+ * Example: Rectangle r = grect.getAWTBounds();
  * @return A <code>Rectangle</code> that specifies the bounds of this object
  */
 	protected Rectangle getAWTBounds() {

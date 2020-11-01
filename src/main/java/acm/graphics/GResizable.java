@@ -31,7 +31,7 @@ public interface GResizable {
 /**
  * Changes the size of this object to the specified width and height.
  *
- * @usage gobj.setSize(width, height);
+ * Example: gobj.setSize(width, height);
  * @param width The new width of the object
  * @param height The new height of the object
  */
@@ -42,7 +42,7 @@ public interface GResizable {
  * Changes the size of this object as specified by the <code>GDimension</code>
  * object.
  *
- * @usage gobj.setSize(size);
+ * Example: gobj.setSize(size);
  * @param size A <code>GDimension</code> object specifying the new size
  */
 	public void setSize(GDimension size);
@@ -51,7 +51,7 @@ public interface GResizable {
 /**
  * Changes the bounds of this object to the specified values.
  *
- * @usage gobj.setBounds(x, y, width, height);
+ * Example: gobj.setBounds(x, y, width, height);
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
  * @param width The new width of the object
@@ -64,7 +64,7 @@ public interface GResizable {
  * Changes the bounds of this object to the values from the specified
  * <code>GRectangle</code>.
  *
- * @usage gobj.setBounds(bounds);
+ * Example: gobj.setBounds(bounds);
  * @param bounds A <code>GRectangle</code> specifying the new bounds
  */
 	public void setBounds(GRectangle bounds);

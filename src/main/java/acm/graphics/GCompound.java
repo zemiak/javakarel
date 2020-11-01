@@ -51,7 +51,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Creates a new <code>GCompound</code> object with no internal components.
  *
- * @usage GCompound gcomp = new GCompound();
+ * Example: GCompound gcomp = new GCompound();
  */
 	public GCompound() {
 		contents = new GObjectList(this);
@@ -62,7 +62,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Adds a new graphical object to this <code>GCompound</code>.
  *
- * @usage gcomp.add(gobj);
+ * Example: gcomp.add(gobj);
  * @param gobj The graphical object to add
  */
 	public void add(GObject gobj) {
@@ -79,7 +79,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Adds the graphical object to this canvas and sets its location
  * to the point (<code>x</code>,&nbsp;<code>y</code>).
  *
- * @usage gc.add(gobj, x, y);
+ * Example: gc.add(gobj, x, y);
  * @param gobj The graphical object to add
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
@@ -93,7 +93,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Adds the graphical object to this canvas and sets its location to the specified point.
  *
- * @usage gc.add(gobj, pt);
+ * Example: gc.add(gobj, pt);
  * @param gobj The graphical object to add
  * @param pt A <code>GPoint</code> object giving the coordinates of the point
  */
@@ -105,7 +105,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Removes a graphical object from this <code>GCompound</code>.
  *
- * @usage gcomp.remove(gobj);
+ * Example: gcomp.remove(gobj);
  * @param gobj The graphical object to remove
  */
 	public void remove(GObject gobj) {
@@ -121,7 +121,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Removes all graphical objects from this <code>GCompound</code>.
  *
- * @usage gcomp.removeAll();
+ * Example: gcomp.removeAll();
  */
 	public void removeAll() {
 		if (complete) {
@@ -136,7 +136,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Returns the number of graphical objects stored in this container.
  *
- * @usage int n = gcomp.getElementCount();
+ * Example: int n = gcomp.getElementCount();
  * @return The number of graphical objects in this container
  */
 	public int getElementCount() {
@@ -148,7 +148,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Returns the graphical object at the specified index, numbering from back
  * to front in the the <i>z</i> dimension.
  *
- * @usage GObject gobj = gcomp.getElement(index);
+ * Example: GObject gobj = gcomp.getElement(index);
  * @param index The index of the component to return
  * @return The graphical object at the specified index
  */
@@ -164,7 +164,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * location of the compound object and not to the canvas in which
  * it is displayed.
  *
- * @usage GObject gobj = gcomp.getElementAt(x, y);
+ * Example: GObject gobj = gcomp.getElementAt(x, y);
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return The graphical object at the specified location, or <code>null</code>
@@ -179,7 +179,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Returns the topmost graphical object that contains the specified point,
  * or <code>null</code> if no such object exists.
  *
- * @usage GObject gobj = gc.getElementAt(pt);
+ * Example: GObject gobj = gc.getElementAt(pt);
  * @param pt The coordinates being tested
  * @return The graphical object at the specified location, or <code>null</code>
  *         if no such object exists
@@ -193,10 +193,9 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Returns an <code>Iterator</code> that cycles through the elements within
  * this container in the default direction, which is from back to front.
  * You can also run the iterator in the opposite direction by using the
- * <a href="#iterator(int)"><code>iterator</code></a><code>(</code><font
- * size=-1><i>direction</i></font><code>)</code> form of this method.
+ * iterator(direction) form of this method.
  *
- * @usage Iterator<GObject> i = gc.iterator();
+ * Example: Iterator i = gc.iterator();
  * @return An <code>Iterator</code> ranging over the elements of the
  *         container from back to front
  */
@@ -208,14 +207,13 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Returns an <code>Iterator</code> that cycles through the elements
  * within this container in the specified direction, which must be one
- * of the constants <a href="GContainer.html#FRONT_TO_BACK"><code>GContainer.FRONT_TO_BACK</code></a>
- * or <a href="GContainer.html#BACK_TO_FRONT"><code>GContainer.BACK_TO_FRONT</code></a>.<p>
+ * @param direction of the constants <code>GContainer.FRONT_TO_BACK</code> or <code>GContainer.BACK_TO_FRONT</code>.
  *
- * <p><pre><code>
+ * <code>
  * &nbsp;    for (Iterator&lt;GObject&gt; i = gc.iterator(direction); i.hasNext(); )
- * </code></pre>
+ * </code>
  *
- * @usage Iterator<GObject> i = gc.iterator(direction);
+ * Example: Iterator i = gc.iterator(direction);
  * @return An <code>Iterator</code> ranging over the elements of the
  *         container in the specified direction
  */
@@ -227,7 +225,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		g = g.create();
@@ -241,7 +239,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * <code>sx</code> and <code>sy</code>.  Automatic repaint is turned off
  * during the scaling operation so that at most one repaint is performed.
  *
- * @usage gcomp.scale(sx, sy);
+ * Example: gcomp.scale(sx, sy);
  * @param sx The factor used to scale all coordinates in the x direction
  * @param sy The factor used to scale all coordinates in the y direction
  */
@@ -270,7 +268,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Scales the object on the screen by the scale factor <code>sf</code>, which applies
  * in both dimensions.
  *
- * @usage gcomp.scale(sf);
+ * Example: gcomp.scale(sf);
  * @param sf The factor used to scale all coordinates in both dimensions
  */
 	public final void scale(double sf) {
@@ -282,7 +280,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Returns the bounding rectangle for this compound object, which consists of
  * the union of the bounding rectangles for each of the components.
  *
- * @usage GRectangle bounds = gcomp.getBounds();
+ * Example: GRectangle bounds = gcomp.getBounds();
  * @return A <code>GRectangle</code> that bounds the components of this object
  */
 	public GRectangle getBounds() {
@@ -296,7 +294,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Checks to see whether a point is "inside" the compound, which means that it is
  * inside one of the components.
  *
- * @usage if (gcomp.contains(x, y)) . . .
+ * Example: if (gcomp.contains(x, y)) . . .
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return <code>true</code> if the point (<code>x</code>,&nbsp;<code>y</code>) is inside
@@ -311,7 +309,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Converts the location of the specified point in this compound to
  * the corresponding point in the enclosing canvas.
  *
- * @usage canvasPoint = gcomp.getCanvasPoint(localPoint);
+ * Example: canvasPoint = gcomp.getCanvasPoint(localPoint);
  * @param localPoint The coordinates in the space of the compound
  * @return The coordinates in the space of the enclosing <code>GCanvas</code>
  */
@@ -324,7 +322,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Converts the location of the specified point in this compound to
  * the corresponding point in the enclosing canvas.
  *
- * @usage canvasPoint = gcomp.getCanvasPoint(x, y);
+ * Example: canvasPoint = gcomp.getCanvasPoint(x, y);
  * @param x The x coordinate in the space of the compound
  * @param y The y coordinate in the space of the compound
  * @return The coordinates in the space of the enclosing <code>GCanvas</code>
@@ -344,7 +342,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Converts the location of the specified point on the enclosing canvas
  * to the corresponding point in the space of this compound.
  *
- * @usage localPoint = gcomp.getLocalPoint(canvasPoint);
+ * Example: localPoint = gcomp.getLocalPoint(canvasPoint);
  * @param canvasPoint The coordinates in the space of the enclosing <code>GCanvas</code>
  * @return The coordinates in the space of the compound
  */
@@ -357,7 +355,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Converts the specified point on the enclosing canvas to the
  * corresponding point in the space of this compound.
  *
- * @usage localPoint = gcomp.getCanvasPoint(x, y);
+ * Example: localPoint = gcomp.getCanvasPoint(x, y);
  * @param x The x coordinate in the space of the space of the enclosing <code>GCanvas</code>
  * @param y The y coordinate in the space of the space of the enclosing <code>GCanvas</code>
  * @return The coordinates in the space of the compound
@@ -378,7 +376,7 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * compound object.  Subclasses can invoke this method to protect the
  * integrity of the structure from changes by the client.
  *
- * @usage gcomp.markAsComplete();
+ * Example: gcomp.markAsComplete();
  */
 	public void markAsComplete() {
 		complete = true;
@@ -517,7 +515,8 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Implements the <code>sendToFront</code> function from the <code>GContainer</code>
  * interface.  Clients should not be calling this method, but the semantics of
  * interfaces forces it to be exported.
- * @noshow
+ *
+ * @param gobj object to relocate
  */
 	protected void sendToFront(GObject gobj) {
 		contents.sendToFront(gobj);
@@ -529,7 +528,8 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Implements the <code>sendToBack</code> function from the <code>GContainer</code>
  * interface.  Clients should not be calling this method, but the semantics of
  * interfaces forces it to be exported.
- * @noshow
+ *
+ * @param gobj object to relocate
  */
 	protected void sendToBack(GObject gobj) {
 		contents.sendToBack(gobj);
@@ -541,7 +541,8 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Implements the <code>sendForward</code> function from the <code>GContainer</code>
  * interface.  Clients should not be calling this method, but the semantics of
  * interfaces forces it to be exported.
- * @noshow
+ *
+ * @param gobj object to relocate
  */
 	protected void sendForward(GObject gobj) {
 		contents.sendForward(gobj);
@@ -553,7 +554,8 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Implements the <code>sendBackward</code> function from the <code>GContainer</code>
  * interface.  Clients should not be calling this method, but the semantics of
  * interfaces forces it to be exported.
- * @noshow
+ *
+ * @param gobj object to relocate
  */
 	protected void sendBackward(GObject gobj) {
 		contents.sendBackward(gobj);
@@ -564,7 +566,8 @@ public class GCompound extends GObject implements GContainer, GScalable {
 /**
  * Dispatches a mouse event to the topmost child that covers the location
  * in the event <code>e</code>.
- * @noshow
+ *
+ * @param e source event
  */
 	protected void fireMouseListeners(MouseEvent e) {
 		if (super.areMouseListenersEnabled()) {
@@ -606,9 +609,9 @@ public class GCompound extends GObject implements GContainer, GScalable {
  * Returns <code>true</code> if mouse listeners have ever been assigned to
  * this object or to any of the contained objects.
  *
- * @usage if (gcomp.areMouseListenersEnabled()) . . .
+ * Example: if (gcomp.areMouseListenersEnabled()) . . .
  * @return <code>true</code> if mouse listeners have been enabled in this object
- * @noshow
+ *
  */
 	protected boolean areMouseListenersEnabled() {
 		if (super.areMouseListenersEnabled()) return true;

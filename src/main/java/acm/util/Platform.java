@@ -68,7 +68,7 @@ public class Platform {
  * on which this applet is running, which is one of the supported
  * types defined at the beginning of this class.
  *
- * @usage int platform = Platform.getPlatform();
+ * Example: int platform = Platform.getPlatform();
  * @return A constant specifying the platform type
  */
 	public static int getPlatform() {
@@ -87,7 +87,7 @@ public class Platform {
 /**
  * Checks whether the platform is a Macintosh.
  *
- * @usage if (Platform.isMac()) . . .
+ * Example: if (Platform.isMac()) . . .
  * @return <code>true</code> if the platform is a Macintosh, <code>false</code> otherwise
  */
 	public static boolean isMac() {
@@ -98,7 +98,7 @@ public class Platform {
 /**
  * Checks whether the platform is a Windows machine.
  *
- * @usage if (Platform.isWindows()) . . .
+ * Example: if (Platform.isWindows()) . . .
  * @return <code>true</code> if the platform is a Windows machine, <code>false</code> otherwise
  */
 	public static boolean isWindows() {
@@ -109,7 +109,7 @@ public class Platform {
 /**
  * Checks whether the platform is Unix.
  *
- * @usage if (Platform.isUnix()) . . .
+ * Example: if (Platform.isUnix()) . . .
  * @return <code>true</code> if the platform is Unix, <code>false</code> otherwise
  */
 	public static boolean isUnix() {
@@ -121,7 +121,7 @@ public class Platform {
  * Sets the Macintosh file type and creator.  This method is ignored on non-Mac
  * platforms.
  *
- * @usage Platform.setFileTypeAndCreator(filename, type, creator);
+ * Example: Platform.setFileTypeAndCreator(filename, type, creator);
  * @param filename The name of the file
  * @param type A four-character string indicating the file type
  * @param creator A four-character string indicating the file type
@@ -140,7 +140,7 @@ public class Platform {
  * Sets the Macintosh file type and creator.  This method is ignored on non-Mac
  * platforms.
  *
- * @usage Platform.setFileTypeAndCreator(file, type, creator);
+ * Example: Platform.setFileTypeAndCreator(file, type, creator);
  * @param file The <code>File</code> object corresponding to the file
  * @param type A four-character string indicating the file type
  * @param creator A four-character string indicating the file type
@@ -170,7 +170,7 @@ public class Platform {
  * Sets the Macintosh file type and creator for the new file using the old file
  * as a model.  This method is ignored on non-Mac platforms.
  *
- * @usage Platform.copyFileTypeAndCreator(oldFile, newFile);
+ * Example: Platform.copyFileTypeAndCreator(oldFile, newFile);
  * @param oldFile The <code>File</code> object corresponding to the existing file
  * @param newFile The <code>File</code> object corresponding to the new file
  */
@@ -203,7 +203,7 @@ public class Platform {
  * would be the one with which the code was compiled, which is less
  * likely to be useful.
  *
- * @usage String version = getJTFVersion();
+ * Example: String version = getJTFVersion();
  * @return The loaded version of the JTF libraries
  */
 	public static String getJTFVersion() {
@@ -218,11 +218,11 @@ public class Platform {
  * one.  Thus, to test whether the current version of the JDK was at least
  * 1.2.1, for example, you could write
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    if (Platform.compareVersion("1.2.1") &gt;= 0) . . .
  * </code></pre>
  *
- * @usage int cmp = Platform.compareVersion(version);
+ * Example: int cmp = Platform.compareVersion(version);
  * @param version A string consisting of integers separated by periods
  * @return -1, 0, or +1 depending on whether the system version is earlier than,
  *         equal to, or later than the specified one
@@ -237,7 +237,7 @@ public class Platform {
  * and returns -1, 0, or +1 depending on whether <code>v1</code> is earlier
  * than, equal to, or later than <code>v2</code>.
  *
- * @usage int cmp = Platform.compareVersion(v1, v2);
+ * Example: int cmp = Platform.compareVersion(v1, v2);
  * @param v1 A string consisting of integers separated by periods
  * @param v2 A second version string in the same format
  * @return -1, 0, or +1 depending on whether <code>v1</code> is earlier than,
@@ -262,11 +262,11 @@ public class Platform {
  * about the JDK version and return a 1.2 number without actually having Swing.
  * This implementation tests the version first, but then confirms the result
  * by looking for the <code>JComponent</code> class.  Checking the version first
- * means that no <nobr><code>SecurityException</code>s</nobr> will be logged in
- * Windows machines, which always log <nobr><code>SecurityException</code>s</nobr>,
+ * means that no <code>SecurityException</code>s will be logged in
+ * Windows machines, which always log <code>SecurityException</code>s,
  * even if the exception is caught.
  *
- * @usage if (Platform.isSwingAvailable()) . . .
+ * Example: if (Platform.isSwingAvailable()) . . .
  * @return <code>true</code> if Swing is available, <code>false</code> otherwise
  */
 	public static boolean isSwingAvailable() {
@@ -288,7 +288,7 @@ public class Platform {
 /**
  * Checks whether the <code>sun.audio</code> package is available.
  *
- * @usage if (Platform.isSunAudioAvailable()) . . .
+ * Example: if (Platform.isSunAudioAvailable()) . . .
  * @return <code>true</code> if the <code>sun.audio</code> package is available,
  *         <code>false</code> otherwise
  */
@@ -308,7 +308,7 @@ public class Platform {
 /**
  * Checks whether the Java Media Framework is available.
  *
- * @usage if (Platform.isJMFAvailable()) . . .
+ * Example: if (Platform.isJMFAvailable()) . . .
  * @return <code>true</code> if the JMF package is available, <code>false</code> otherwise
  */
 	public static boolean isJMFAvailable() {
@@ -330,7 +330,7 @@ public class Platform {
  * This method actually checks whether the collection classes are there by
  * looking for the <code>ArrayList</code> class.
  *
- * @usage if (Platform.areCollectionsAvailable()) . . .
+ * Example: if (Platform.areCollectionsAvailable()) . . .
  * @return <code>true</code> if collections are available, <code>false</code> otherwise
  */
 	public static boolean areCollectionsAvailable() {
@@ -350,7 +350,7 @@ public class Platform {
  * Checks whether the JDK 1.2 standard font families (<code>Serif</code>,
  * <code>SansSerif</code>, and <code>Monospaced</code>) are available.
  *
- * @usage if (Platform.areStandardFontFamiliesAvailable()) . . .
+ * Example: if (Platform.areStandardFontFamiliesAvailable()) . . .
  * @return <code>true</code> if the standard fonts are available, <code>false</code> otherwise
  */
 	public static boolean areStandardFontFamiliesAvailable() {

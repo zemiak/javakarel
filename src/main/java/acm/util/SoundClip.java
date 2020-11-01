@@ -79,7 +79,7 @@ public class SoundClip implements AudioClip {
 /**
  * Creates an empty single-channel sound to which samples can be added.
  *
- * @usage SoundClip sound = new SoundClip();
+ * Example: SoundClip sound = new SoundClip();
  */
 	public SoundClip() {
 		this(MONO);
@@ -90,7 +90,7 @@ public class SoundClip implements AudioClip {
  * Creates an empty sound with the specified number of channels, which
  * must be 1 for mono and 2 for stereo.
  *
- * @usage SoundClip sound = new SoundClip(channels);
+ * Example: SoundClip sound = new SoundClip(channels);
  * @param channels The desired number of channels (1 for mono, 2 for stereo)
  */
 	public SoundClip(int channels) {
@@ -110,7 +110,7 @@ public class SoundClip implements AudioClip {
 /**
  * Creates a new sound by reading the data from the specified file.
  *
- * @usage SoundClip sound = new SoundClip(name);
+ * Example: SoundClip sound = new SoundClip(name);
  * @param name The file from which the sound is read
  */
 	public SoundClip(String name) {
@@ -132,7 +132,7 @@ public class SoundClip implements AudioClip {
 /**
  * Creates a new sound by reading the data from the specified file.
  *
- * @usage SoundClip sound = new SoundClip(file);
+ * Example: SoundClip sound = new SoundClip(file);
  * @param file A <code>File</code> object from which the sound is read
  */
 	public SoundClip(File file) {
@@ -148,7 +148,7 @@ public class SoundClip implements AudioClip {
 /**
  * Creates a new sound by reading the data from the specified URL.
  *
- * @usage SoundClip sound = new SoundClip(url);
+ * Example: SoundClip sound = new SoundClip(url);
  * @param url A network URL containing the sound
  */
 	public SoundClip(URL url) {
@@ -164,7 +164,7 @@ public class SoundClip implements AudioClip {
 /**
  * Creates a new sound by reading the data from the specified input stream.
  *
- * @usage SoundClip sound = new SoundClip(in);
+ * Example: SoundClip sound = new SoundClip(in);
  * @param in An <code>InputStream</code> from which the sound is read
  */
 	public SoundClip(InputStream in) {
@@ -176,7 +176,7 @@ public class SoundClip implements AudioClip {
 /**
  * Creates a new mono sound from the sample array.
  *
- * @usage SoundClip sound = new SoundClip(samples);
+ * Example: SoundClip sound = new SoundClip(samples);
  * @param samples An array of integers containing the sampled sound
  */
 	public SoundClip(int[] samples) {
@@ -188,7 +188,7 @@ public class SoundClip implements AudioClip {
 /**
  * Creates a new stereo sound from the two sample arrays.
  *
- * @usage SoundClip sound = new SoundClip(samples);
+ * Example: SoundClip sound = new SoundClip(samples);
  * @param left An array of integers containing the samples for the left channel
  * @param right An array of integers containing the samples for the right channel
  */
@@ -201,7 +201,7 @@ public class SoundClip implements AudioClip {
 /**
  * Plays the sound through the computer's audio system.
  *
- * @usage sound.play();
+ * Example: sound.play();
  */
 	public synchronized void play() {
 		if (player == null) player = new SoundPlayer(this);
@@ -212,7 +212,7 @@ public class SoundClip implements AudioClip {
 /**
  * Plays the sound in a continuous audio loop.
  *
- * @usage sound.loop();
+ * Example: sound.loop();
  */
 	public void loop() {
 		if (player == null) player = new SoundPlayer(this);
@@ -225,7 +225,7 @@ public class SoundClip implements AudioClip {
  * current frame index so that calling <code>start</code> will resume from
  * the point at which it stopped.
  *
- * @usage sound.stop();
+ * Example: sound.stop();
  */
 	public synchronized void stop() {
 		if (player != null) player.stop();
@@ -237,14 +237,14 @@ public class SoundClip implements AudioClip {
  * is determined by the file extension, as follows:
  *
  * <center>
- * <table border=1>
+ * <table><caption>Formats</caption>
  * <tr><td align=center><code>.au</code></td><td>Sun audio file with ALAW encoding</td></tr>
  * <tr><td align=center><code>.wav</code></td><td>Waveform audio format</td></tr>
  * <tr><td align=center><code>.aif</code> or <code>.aiff</code></td><td>Audio Interchange File Format</td></tr>
  * </table>
  * </center>
  *
- * @usage sound.save(filename);
+ * Example: sound.save(filename);
  * @param filename The name of the file
  */
 	public void save(String filename) {
@@ -255,7 +255,7 @@ public class SoundClip implements AudioClip {
 /**
  * Writes the sound to the specified <code>File</code> object.
  *
- * @usage sound.save(file);
+ * Example: sound.save(file);
  * @param file The <code>File</code> object to which the sound is written
  */
 	public void save(File file) {
@@ -271,7 +271,7 @@ public class SoundClip implements AudioClip {
  * Returns the name of the sound, which is typically the file name from which it
  * was read.
  *
- * @usage String name = sound.getName();
+ * Example: String name = sound.getName();
  * @return The name of the sound
  */
 	public String getName() {
@@ -282,7 +282,7 @@ public class SoundClip implements AudioClip {
 /**
  * Sets a name to identify the sound.
  *
- * @usage sound.setName(name);
+ * Example: sound.setName(name);
  * @param name The name to use for the sound
  */
 	public void setName(String name) {
@@ -293,7 +293,7 @@ public class SoundClip implements AudioClip {
 /**
  * Returns the number of channels.
  *
- * @usage int channels = sound.getChannelCount();
+ * Example: int channels = sound.getChannelCount();
  * @return The number of channels (1 for mono, 2 for stereo)
  */
 	public int getChannelCount() {
@@ -304,7 +304,7 @@ public class SoundClip implements AudioClip {
 /**
  * Returns <code>true</code> if the sound is recorded in stereo.
  *
- * @usage if (sound.isStereo()) . . .
+ * Example: if (sound.isStereo()) . . .
  * @return <code>true</code> if the sound is recorded in stereo
  */
 	public boolean isStereo() {
@@ -315,7 +315,7 @@ public class SoundClip implements AudioClip {
 /**
  * Returns the number of frames in a sound.
  *
- * @usage int nFrames = sound.getFrameCount();
+ * Example: int nFrames = sound.getFrameCount();
  * @return The number of frames in a sound
  */
 	public int getFrameCount() {
@@ -326,7 +326,7 @@ public class SoundClip implements AudioClip {
 /**
  * Returns the frame rate of the sound.
  *
- * @usage double frameRate = sound.getFrameRate();
+ * Example: double frameRate = sound.getFrameRate();
  * @return The frame rate of the sound (in frames/second)
  */
 	public double getFrameRate() {
@@ -337,7 +337,7 @@ public class SoundClip implements AudioClip {
 /**
  * Returns the duration of a sound (in seconds).
  *
- * @usage double duration = sound.getDuration();
+ * Example: double duration = sound.getDuration();
  * @return The duration of a sound (in seconds)
  */
 	public double getDuration() {
@@ -348,7 +348,7 @@ public class SoundClip implements AudioClip {
 /**
  * Returns the current frame index in the sound.
  *
- * @usage int frameIndex = sound.getFrameIndex();
+ * Example: int frameIndex = sound.getFrameIndex();
  * @return The current frame index in the sound
  */
 	public int getFrameIndex() {
@@ -359,7 +359,7 @@ public class SoundClip implements AudioClip {
 /**
  * Sets the current frame index.
  *
- * @usage sound.setFrameIndex(frameIndex);
+ * Example: sound.setFrameIndex(frameIndex);
  * @param frameIndex The current frame index in the sound
  */
 	public void setFrameIndex(int frameIndex) {
@@ -371,7 +371,7 @@ public class SoundClip implements AudioClip {
  * Rewinds the sound to the beginning.  This method is useful after you have
  * stopped a sound and want to replay it from the beginning.
  *
- * @usage sound.rewind();
+ * Example: sound.rewind();
  */
 	public void rewind() {
 		setFrameIndex(0);
@@ -382,7 +382,7 @@ public class SoundClip implements AudioClip {
  * Returns the overall volume setting for the sound, which is a number
  * between 0 (silent) and 1 (maximum volume).
  *
- * @usage double volume = sound.getVolume();
+ * Example: double volume = sound.getVolume();
  * @return The overall volume setting for the sound
  */
 	public double getVolume() {
@@ -394,7 +394,7 @@ public class SoundClip implements AudioClip {
  * Sets the overall volume setting for the sound, which is a number
  * between 0 (silent) and 1 (maximum volume).
  *
- * @usage sound.setVolume(volume);
+ * Example: sound.setVolume(volume);
  * @param volume The new overall volume setting for the sound
  */
 	public void setVolume(double volume) {
@@ -407,7 +407,7 @@ public class SoundClip implements AudioClip {
  * channel of the sound.  For mono sounds, this channel is the only channel;
  * for stereo sounds, it is defined to be the left channel.
  *
- * @usage int[] samples = sound.getSampleData();
+ * Example: int[] samples = sound.getSampleData();
  * @return An array of the samples in the sound
  */
 	public int[] getSampleData() {
@@ -419,7 +419,7 @@ public class SoundClip implements AudioClip {
  * Returns an array of integers corresponding to the samples in the specified
  * channel, which is typically represented by <code>LEFT</code> or <code>RIGHT</code>.
  *
- * @usage int[] samples = sound.getSampleData(channel);
+ * Example: int[] samples = sound.getSampleData(channel);
  * @param channel The channel for which samples are requested
  * @return An array of the samples in the sound
  */
@@ -442,7 +442,7 @@ public class SoundClip implements AudioClip {
  * Adds a single sound sample to the end of the sound.  If the sound is stereo,
  * the new sample is added to both the left and right channel.
  *
- * @usage sound.addSampleData(sample);
+ * Example: sound.addSampleData(sample);
  * @param sample An integers representing a new sound samples
  */
 	public void addSampleData(int sample) {
@@ -469,7 +469,7 @@ public class SoundClip implements AudioClip {
  * Adds the specified samples to the end of the appropriate channels of
  * the stereo sound.
  *
- * @usage sound.addSampleData(left, right);
+ * Example: sound.addSampleData(left, right);
  * @param left An integer containing a single sample for the left channel
  * @param right An integer containing a single sample for the right channel
  */
@@ -499,7 +499,7 @@ public class SoundClip implements AudioClip {
  * Adds the specified samples to the end of the sound.  If the sound is stereo,
  * the new samples are added to both the left and right channel.
  *
- * @usage sound.addSampleData(samples);
+ * Example: sound.addSampleData(samples);
  * @param samples An array of integers containing the new sound samples
  */
 	public void addSampleData(int[] samples) {
@@ -526,7 +526,7 @@ public class SoundClip implements AudioClip {
  * Adds the specified samples to the end of the appropriate channels of
  * the stereo sound.
  *
- * @usage sound.addSampleData(left, right);
+ * Example: sound.addSampleData(left, right);
  * @param left An array of integers containing the samples for the left channel
  * @param right An array of integers containing the samples for the right channel
  */
@@ -557,7 +557,7 @@ public class SoundClip implements AudioClip {
 /**
  * Converts a sound to a string.
  *
- * @usage String str = sound.toString();
+ * Example: String str = sound.toString();
  * @return A string representation of the sound
  */
 	public String toString() {
@@ -579,7 +579,7 @@ public class SoundClip implements AudioClip {
  * Converts an integer sample in the range -32767 and +32767 into a
  * <code>double</code> between -1.0 and +1.0.
  *
- * @usage double intensity = SoundClip.sampleToIntensity(sample)
+ * Example: double intensity = SoundClip.sampleToIntensity(sample)
  * @param sample An integer sample from a digital sound
  * @return The corresponding intensity value between -1.0 and +1.0
  */
@@ -592,7 +592,7 @@ public class SoundClip implements AudioClip {
  * Converts an intensity value between -1.0 and +1.0 into the corresponding
  * integer sample in the range -32767 and +32767.
  *
- * @usage int sample = SoundClip.intensityToSample(intensity)
+ * Example: int sample = SoundClip.intensityToSample(intensity)
  * @param intensity An intensity value between -1.0 and +1.0
  * @return The corresponding integer sample between -32767 and +32767
  */
@@ -606,7 +606,7 @@ public class SoundClip implements AudioClip {
 
 /* Protected method: getData() */
 /**
- * Returns the byte array containing the sound data.
+ * @return Returns the byte array containing the sound data.
  */
 	protected byte[] getData() {
 		return data;
@@ -614,7 +614,7 @@ public class SoundClip implements AudioClip {
 
 /* Protected method: getFormat() */
 /**
- * Returns the format in which the sound is stored.
+ * @return Returns the format in which the sound is stored.
  */
 	protected AudioFormat getFormat() {
 		return format;
@@ -622,7 +622,7 @@ public class SoundClip implements AudioClip {
 
 /* Protected method: getAudioInputStream() */
 /**
- * Returns an <code>AudioInputStream</code> for the sound.
+ * @return Returns an <code>AudioInputStream</code> for the sound.
  */
 	protected AudioInputStream getAudioInputStream() {
 		return new AudioInputStream(new ByteArrayInputStream(data), format, frameCount);

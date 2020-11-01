@@ -43,7 +43,7 @@ public class GPoint implements Serializable {
 /**
  * Constructs a new <code>GPoint</code> at the origin (0, 0).
  *
- * @usage pt = new GPoint();
+ * Example: pt = new GPoint();
  */
 	public GPoint() {
 		this(0, 0);
@@ -53,7 +53,7 @@ public class GPoint implements Serializable {
 /**
  * Constructs a new <code>GPoint</code> with the specified coordinates.
  *
- * @usage pt = new GPoint(x, y);
+ * Example: pt = new GPoint(x, y);
  * @param x The x-coordinate of the point
  * @param y The y-coordinate of the point
  */
@@ -66,7 +66,7 @@ public class GPoint implements Serializable {
 /**
  * Constructs a new <code>GPoint</code> from an existing one.
  *
- * @usage pt = new GPoint(p);
+ * Example: pt = new GPoint(p);
  * @param p The original point
  */
 	public GPoint(GPoint p) {
@@ -77,7 +77,7 @@ public class GPoint implements Serializable {
 /**
  * Constructs a new <code>GPoint</code> from an existing AWT <code>Point</code>.
  *
- * @usage pt = new GPoint(p);
+ * Example: pt = new GPoint(p);
  * @param p An AWT <code>Point</code>
  */
 	public GPoint(Point p) {
@@ -88,7 +88,7 @@ public class GPoint implements Serializable {
 /**
  * Returns the x coordinate of this <code>GPoint</code>.
  *
- * @usage x = pt.getX();
+ * Example: x = pt.getX();
  * @return The x coordinate of this <code>GPoint</code>
  */
 	public double getX() {
@@ -99,7 +99,7 @@ public class GPoint implements Serializable {
 /**
  * Returns the y coordinate of this <code>GPoint</code>.
  *
- * @usage y = pt.getY();
+ * Example: y = pt.getY();
  * @return The y coordinate of this <code>GPoint</code>
  */
 	public double getY() {
@@ -111,7 +111,7 @@ public class GPoint implements Serializable {
  * Sets the location of the <code>GPoint</code> to the specified <code>x</code>
  * and <code>y</code> values.
  *
- * @usage pt.setLocation(x, y);
+ * Example: pt.setLocation(x, y);
  * @param x The new x-coordinate for the point
  * @param y The new y-coordinate for the point
  */
@@ -124,7 +124,7 @@ public class GPoint implements Serializable {
 /**
  * Sets the location of the <code>GPoint</code> to that of an existing one.
  *
- * @usage pt.setLocation(p);
+ * Example: pt.setLocation(p);
  * @param p An existing <code>GPoint</code> specifying the new location
  */
 	public void setLocation(GPoint p) {
@@ -135,7 +135,7 @@ public class GPoint implements Serializable {
 /**
  * Returns a new <code>GPoint</code> whose coordinates are the same as this one.
  *
- * @usage p = pt.getLocation();
+ * Example: p = pt.getLocation();
  * @return A new point with the same coordinates
  */
 	public GPoint getLocation() {
@@ -147,7 +147,7 @@ public class GPoint implements Serializable {
  * Adjusts the coordinates of a point by the specified <code>dx</code> and
  * <code>dy</code> offsets.
  *
- * @usage pt.translate(dx, dy);
+ * Example: pt.translate(dx, dy);
  * @param dx The change in the x direction (positive is rightward)
  * @param dy The change in the y direction (positive is downward)
  */
@@ -160,7 +160,7 @@ public class GPoint implements Serializable {
 /**
  * Converts this <code>GPoint</code> to the nearest integer-based <code>Point</code>.
  *
- * @usage size = dim.toPoint();
+ * Example: size = dim.toPoint();
  * @return The closest integer-based <code>Point</code>
  */
 	public Point toPoint() {
@@ -174,9 +174,9 @@ public class GPoint implements Serializable {
  * <code>float</code> values of the coordinates, which are the ones used in the
  * <code>equals</code> method.
  *
- * @usage hash = pt.hashCode();
+ * Example: hash = pt.hashCode();
  * @return The hash code for this pt
- * @noshow
+ *
  */
 	public int hashCode() {
 		return new Float((float) xc).hashCode() ^ (37 * new Float((float) yc).hashCode());
@@ -189,11 +189,11 @@ public class GPoint implements Serializable {
  * equality by comparing the <code>float</code> values (rather than the
  * <code>double</code> values) of the coordinates.
  *
- * @usage if (pt.equals(obj)) . . .
+ * Example: if (pt.equals(obj)) . . .
  * @param obj Any object
  * @return <code>true</code> if the <code>obj</code> is a <code>GPoint</code>
  *         equal to this one, and <code>false</code> otherwise
- * @noshow
+ *
  */
 	public boolean equals(Object obj) {
 		if (!(obj instanceof GPoint)) return false;
@@ -205,9 +205,9 @@ public class GPoint implements Serializable {
 /**
  * Converts this <code>GPoint</code> to its string representation.
  *
- * @usage str = rect.toString();
+ * Example: str = rect.toString();
  * @return A string representation of this point
- * @noshow
+ *
  */
 	public String toString() {
 		return "(" + (float) xc + ", " + (float) yc + ")";

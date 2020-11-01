@@ -34,50 +34,50 @@ public interface IOModel {
  * output on the same line.  The <code>print</code> method is overloaded
  * so that <code>value</code> can be of any type.
  *
- * @usage model.print(value);
+ * Example: model.print(value);
  * @param value The value to be displayed
  */
 	public void print(String value);
 
 /**
  * Makes sure that <code>print</code> can display a <code>boolean</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void print(boolean x);
 
 /**
  * Makes sure that <code>print</code> can display a <code>char</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void print(char x);
 
 /**
  * Makes sure that <code>print</code> can display a <code>double</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void print(double x);
 
 /**
  * Makes sure that <code>print</code> can display a <code>float</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void print(float x);
 
 /**
  * Makes sure that <code>print</code> can display an <code>int</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void print(int x);
 
 /**
  * Makes sure that <code>print</code> can display a <code>long</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void print(long x);
 
 /**
  * Makes sure that <code>print</code> can display an <code>Object</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void print(Object x);
 
@@ -85,7 +85,7 @@ public interface IOModel {
 /**
  * Completes the output line.
  *
- * @usage io.println();
+ * Examples: io.println();
  */
 	public void println();
 
@@ -94,50 +94,50 @@ public interface IOModel {
  * Displays the value and then completes the line.  The <code>println</code>
  * method is overloaded so that <code>value</code> can be of any type.
  *
- * @usage io.println(value);
+ * Example: io.println(value);
  * @param value The value to be displayed
  */
 	public void println(String value);
 
 /**
  * Makes sure that <code>println</code> can display a <code>boolean</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void println(boolean x);
 
 /**
  * Makes sure that <code>println</code> can display a <code>char</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void println(char x);
 
 /**
  * Makes sure that <code>println</code> can display a <code>double</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void println(double x);
 
 /**
  * Makes sure that <code>println</code> can display a <code>float</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void println(float x);
 
 /**
  * Makes sure that <code>println</code> can display an <code>int</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void println(int x);
 
 /**
  * Makes sure that <code>println</code> can display a <code>long</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void println(long x);
 
 /**
  * Makes sure that <code>println</code> can display an <code>Object</code>.
- * @noshow
+ * @param x The value to be displayed
  */
 	public void println(Object x);
 
@@ -145,7 +145,7 @@ public interface IOModel {
 /**
  * Displays the error message.
  *
- * @usage io.showErrorMessage(msg);
+ * Example: io.showErrorMessage(msg);
  * @param msg The error msg to be displayed
  */
 	public void showErrorMessage(String msg);
@@ -155,7 +155,7 @@ public interface IOModel {
  * Reads and returns a line of input, without including the end-of-line
  * characters that terminate the input.
  *
- * @usage String str = io.readLine();
+ * Example: String str = io.readLine();
  * @return The next line of input as a <code>String</code>
  */
 	public String readLine();
@@ -166,7 +166,7 @@ public interface IOModel {
  * as the value of this method.  The end-of-line characters that terminate
  * the input are not included in the returned string.
  *
- * @usage String str = io.readLine(prompt);
+ * Example: String str = io.readLine(prompt);
  * @param prompt The prompt string to display to the user
  * @return The next line of input as a <code>String</code>
  */
@@ -176,7 +176,7 @@ public interface IOModel {
 /**
  * Reads and returns an integer value from the user.
  *
- * @usage int n = io.readInt();
+ * Example: int n = io.readInt();
  * @return The value of the input interpreted as a decimal integer
  */
 	public int readInt();
@@ -186,7 +186,7 @@ public interface IOModel {
  * Reads and returns an integer value from the user, which is constrained to
  * be within the specified inclusive range.
  *
- * @usage int n = io.readInt(low, high);
+ * Example: int n = io.readInt(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  * @return The value of the input interpreted as a decimal integer
@@ -198,7 +198,7 @@ public interface IOModel {
  * Prompts the user to enter an integer, which is then returned as the value
  * of this method.
  *
- * @usage int n = io.readInt(prompt);
+ * Example: int n = io.readInt(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a decimal integer
  */
@@ -210,7 +210,7 @@ public interface IOModel {
  * of this method.  The value must be within the inclusive range between
  * <code>low</code> and <code>high</code>.
  *
- * @usage int n = io.readInt(prompt, low, high);
+ * Example: int n = io.readInt(prompt, low, high);
  * @param prompt The prompt string to display to the user
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -222,7 +222,7 @@ public interface IOModel {
 /**
  * Reads and returns a double-precision value from the user.
  *
- * @usage double d = io.readDouble();
+ * Example: double d = io.readDouble();
  * @return The value of the input interpreted as a <code>double</code>
  */
 	public double readDouble();
@@ -232,7 +232,7 @@ public interface IOModel {
  * Reads and returns a double-precision value from the user, which is
  * constrained to be within the specified inclusive range.
  *
- * @usage double d = io.readDouble(low, high);
+ * Example: double d = io.readDouble(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  * @return The value of the input interpreted as a <code>double</code>
@@ -244,7 +244,7 @@ public interface IOModel {
  * Prompts the user to enter an double-precision number, which is then
  * returned as the value of this method.
  *
- * @usage double d = io.readDouble(prompt);
+ * Example: double d = io.readDouble(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a <code>double</code>
  */
@@ -256,7 +256,7 @@ public interface IOModel {
  * as the value of this method.  The value must be within the inclusive range
  * between <code>low</code> and <code>high</code>.
  *
- * @usage d = io.readDouble(prompt, low, high);
+ * Example: d = io.readDouble(prompt, low, high);
  * @param prompt The prompt string to display to the user
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -269,7 +269,7 @@ public interface IOModel {
  * Reads and returns a boolean value from the user, which must match
  * either <code>true</code> or <code>false</code>, ignoring case.
  *
- * @usage boolean flag = io.readBoolean();
+ * Example: boolean flag = io.readBoolean();
  * @return The value of the input interpreted as a boolean value
  */
 	public boolean readBoolean();
@@ -279,7 +279,7 @@ public interface IOModel {
  * Prompts the user to enter a boolean value, which is then returned as
  * the value of this method.
  *
- * @usage boolean flag = io.readBoolean(prompt);
+ * Example: boolean flag = io.readBoolean(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a boolean value
  */
@@ -291,7 +291,7 @@ public interface IOModel {
  * by matching it against the <code>trueLabel</code> and <code>falseLabel</code>
  * parameters.
  *
- * @usage boolean flag = dialog.readBoolean(prompt);
+ * Example: boolean flag = dialog.readBoolean(prompt);
  * @param prompt The prompt string to display to the user
  * @param trueLabel The string used to indicate <code>true</code>
  * @param falseLabel The string used to indicate <code>false</code>

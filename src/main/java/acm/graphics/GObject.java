@@ -67,7 +67,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * method which allows the object to draw itself on the <code>Graphics</code>
  * context passed in as the parameter <code>g</code>.
  *
- * @usage gobj.paint(g);
+ * Example: gobj.paint(g);
  * @param g The graphics context into which the painting is done
  */
 	public abstract void paint(Graphics g);
@@ -84,7 +84,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * string begins; <code>getBounds</code>, by contrast, returns a
  * rectangle that covers the entire window area occupied by the string.
  *
- * @usage GRectangle bounds = gobj.getBounds();
+ * Example: GRectangle bounds = gobj.getBounds();
  * @return The bounding box for this object
  */
 	public abstract GRectangle getBounds();
@@ -93,7 +93,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Sets the location of this object to the point (<code>x</code>, <code>y</code>).
  *
- * @usage gobj.setLocation(x, y);
+ * Example: gobj.setLocation(x, y);
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
  */
@@ -107,9 +107,9 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Sets the location of this object to the specified point.
  *
- * @usage gobj.setLocation(pt);
+ * Example: gobj.setLocation(pt);
  * @param pt The new location for this object
- * @noshow
+ *
  */
 	public final void setLocation(GPoint pt) {
 		setLocation(pt.getX(), pt.getY());
@@ -119,7 +119,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Returns the location of this object as a <code>GPoint</code>.
  *
- * @usage GPoint pt = gobj.getLocation();
+ * Example: GPoint pt = gobj.getLocation();
  * @return The location of this object as a <code>GPoint</code>
  */
 	public GPoint getLocation() {
@@ -130,7 +130,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Returns the x-coordinate of the object.
  *
- * @usage double x = gobj.getX();
+ * Example: double x = gobj.getX();
  * @return The x-coordinate of the object
  */
 	public double getX() {
@@ -141,7 +141,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Returns the y-coordinate of the object.
  *
- * @usage double y = gobj.getY();
+ * Example: double y = gobj.getY();
  * @return The y-coordinate of the object
  */
 	public double getY() {
@@ -152,7 +152,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Moves the object on the screen using the displacements <code>dx</code> and <code>dy</code>.
  *
- * @usage gobj.move(dx, dy);
+ * Example: gobj.move(dx, dy);
  * @param dx The distance to move the object in the x direction (positive is rightward)
  * @param dy The distance to move the object in the y direction (positive is downward)
  */
@@ -167,7 +167,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * specifies the angle in which the motion occurs.  The angle is measured in
  * degrees increasing counterclockwise from the +x axis.
  *
- * @usage gobj.movePolar(r, theta);
+ * Example: gobj.movePolar(r, theta);
  * @param r The distance to move
  * @param theta The angle in which to move, measured in degrees
  *              increasing counterclockwise from the +x axis
@@ -181,7 +181,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Returns the size of the bounding box for this object.
  *
- * @usage GDimension size = gobj.getSize();
+ * Example: GDimension size = gobj.getSize();
  * @return The size of this object
  */
 	public GDimension getSize() {
@@ -194,7 +194,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * Returns the width of this object, which is defined to be
  * the width of the bounding box.
  *
- * @usage double width = gobj.getWidth();
+ * Example: double width = gobj.getWidth();
  * @return The width of this object on the screen
  */
 	public double getWidth() {
@@ -206,7 +206,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * Returns the height of this object, which is defined to be
  * the height of the bounding box.
  *
- * @usage double height = gobj.getHeight();
+ * Example: double height = gobj.getHeight();
  * @return The height of this object on the screen
  */
 	public double getHeight() {
@@ -220,7 +220,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * Many subclasses will need to override this to check whether the point
  * is contained in the shape.
  *
- * @usage if (gobj.contains(x, y)) . . .
+ * Example: if (gobj.contains(x, y)) . . .
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return <code>true</code> if the point (<code>x</code>,&nbsp;<code>y</code>) is inside
@@ -234,7 +234,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Checks to see whether a point is inside the object.
  *
- * @usage if (gobj.contains(pt)) . . .
+ * Example: if (gobj.contains(pt)) . . .
  * @param pt The point being tested
  * @return <code>true</code> if the point is inside the object, and <code>false</code> otherwise
  */
@@ -248,7 +248,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * moving it to the front, this object will appear to be on top of the other graphical
  * objects on the display and may hide any objects that are further back.
  *
- * @usage gobj.sendToFront();
+ * Example: gobj.sendToFront();
  */
 	public void sendToFront() {
 		if (compoundParent != null) {
@@ -275,7 +275,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * moving it to the back, this object will appear to be behind the other graphical
  * objects on the display and may be obscured by other objects in front.
  *
- * @usage gobj.sendToBack();
+ * Example: gobj.sendToBack();
  */
 	public void sendToBack() {
 		if (compoundParent != null) {
@@ -301,7 +301,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * Moves this object one step toward the front in the <i>z</i> dimension.
  * If it was already at the front of the stack, nothing happens.
  *
- * @usage gobj.sendForward();
+ * Example: gobj.sendForward();
  */
 	public void sendForward() {
 		if (compoundParent != null) {
@@ -327,7 +327,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * Moves this object one step toward the back in the <i>z</i> dimension.
  * If it was already at the back of the stack, nothing happens.
  *
- * @usage gobj.sendBackward();
+ * Example: gobj.sendBackward();
  */
 	public void sendBackward() {
 		if (compoundParent != null) {
@@ -352,7 +352,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Sets the color used to display this object.
  *
- * @usage gobj.setColor(color);
+ * Example: gobj.setColor(color);
  * @param color The color used to display this object
  */
 	public void setColor(Color color) {
@@ -364,7 +364,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Returns the color used to display this object.
  *
- * @usage Color color = gobj.getColor();
+ * Example: Color color = gobj.getColor();
  * @return The color used to display this object
  */
 	public Color getColor() {
@@ -386,7 +386,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Sets whether this object is visible.
  *
- * @usage gobj.setVisible(visible);
+ * Example: gobj.setVisible(visible);
  * @param visible <code>true</code> to make the object visible, <code>false</code> to hide it
  */
 	public void setVisible(boolean visible) {
@@ -398,7 +398,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Checks to see whether this object is visible.
  *
- * @usage if (gobj.isVisible()) . . .
+ * Example: if (gobj.isVisible()) . . .
  * @return <code>true</code> if the object is visible, otherwise <code>false</code>
  */
 	public boolean isVisible() {
@@ -409,7 +409,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Overrides the <code>toString</code> method in <code>Object</code> to produce
  * more readable output.
- * @noshow
+ *
  */
 	public String toString() {
 		String name = getClass().getName();
@@ -424,7 +424,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * Returns the parent of this object, which is the canvas or compound object in
  * which it is enclosed.
  *
- * @usage GContainer parent = gobj.getParent();
+ * Example: GContainer parent = gobj.getParent();
  * @return The parent of this object
  */
 	public GContainer getParent() {
@@ -437,7 +437,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * milliseconds.  Unlike <code>Thread.sleep</code>, this method never throws an
  * exception.
  *
- * @usage gobj.pause(milliseconds);
+ * Example: gobj.pause(milliseconds);
  * @param milliseconds The sleep time in milliseconds
  */
 	public void pause(double milliseconds) {
@@ -448,7 +448,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Adds a mouse listener to this graphical object.
  *
- * @usage gobj.addMouseListener(listener);
+ * Example: gobj.addMouseListener(listener);
  * @param listener Any object that implements the <code>MouseListener</code> interface
  */
 	public void addMouseListener(MouseListener listener) {
@@ -461,7 +461,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Removes a mouse listener from this graphical object.
  *
- * @usage gobj.removeMouseListener(listener);
+ * Example: gobj.removeMouseListener(listener);
  * @param listener The listener object to remove
  */
 	public void removeMouseListener(MouseListener listener) {
@@ -472,7 +472,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Adds a mouse motion listener to this graphical object.
  *
- * @usage gobj.addMouseMotionListener(listener);
+ * Example: gobj.addMouseMotionListener(listener);
  * @param listener Any object that implements the <code>MouseMotionListener</code> interface
  */
 	public void addMouseMotionListener(MouseMotionListener listener) {
@@ -485,7 +485,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Removes a mouse motion listener from this graphical object.
  *
- * @usage gobj.removeMouseMotionListener(listener);
+ * Example: gobj.removeMouseMotionListener(listener);
  * @param listener The listener object to remove
  */
 	public void removeMouseMotionListener(MouseMotionListener listener) {
@@ -496,7 +496,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Adds an action listener to this graphical object.
  *
- * @usage gobj.addActionListener(listener);
+ * Example: gobj.addActionListener(listener);
  * @param listener Any object that implements the <code>ActionListener</code> interface
  */
 	public void addActionListener(ActionListener listener) {
@@ -507,7 +507,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Removes an action listener from this graphical object.
  *
- * @usage gobj.removeActionListener(listener);
+ * Example: gobj.removeActionListener(listener);
  * @param listener The listener object to remove
  */
 	public void removeActionListener(ActionListener listener) {
@@ -519,7 +519,7 @@ public abstract class GObject implements Cloneable, Serializable {
  * Triggers an action event for this graphical object with the specified
  * action command.
  *
- * @usage gobj.fireActionEvent(actionCommand);
+ * Example: gobj.fireActionEvent(actionCommand);
  * @param actionCommand The action command to include in the event
  */
 	public void fireActionEvent(String actionCommand) {
@@ -530,7 +530,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Triggers an action event for this graphical object.
  *
- * @usage gobj.fireActionEvent(e);
+ * Example: gobj.fireActionEvent(e);
  * @param e The <code>ActionEvent</code> to fire
  */
 	public void fireActionEvent(ActionEvent e) {
@@ -546,7 +546,9 @@ public abstract class GObject implements Cloneable, Serializable {
  * needs to be maintained in a nontransient variable; other parent
  * classes are transient, so that these parents are not recorded
  * in the serial form.
- * @noshow
+ *
+ * @param parent parent
+ *
  */
 	public void setParent(GContainer parent) {
 		if (parent instanceof GCompound) {
@@ -560,9 +562,9 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Sends the event to the appropriate listener.
  *
- * @usage gobj.fireMouseListeners(e);
+ * Example: gobj.fireMouseListeners(e);
  * @param e The <code>MouseEvent</code> that triggered this response
- * @noshow
+ *
  */
 	protected void fireMouseListeners(MouseEvent e) {
 		switch (e.getID()) {
@@ -595,9 +597,9 @@ public abstract class GObject implements Cloneable, Serializable {
  * Returns <code>true</code> if mouse listeners have ever been assigned to
  * this object.
  *
- * @usage if (gobj.areMouseListenersEnabled()) . . .
+ * Example: if (gobj.areMouseListenersEnabled()) . . .
  * @return <code>true</code> if mouse listeners have been enabled in this object
- * @noshow
+ *
  */
 	protected boolean areMouseListenersEnabled() {
 		return mouseListenersEnabled;
@@ -607,8 +609,8 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Starts a <code>GraphicsProgram</code> containing this object.
  *
- * @usage gobj.start();
- * @noshow
+ * Example: gobj.start();
+ *
  */
 	protected void start() {
 		start(null);
@@ -619,9 +621,9 @@ public abstract class GObject implements Cloneable, Serializable {
  * Starts a <code>GraphicsProgram</code> containing this object, passing
  * it the specified arguments.
  *
- * @usage gobj.start();
+ * Example: gobj.start();
  * @param args The array of arguments
- * @noshow
+ *
  */
 	protected void start(String[] args) {
 		try {
@@ -641,7 +643,9 @@ public abstract class GObject implements Cloneable, Serializable {
  * This method returns the color set for this specific object, which may
  * be <code>null</code>.  It differs from <code>getColor</code> in that
  * it does not walk up the containment chain.
- * @noshow
+ *
+ * @return Color object color
+ *
  */
 	protected Color getObjectColor() {
 		return objectColor;
@@ -650,7 +654,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /* Protected method: paramString() */
 /**
  * Returns a string indicating the parameters of this object.
- * @noshow
+ * @return String parameters as string
  */
 	protected String paramString() {
 		String param = "";
@@ -678,7 +682,8 @@ public abstract class GObject implements Cloneable, Serializable {
 /* Protected static method: colorName(color) */
 /**
  * Translates a color to a string representation.
- * @noshow
+ * @param color color object
+ * @return String name of the color
  */
 	protected static String colorName(Color color) {
 		if (color.equals(Color.BLACK)) return "BLACK";
@@ -701,7 +706,8 @@ public abstract class GObject implements Cloneable, Serializable {
 /**
  * Paints the object by setting up the necessary parameters and then
  * dispatching to the <code>paint</code> procedure for this object.
- * @noshow
+ *
+ * @param g object to paint
  */
 	protected void paintObject(Graphics g) {
 		if (!isVisible()) return;
@@ -716,9 +722,9 @@ public abstract class GObject implements Cloneable, Serializable {
  * Returns the component in which this object is installed, or <code>null</code>
  * if none exists.
  *
- * @usage Component comp = gobj.getComponent();
+ * Example: Component comp = gobj.getComponent();
  * @return The component in which this object is installed, or <code>null</code> if none exists
- * @noshow
+ *
  */
 	protected Component getComponent() {
 		GContainer parent = getParent();
@@ -731,7 +737,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /* Protected method: updateEnabledList() */
 /**
  * Tells the parent to update its list of enabled objects.
- * @noshow
+ *
  */
 	protected void updateEnabledList() {
 		Component comp = getComponent();
@@ -743,7 +749,7 @@ public abstract class GObject implements Cloneable, Serializable {
 /* Protected method: repaint() */
 /**
  * Signals that the object needs to be repainted.
- * @noshow
+ *
  */
 	protected void repaint() {
 		GContainer parent = getParent();

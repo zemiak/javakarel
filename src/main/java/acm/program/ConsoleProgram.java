@@ -35,7 +35,7 @@ public abstract class ConsoleProgram extends Program {
 /**
  * Creates a new console program.
  *
- * @usage ConsoleProgram program = new ConsoleProgram();
+ * Example: ConsoleProgram program = new ConsoleProgram();
  */
 	public ConsoleProgram() {
 		add(getConsole(), CENTER);
@@ -69,7 +69,7 @@ public abstract class ConsoleProgram extends Program {
  * for applications in which there needs to be some control thread
  * while the program runs, as in a typical animation.
  *
- * @usage program.init();
+ * Example: program.init();
  */
 	public void init() {
 		/* Empty */
@@ -86,7 +86,7 @@ public abstract class ConsoleProgram extends Program {
  * where both <i>style</i> and <i>size</i> are optional.  If any of these parts
  * are specified as an asterisk, the existing value is retained.
  *
- * @usage program.setFont(str);
+ * Example: program.setFont(str);
  * @param str A <code>String</code> specifying the new font
  */
 	public void setFont(String str) {
@@ -101,7 +101,7 @@ public abstract class ConsoleProgram extends Program {
 /**
  * Sets the font for the console.
  *
- * @usage program.setFont(font);
+ * Example: program.setFont(font);
  * @param font The new font
  */
 	public void setFont(Font font) {
@@ -115,7 +115,7 @@ public abstract class ConsoleProgram extends Program {
 /**
  * Creates the console used by the <code>ConsoleProgram</code>.
  *
- * @usage IOConsole console = program.createConsole();
+ * Example: IOConsole console = program.createConsole();
  * @return The console to be used by the program
  */
 	protected IOConsole createConsole() {

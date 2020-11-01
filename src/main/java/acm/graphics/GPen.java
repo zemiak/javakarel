@@ -41,13 +41,13 @@ import java.util.*;
 /**
  * The <code>GPen</code> class simulates a pen drawing on a canvas.
  * As with the other graphical objects in the
- * <a href="index.html"><code>acm.graphics</code></a>
+ * <code>acm.graphics</code>
  * package, you use this class by constructing a new <code>GPen</code>
- * object and adding that object to a <a href="GCanvas.html"><code>GCanvas</code></a>.
+ * object and adding that object to a <code>GCanvas</code>.
  * You can move the pen on the canvas by using the methods
- * <a href="#setLocation(double, double)"<code>setLocation</code></a> and
- * <a href="#move(double, double)"<code>move</code></a> and then
- * draw lines using  <a href="#drawLine(double, double)"<code>drawLine</code></a>.
+ * <code>setLocation</code> and
+ * <code>move</code> and then
+ * draw lines using  <code>drawLine</code>.
  * The <code>GPen</code> object remembers the series of lines
  * and can therefore repaint the screen image when necessary.
  */
@@ -57,7 +57,7 @@ public class GPen extends GObject {
 /**
  * Creates a new <code>GPen</code> object with an empty path.
  *
- * @usage GPen gpen = new GPen();
+ * Example: GPen gpen = new GPen();
  */
 	public GPen() {
 		penVisible = false;
@@ -72,7 +72,7 @@ public class GPen extends GObject {
  * Creates a new <code>GPen</code> object with an empty path, initially
  * positioned at the point (<code>x</code>, <code>y</code>).
  *
- * @usage GPen gpen = new GPen(x, y);
+ * Example: GPen gpen = new GPen(x, y);
  * @param x The initial x coordinate of the pen
  * @param y The initial y coordinate of the pen
  */
@@ -85,7 +85,7 @@ public class GPen extends GObject {
 /**
  * Erases the entire path drawn by the pen but does not change its position.
  *
- * @usage gpen.erasePath();
+ * Example: gpen.erasePath();
  */
 	public void erasePath() {
 		path.clear();
@@ -100,7 +100,7 @@ public class GPen extends GObject {
 /**
  * Moves the pen to the point (<code>x</code>, <code>y</code>) without drawing a line.
  *
- * @usage gpen.setLocation(x, y);
+ * Example: gpen.setLocation(x, y);
  * @param x The x-coordinate of the new position
  * @param y The y-coordinate of the new position
  */
@@ -120,7 +120,7 @@ public class GPen extends GObject {
  * that the next call to <code>drawLine</code> will continue from where this
  * one finished.
  *
- * @usage drawLine(dx, dy);
+ * Example: drawLine(dx, dy);
  * @param dx The extent of the line in the x direction
  * @param dy The extent of the line in the y direction
  */
@@ -145,20 +145,20 @@ public class GPen extends GObject {
  * angle is measured in degrees increasing counterclockwise from the +x axis.
  * Thus, the call
  *
- * <p><pre><code>
+ *
  * &nbsp;    drawPolarLine(1.0, 0);
- * </code></pre>
+ *
  *
  * <p>draws a line extending rightward one inch from the current point.
  * Similarly
  *
- * <p><pre><code>
+ *
  * &nbsp;    drawPolarLine(2.0, 135);
- * </code></pre>
+ *
  *
  * <p>draws a two-inch line extending to the northwest from the current point.
  *
- * @usage drawPolarLine(r, theta);
+ * Example: drawPolarLine(r, theta);
  * @param r The length of the line segment
  * @param theta The angle at which to draw the line, measured in degrees
  *              increasing counterclockwise from the +x axis
@@ -172,7 +172,7 @@ public class GPen extends GObject {
 /**
  * Sets the color of the pen.
  *
- * @usage gpen.setColor(color);
+ * Example: gpen.setColor(color);
  * @param color The new color for the pen
  */
 	public void setColor(Color color) {
@@ -188,7 +188,7 @@ public class GPen extends GObject {
 /**
  * Sets the color used to fill a region.
  *
- * @usage gpen.setFillColor(color);
+ * Example: gpen.setFillColor(color);
  * @param color The new color used to fill a region
  */
 	public void setFillColor(Color color) {
@@ -205,7 +205,7 @@ public class GPen extends GObject {
  * none has been set, <code>getFillColor</code> returns the color of the
  * object.
  *
- * @usage Color color = gpen.getFillColor();
+ * Example: Color color = gpen.getFillColor();
  * @return The color used to display the filled region of this object
  */
 	public Color getFillColor() {
@@ -219,7 +219,7 @@ public class GPen extends GObject {
  * <code>endFilledRegion</code> will be used to create a polygon that
  * is then filled.
  *
- * @usage gpen.startFilledRegion();
+ * Example: gpen.startFilledRegion();
  */
 	public void startFilledRegion() {
 		if (regionOpen) {
@@ -234,7 +234,7 @@ public class GPen extends GObject {
 /**
  * Ends the definition of a region and fills it with the current color.
  *
- * @usage gpen.endFilledRegion();
+ * Example: gpen.endFilledRegion();
  */
 	public void endFilledRegion() {
 		if (!regionOpen) {
@@ -252,7 +252,7 @@ public class GPen extends GObject {
  * Makes the pen itself visible.  If the pen is visible, the <code>drawPen</code>
  * method will be called at the end of painting the path to show the current location.
  *
- * @usage gpen.showPen();
+ * Example: gpen.showPen();
  */
 	public void showPen() {
 		penVisible = true;
@@ -264,7 +264,7 @@ public class GPen extends GObject {
 /**
  * Makes the pen itself invisible.
  *
- * @usage gpen.showPen();
+ * Example: gpen.showPen();
  */
 	public void hidePen() {
 		penVisible = false;
@@ -276,7 +276,7 @@ public class GPen extends GObject {
 /**
  * Returns whether the pen is visible.
  *
- * @usage if (isPenVisible(visible)) . . .
+ * Example: if (isPenVisible(visible)) . . .
  * @return <code>true</code> if the pen is visible, otherwise <code>false</code>
  */
 	public boolean isPenVisible() {
@@ -289,7 +289,7 @@ public class GPen extends GObject {
  * and 1 (fastest).  Setting speed to a value less than one makes the pen
  * move slowly, thereby making it easy to see exactly how a figure is being drawn.
  *
- * @usage setSpeed(speed);
+ * Example: setSpeed(speed);
  * @param speed The speed of the pen (0 is slowest, 1 is fastest)
  */
 	public void setSpeed(double speed) {
@@ -300,7 +300,7 @@ public class GPen extends GObject {
 /**
  * Returns the current speed of the pen.
  *
- * @usage double speed = getSpeed();
+ * Example: double speed = getSpeed();
  * @return The current speed of the pen (0 is slowest, 1 is fastest)
  */
 	public double getSpeed() {
@@ -314,7 +314,7 @@ public class GPen extends GObject {
  * behavior seems counterintuitive for a pen installed directly in a <code>GCanvas</code>,
  * but is quite useful when a <code>GPen</code> is embedded in a compound object.
  *
- * @usage gpen.scale(sx, sy);
+ * Example: gpen.scale(sx, sy);
  * @param sx The factor used to scale all coordinates in the x direction
  * @param sy The factor used to scale all coordinates in the y direction
  */
@@ -328,7 +328,7 @@ public class GPen extends GObject {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		PathState state = new PathState();
@@ -342,7 +342,7 @@ public class GPen extends GObject {
 /**
  * Returns the bounding box for the entire figure traced by the pen.
  *
- * @usage bounds = getBounds();
+ * Example: bounds = getBounds();
  * @return A <code>GRectangle</code> representing the bounding box
  */
 	public GRectangle getBounds() {
@@ -357,7 +357,7 @@ public class GPen extends GObject {
  * Contains is defined to be false for the <code>GPen</code> object to avoid having the
  * trace intercept mouse clicks.
  *
- * @noshow
+ *
  */
 	public boolean contains(double x, double y) {
 		return false;
@@ -368,7 +368,7 @@ public class GPen extends GObject {
  * Sets the image of the pen to be the specified image.  This image is drawn with
  * its center at the pen position.
  *
- * @usage pen.setPenImage(image);
+ * Example: pen.setPenImage(image);
  * @param image The new image to use for the pen
  */
 	public void setPenImage(Image image) {
@@ -379,6 +379,8 @@ public class GPen extends GObject {
 /**
  * Returns the image used to draw the pen when <code>setPenVisible</code> has been
  * called.
+ *
+ * @return Image pen image
  */
 	public Image getPenImage() {
 		if (penImage == null) penImage = PenImage.getImage();
@@ -483,7 +485,7 @@ public class GPen extends GObject {
  * This method draws a representation of the pen at the current location.
  * Subclasses can override this method to draw fancier pens.
  *
- * @usage drawPen(g);
+ * Example: drawPen(g);
  * @param g The graphics context in which to draw the pen
  */
 	protected void drawPen(Graphics g) {
@@ -499,9 +501,9 @@ public class GPen extends GObject {
 
 /* Protected method: getPenBounds() */
 /**
- * This method returns the bounds that the pen occupies.
+ * @return This method returns the bounds that the pen occupies.
  *
- * @usage Rectangle r = getPenBounds();
+ * Example: Rectangle r = getPenBounds();
  */
 	protected Rectangle getPenBounds() {
 		Component comp = getComponent();
@@ -535,7 +537,7 @@ public class GPen extends GObject {
 
 /* Package class: PathList */
 /**
- * The <code>PathList<code> class represents a list of path elements.
+ * The <code>PathList</code> class represents a list of path elements.
  */
 class PathList implements Serializable {
 
@@ -582,7 +584,7 @@ class PathList implements Serializable {
 
 /* Method: getElementCount() */
 /**
- * Returns the number of path elements in the list.
+ * @return Returns the number of path elements in the list.
  */
 	public int getElementCount() {
 		return path.size();
@@ -590,7 +592,7 @@ class PathList implements Serializable {
 
 /* Method: getElement(index) */
 /**
- * Returns the path element at the specified index.
+ * @return Returns the path element at the specified index.
  */
 	public PathElement getElement(int index) {
 		return path.get(index);
@@ -598,7 +600,7 @@ class PathList implements Serializable {
 
 /* Method: getBounds() */
 /**
- * Returns the bounding rectangle for the objects in the list.
+ * @return Returns the bounding rectangle for the objects in the list.
  */
 	public synchronized GRectangle getBounds(PathState state) {
 		GRectangle bounds = new GRectangle(-1, -1, -1, -1);
@@ -632,7 +634,7 @@ class PathList implements Serializable {
 
 /* Package class: PathState */
 /**
- * The <code>PathState<code> class maintains the information necessary to
+ * The <code>PathState</code> class maintains the information necessary to
  * render the path.  It is a structure in which the elements are read directly
  * by the PathElement subclasses.
  */
@@ -645,7 +647,7 @@ class PathState implements Serializable {
 
 /* Package abstract class: PathElement */
 /**
- * The <code>PathElement<code> class is used to elements of the path being constructed.
+ * The <code>PathElement</code> class is used to elements of the path being constructed.
  * <code>PathElement</code> is the abstract class; the actual code to render and
  * compute the bounds of the path element is provided by the concrete classes.
  */
@@ -682,7 +684,7 @@ abstract class PathElement implements Serializable {
 
 /* Package class: SetLocationElement */
 /**
- * The <code>SetLocationElement<code> class is used to represent a change in
+ * The <code>SetLocationElement</code> class is used to represent a change in
  * position.
  */
 class SetLocationElement extends PathElement {
@@ -710,7 +712,7 @@ class SetLocationElement extends PathElement {
 
 /* Package class: DrawLineElement */
 /**
- * The <code>DrawLineElement<code> class is used to represent a
+ * The <code>DrawLineElement</code> class is used to represent a
  * line.
  */
 class DrawLineElement extends PathElement {
@@ -750,7 +752,7 @@ class DrawLineElement extends PathElement {
 
 /* Package class: SetColorElement */
 /**
- * The <code>SetColorElement<code> class is used to represent a
+ * The <code>SetColorElement</code> class is used to represent a
  * change of color.
  */
 class SetColorElement extends PathElement {
@@ -767,7 +769,7 @@ class SetColorElement extends PathElement {
 
 /* Package class: StartRegionElement */
 /**
- * The <code>StartRegionElement<code> class marks the beginning of a region.
+ * The <code>StartRegionElement</code> class marks the beginning of a region.
  */
 class StartRegionElement extends PathElement {
 	public StartRegionElement(Color color) {
@@ -784,7 +786,7 @@ class StartRegionElement extends PathElement {
 
 /* Package class: EndRegionElement */
 /**
- * The <code>EndRegionElement<code> class marks the end of a region.
+ * The <code>EndRegionElement</code> class marks the end of a region.
  */
 class EndRegionElement extends PathElement {
 	public EndRegionElement() {
@@ -803,7 +805,7 @@ class EndRegionElement extends PathElement {
 
 /* Package class: FinalPathElement */
 /**
- * The <code>FinalPathElement<code> class is invoked at the end of the path
+ * The <code>FinalPathElement</code> class is invoked at the end of the path
  * and has the effect of drawing an incomplete region.
  */
 class FinalPathElement extends PathElement {

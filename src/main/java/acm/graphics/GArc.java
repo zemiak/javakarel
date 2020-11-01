@@ -62,11 +62,11 @@ public class GArc extends GObject implements GFillable, GScalable {
  * Creates a new <code>GArc</code> object consisting of an elliptical arc
  * located at the point (0,&nbsp;0).  For complete descriptions of the
  * other parameters, see the entry for the
- * <a href="#GArc(double, double, double, double, double, double)"><code>GArc</code></a>
+ * <code>GArc</code>
  * constructor that includes explicit <code>x</code> and <code>y</code>
  * parameters.
  *
- * @usage GArc garc = new GArc(width, height, start, sweep);
+ * Example: GArc garc = new GArc(width, height, start, sweep);
  * @param width The width of the rectangle in which the arc is inscribed
  * @param height The height of the rectangle in which the arc is inscribed
  * @param start The angle at which the arc begins measured in degrees counterclockwise
@@ -95,7 +95,7 @@ public class GArc extends GObject implements GFillable, GScalable {
  * <code>sweep</code> angle of -180 defines a semicircle extending
  * clockwise.
  *
- * @usage GArc garc = new GArc(x, y, width, height, start, sweep);
+ * Example: GArc garc = new GArc(x, y, width, height, start, sweep);
  * @param x The x-coordinate for the rectangle in which the arc is inscribed
  * @param y The y-coordinate for the rectangle in which the arc is inscribed
  * @param width The width of the rectangle in which the arc is inscribed
@@ -117,7 +117,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Sets the starting angle for this <code>GArc</code> object.
  *
- * @usage garc.setStartAngle(start);
+ * Example: garc.setStartAngle(start);
  * @param start The new starting angle
  */
 	public void setStartAngle(double start) {
@@ -129,7 +129,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Returns the starting angle for this <code>GArc</code> object.
  *
- * @usage double start = garc.getStartAngle();
+ * Example: double start = garc.getStartAngle();
  * @return The starting angle for this arc
  */
 	public double getStartAngle() {
@@ -140,7 +140,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Sets the sweep angle for this <code>GArc</code> object.
  *
- * @usage garc.setSweepAngle(sweep);
+ * Example: garc.setSweepAngle(sweep);
  * @param sweep The new sweep angle
  */
 	public void setSweepAngle(double sweep) {
@@ -152,7 +152,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Returns the sweep angle for this <code>GArc</code> object.
  *
- * @usage double sweep = garc.getSweepAngle();
+ * Example: double sweep = garc.getSweepAngle();
  * @return The sweep angle for this arc
  */
 	public double getSweepAngle() {
@@ -163,7 +163,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Returns the point at which the arc starts.
  *
- * @usage GPoint pt = garc.getStartPoint();
+ * Example: GPoint pt = garc.getStartPoint();
  * @return The point at which the arc starts
  */
 	public GPoint getStartPoint() {
@@ -174,7 +174,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Returns the point at which the arc ends.
  *
- * @usage GPoint pt = garc.getEndPoint();
+ * Example: GPoint pt = garc.getEndPoint();
  * @return The point at which the arc ends
  */
 	public GPoint getEndPoint() {
@@ -185,7 +185,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		Component comp = getComponent();
@@ -217,11 +217,11 @@ public class GArc extends GObject implements GFillable, GScalable {
  * Returns the bounding box of the arc.  Note that this method returns the
  * bounds of the visible portion of the arc and will therefore not contain
  * the same values as specified in
- * <a href="#setFrameRectangle(double, double, double, double)"><code>setFrameRectangle</code></a>.
+ * <code>setFrameRectangle</code>.
  * To obtain the bounds used to describe the Java arc, use
- * <a href="#getFrameRectangle()"><code>getFrameRectangle</code></a>.
+ * <code>getFrameRectangle</code>.
  *
- * @usage GRectangle bounds = garc.getBounds();
+ * Example: GRectangle bounds = garc.getBounds();
  * @return The bounding box of this object
  */
 	public GRectangle getBounds() {
@@ -256,10 +256,10 @@ public class GArc extends GObject implements GFillable, GScalable {
  * class, containment depends on whether the arc is filled.  Filled arcs are a
  * wedge in which containment can be defined in a natural way; unfilled arcs are
  * essentially lines, which means that containment is defined to mean that the
- * point is within <a href="#ARC_TOLERANCE"><code>ARC_TOLERANCE</code></a> pixels
+ * point is within <code>ARC_TOLERANCE</code> pixels
  * of the arc.
  *
- * @usage if (garc.contains(x, y)) . . .
+ * Example: if (garc.contains(x, y)) . . .
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return <code>true</code> if the point (<code>x</code>,&nbsp;<code>y</code>) is inside
@@ -284,7 +284,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Changes the arc bounds to the specified values.
  *
- * @usage garc.setBounds(x, y, width, height);
+ * Example: garc.setBounds(x, y, width, height);
  * @param x The x-coordinate for the rectangle in which the arc is inscribed
  * @param y The y-coordinate for the rectangle in which the arc is inscribed
  * @param width The width of the rectangle in which the arc is inscribed
@@ -300,7 +300,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Changes the arc bounds to the values from the specified <code>GRectangle</code>.
  *
- * @usage garc.setFrameRectangle(bounds);
+ * Example: garc.setFrameRectangle(bounds);
  * @param bounds A <code>GRectangle</code> specifying the new arc bounds
  */
 	public final void setFrameRectangle(GRectangle bounds) {
@@ -311,10 +311,10 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Returns the bounds of the <code>GRectangle</code> in which this arc is inscribed.
  * Note that this is usually different from the bounding box returned by
- * <a href="#getBounds()"><code>getBounds</code></a>, which returns the bounding
+ * <code>getBounds</code>, which returns the bounding
  * box in which the displayed portion of the arc is contained.
  *
- * @usage GRectangle bounds = garc.getFrameRectangle();
+ * Example: GRectangle bounds = garc.getFrameRectangle();
  * @return The <code>GRectangle</code> in which this arc is inscribed
  */
 	public GRectangle getFrameRectangle() {
@@ -325,7 +325,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Scales the object on the screen by the scale factors <code>sx</code> and <code>sy</code>.
  *
- * @usage gobj.scale(sx, sy);
+ * Example: gobj.scale(sx, sy);
  * @param sx The factor used to scale all coordinates in the x direction
  * @param sy The factor used to scale all coordinates in the y direction
  */
@@ -340,7 +340,7 @@ public class GArc extends GObject implements GFillable, GScalable {
  * Scales the object on the screen by the scale factor <code>sf</code>, which applies
  * in both dimensions.
  *
- * @usage gobj.scale(sf);
+ * Example: gobj.scale(sf);
  * @param sf The factor used to scale all coordinates in both dimensions
  */
 	public final void scale(double sf) {
@@ -351,7 +351,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Sets whether this object is filled.
  *
- * @usage garc.setFilled(fill);
+ * Example: garc.setFilled(fill);
  * @param fill <code>true</code> if the object should be filled, <code>false</code> for an outline
  */
 	public void setFilled(boolean fill) {
@@ -363,7 +363,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Returns whether this object is filled.
  *
- * @usage if (garc.isFilled()) . . .
+ * Example: if (garc.isFilled()) . . .
  * @return The color used to display the object
  */
 	public boolean isFilled() {
@@ -374,7 +374,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Sets the color used to display the filled region of this object.
  *
- * @usage garc.setFillColor(color);
+ * Example: garc.setFillColor(color);
  * @param color The color used to display the filled region of this object
  */
 	public void setFillColor(Color color) {
@@ -388,7 +388,7 @@ public class GArc extends GObject implements GFillable, GScalable {
  * none has been set, <code>getFillColor</code> returns the color of the
  * object.
  *
- * @usage Color color = garc.getFillColor();
+ * Example: Color color = garc.getFillColor();
  * @return The color used to display the filled region of this object
  */
 	public Color getFillColor() {
@@ -539,7 +539,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /**
  * Returns an AWT <code>Rectangle</code> that specifies the bounds of this object.
  *
- * @usage Rectangle r = garc.getAWTBounds();
+ * Example: Rectangle r = garc.getAWTBounds();
  * @return A <code>Rectangle</code> that specifies the bounds of this object
  */
 	protected Rectangle getAWTBounds() {
@@ -549,7 +549,7 @@ public class GArc extends GObject implements GFillable, GScalable {
 /* Protected method: paramString() */
 /**
  * Returns a string indicating the parameters of this object.
- * @noshow
+ *
  */
 	public String paramString() {
 		String tail = super.paramString();

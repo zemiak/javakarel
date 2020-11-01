@@ -25,11 +25,11 @@ package acm.util;
  * This class allows errors to be reported in a consistent way.
  * Clients typically call
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    throw new ErrorException(msg);
  * </code></pre>
  *
- * <p>Because <code>ErrorException</code> is a subclass of <code>RuntimeException</code>,
+ * <p>&nbsp;</p>Because <code>ErrorException</code> is a subclass of <code>RuntimeException</code>,
  * this exception need not be declared in <code>throws</code> clauses.
  */
 public class ErrorException extends RuntimeException {
@@ -38,7 +38,7 @@ public class ErrorException extends RuntimeException {
 /**
  * Creates an <code>ErrorException</code> with the specified message.
  *
- * @usage throw new ErrorException(msg);
+ * Example: throw new ErrorException(msg);
  * @param msg The error message to be reported
  */
 	public ErrorException(String msg) {
@@ -49,7 +49,7 @@ public class ErrorException extends RuntimeException {
 /**
  * Creates an <code>ErrorException</code> using an existing exception.
  *
- * @usage throw new ErrorException(ex);
+ * Example: throw new ErrorException(ex);
  * @param ex The exception to be reported
  */
 	public ErrorException(Exception ex) {

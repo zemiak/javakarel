@@ -47,7 +47,7 @@ public class GRoundRect extends GRect {
  * Constructs a new rounded rectangle with the specified width and height,
  * positioned at the origin.
  *
- * @usage GRoundRect rr = new GRoundRect(width, height);
+ * Example: GRoundRect rr = new GRoundRect(width, height);
  * @param width The width of the rectangle in pixels
  * @param height The height of the rectangle in pixels
  */
@@ -59,7 +59,7 @@ public class GRoundRect extends GRect {
 /**
  * Constructs a new rounded rectangle with the specified bounds.
  *
- * @usage GRoundRect rr = new GRoundRect(x, y, width, height);
+ * Example: GRoundRect rr = new GRoundRect(x, y, width, height);
  * @param x The x-coordinate of the upper left corner
  * @param y The y-coordinate of the upper left corner
  * @param width The width of the rectangle in pixels
@@ -74,7 +74,7 @@ public class GRoundRect extends GRect {
  * Constructs a new rounded rectangle with the specified bounds and a single
  * parameter describing both the  describing the curvature at the corners.
  *
- * @usage GRoundRect rr = new GRoundRect(x, y, width, height, arcSize);
+ * Example: GRoundRect rr = new GRoundRect(x, y, width, height, arcSize);
  * @param x The x-coordinate of the upper left corner
  * @param y The y-coordinate of the upper left corner
  * @param width The width of the rectangle in pixels
@@ -91,7 +91,7 @@ public class GRoundRect extends GRect {
  * Constructs a new rounded rectangle with the specified bounds and
  * arc parameters describing the curvature at the corners.
  *
- * @usage GRoundRect rr = new GRoundRect(x, y, width, height, arcWidth, arcHeight);
+ * Example: GRoundRect rr = new GRoundRect(x, y, width, height, arcWidth, arcHeight);
  * @param x The x-coordinate of the upper left corner
  * @param y The y-coordinate of the upper left corner
  * @param width The width of the rectangle in pixels
@@ -111,7 +111,7 @@ public class GRoundRect extends GRect {
 /**
  * Returns the <i>x</i> component of the corner radius.
  *
- * @usage double arcWidth = rr.getArcWidth();
+ * Example: double arcWidth = rr.getArcWidth();
  * @return The <i>x</i> component of the corner radius, in pixels.
  */
 	public double getArcWidth() {
@@ -122,7 +122,7 @@ public class GRoundRect extends GRect {
 /**
  * Returns the <i>y</i> component of the corner radius.
  *
- * @usage double arcHeight = rr.getArcHeight();
+ * Example: double arcHeight = rr.getArcHeight();
  * @return The <i>y</i> component of the corner radius, in pixels.
  */
 	public double getArcHeight() {
@@ -133,7 +133,7 @@ public class GRoundRect extends GRect {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		Component comp = getComponent();
@@ -152,212 +152,6 @@ public class GRoundRect extends GRect {
 		}
 	}
 
-/* Inherited method: setLocation(x, y) */
-/**
- * @inherited GObject#void setLocation(double x, double y)
- * Sets the location of this object to the point (<code>x</code>, <code>y</code>).
- */
-
-/* Inherited method: setLocation(pt) */
-/**
- * @inherited GObject#void setLocation(GPoint pt)
- * Sets the location of this object to the specified point.
- */
-
-/* Inherited method: getLocation() */
-/**
- * @inherited GObject#GPoint getLocation()
- * Returns the location of this object as a <code>GPoint</code>.
- */
-
-/* Inherited method: getX() */
-/**
- * @inherited GObject#double getX()
- * Returns the x-coordinate of the object.
- */
-
-/* Inherited method: getY() */
-/**
- * @inherited GObject#double getY()
- * Returns the y-coordinate of the object.
- */
-
-/* Inherited method: move(dx, dy) */
-/**
- * @inherited GObject#void move(double dx, double dy)
- * Moves the object on the screen using the displacements <code>dx</code> and <code>dy</code>.
- */
-
-/* Inherited method: movePolar(r, theta) */
-/**
- * @inherited GObject#void movePolar(double r, double theta)
- * Moves the object using displacements given in polar coordinates.
- */
-
-/* Inherited method: scale(sx, sy) */
-/**
- * @inherited GObject#void scale(double sx, double sy)
- * Scales the object on the screen by the scale factors <code>sx</code> and <code>sy</code>.
- */
-
-/* Inherited method: scale(sf) */
-/**
- * @inherited GObject#void scale(double sf)
- * Scales the object on the screen by the scale factor <code>sf</code>, which applies
- * in both dimensions.
- */
-
-/* Inherited method: setSize(width, height) */
-/**
- * @inherited GObject#void setSize(double width, double height)
- * Changes the size of this object to the specified width and height.
- */
-
-/* Inherited method: getSize() */
-/**
- * @inherited GObject#GDimension getSize()
- * Returns the size of the bounding box for this object.
- */
-
-/* Inherited method: getWidth() */
-/**
- * @inherited GObject#double getWidth()
- * Returns the width of this object, which is defined to be
- * the width of the bounding box.
- */
-
-/* Inherited method: getHeight() */
-/**
- * @inherited GObject#double getHeight()
- * Returns the height of this object, which is defined to be
- * the height of the bounding box.
- */
-
-/* Inherited method: setBounds(x, y, width, height) */
-/**
- * @inherited GRect#void setBounds(double x, double y, double width, double height)
- * Changes the bounds of this object to the specified parameters.
- */
-
-/* Inherited method: setBounds(bounds) */
-/**
- * @inherited GRect#void setBounds(GRectangle bounds)
- * Changes the bounds of this object as specified.
- */
-
-/* Inherited method: getBounds() */
-/**
- * @inherited GObject#GRectangle getBounds()
- * Returns the bounding box for this object.
- */
-
-/* Inherited method: contains(x, y) */
-/**
- * @inherited GObject#boolean contains(double x, double y)
- * Checks to see whether a point is inside the object.
- */
-
-/* Inherited method: contains(pt) */
-/**
- * @inherited GObject#boolean contains(GPoint pt)
- * Checks to see whether a point is inside the object.
- */
-
-/* Inherited method: sendToFront() */
-/**
- * @inherited GObject#void sendToFront()
- * Moves this object to the front of the display in the <i>z</i> dimension.
- */
-
-/* Inherited method: sendToBack() */
-/**
- * @inherited GObject#void sendToBack()
- * Moves this object to the back of the display in the <i>z</i> dimension.
- */
-
-/* Inherited method: sendForward() */
-/**
- * @inherited GObject#void sendForward()
- * Moves this object one step toward the front in the <i>z</i> dimension.
- */
-
-/* Inherited method: sendBackward() */
-/**
- * @inherited GObject#void sendBackward()
- * Moves this object one step toward the back in the <i>z</i> dimension.
- */
-
-/* Inherited method: setColor(color) */
-/**
- * @inherited GObject#void setColor(Color color)
- * Sets the color used to display this object.
- */
-
-/* Inherited method: getColor() */
-/**
- * @inherited GObject#Color getColor()
- * Returns the color used to display this object.
- */
-
-/* Inherited method: setFillColor(color) */
-/**
- * @inherited GObject#void setFillColor(Color color)
- * Sets the color used to display the filled region of this object.
- */
-
-/* Inherited method: getFillColor() */
-/**
- * @inherited GObject#Color getFillColor()
- * Returns the color used to display the filled region of this object.
- */
-
-/* Inherited method: setFilled(fill) */
-/**
- * @inherited GObject#void setFilled(boolean fill)
- * Sets whether this object is filled.
- */
-
-/* Inherited method: isFilled() */
-/**
- * @inherited GObject#boolean isFilled()
- * Returns whether this object is filled.
- */
-
-/* Inherited method: setVisible(visible) */
-/**
- * @inherited GObject#void setVisible(boolean visible)
- * Sets whether this object is visible.
- */
-
-/* Inherited method: isVisible() */
-/**
- * @inherited GObject#boolean isVisible()
- * Checks to see whether this object is visible.
- */
-
-/* Inherited method: addMouseListener(listener) */
-/**
- * @inherited GObject#void addMouseListener(MouseListener listener)
- * Adds a mouse listener to this graphical object.
- */
-
-/* Inherited method: removeMouseListener(listener) */
-/**
- * @inherited GObject#void removeMouseListener(MouseListener listener)
- * Removes a mouse listener from this graphical object.
- */
-
-/* Inherited method: addMouseMotionListener(listener) */
-/**
- * @inherited GObject#void addMouseMotionListener(MouseMotionListener listener)
- * Adds a mouse motion listener to this graphical object.
- */
-
-/* Inherited method: removeMouseMotionListener(listener) */
-/**
- * @inherited GObject#void removeMouseMotionListener(MouseMotionListener listener)
- * Removes a mouse motion listener from this graphical object.
- */
 /* Private instance variables */
 	private double aWidth, aHeight;
 	private GArc renderer;

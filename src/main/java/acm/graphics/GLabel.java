@@ -39,7 +39,7 @@ public class GLabel extends GObject {
 /* Constant: DEFAULT_FONT */
 /**
  * The default font used to display strings.  You can change the font by invoking
- * the <a href="#setFont(Font)"><code>setFont</code></a> method.
+ * the <code>setFont</code> method.
  */
 	public static final Font DEFAULT_FONT = new Font("Default", Font.PLAIN, 12);
 
@@ -47,7 +47,7 @@ public class GLabel extends GObject {
 /**
  * Creates a new <code>GLabel</code> object initialized to contain the specified string.
  *
- * @usage GLabel glabel = new GLabel(str);
+ * Example: GLabel glabel = new GLabel(str);
  * @param str The initial contents of the <code>GLabel</code>
  */
 	public GLabel(String str) {
@@ -59,7 +59,7 @@ public class GLabel extends GObject {
  * Creates a new <code>GLabel</code> object with its baseline origin at the
  * specified position.
  *
- * @usage GLabel glabel = new GLabel(str, x, y);
+ * Example: GLabel glabel = new GLabel(str, x, y);
  * @param str The initial contents of the <code>GLabel</code>
  * @param x The x-coordinate of the label origin
  * @param y The y-coordinate of the baseline for the label
@@ -74,10 +74,10 @@ public class GLabel extends GObject {
 /**
  * Changes the font used to display the <code>GLabel</code>.  This call will
  * usually change the size of the displayed object and will therefore affect
- * the result of calls to <a href="GObject.html#getSize()"><code>getSize</code></a>
- * and <a href="GObject.html#getBounds()"><code>getBounds</code></a>.
+ * the result of calls to <code>getSize</code>
+ * and <code>getBounds</code>.
  *
- * @usage glabel.setFont(font);
+ * Example: glabel.setFont(font);
  * @param font A <code>Font</code> object indicating the new font
  */
 	public void setFont(Font font) {
@@ -91,14 +91,13 @@ public class GLabel extends GObject {
  * the string <code>str</code>, which is interpreted in the style of
  * <code>Font.decode</code>.  The usual format of the font string is
  *
- * <p><pre><code>
- * &nbsp;    <font face="serif;times"><i>family</i></font>-<font face="serif;times"><i>style</i></font>-<font face="serif;times"><i>size</i></font>
+ * &nbsp;    <i>family</i>-<i>style</i>-<i>size</i>
  *
- * <p>where both <i>style</i> and <i>size</i> are optional.  If any of these
+ * where both <i>style</i> and <i>size</i> are optional.  If any of these
  * parts are specified as an asterisk, the existing value is retained.
  *
- * @usage glabel.setFont(str);
- * @param str A <code>String</code> specifying the new font
+ * Example: glabel.setFont(str);
+ * @param str A String specifying the new font
  */
 	public void setFont(String str) {
 		setFont(JTFTools.decodeFont(str, getFont()));
@@ -108,7 +107,7 @@ public class GLabel extends GObject {
 /**
  * Returns the font in which the <code>GLabel</code> is displayed.
  *
- * @usage Font font = glabel.getFont();
+ * Example: Font font = glabel.getFont();
  * @return The font in use by this object
  */
 	public Font getFont() {
@@ -120,7 +119,7 @@ public class GLabel extends GObject {
  * Changes the string stored within the <code>GLabel</code> object, so that
  * a new text string appears on the display.
  *
- * @usage glabel.setLabel(str);
+ * Example: glabel.setLabel(str);
  * @param str The new string to display
  */
 	public void setLabel(String str) {
@@ -132,7 +131,7 @@ public class GLabel extends GObject {
 /**
  * Returns the string displayed by this object.
  *
- * @usage String str = glabel.getLabel();
+ * Example: String str = glabel.getLabel();
  * @return The string displayed by this object
  */
 	public String getLabel() {
@@ -143,7 +142,7 @@ public class GLabel extends GObject {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		g.setFont(labelFont);
@@ -154,7 +153,7 @@ public class GLabel extends GObject {
 /**
  * Returns the width of this string, as it appears on the display.
  *
- * @usage double width = glabel.getWidth();
+ * Example: double width = glabel.getWidth();
  * @return The width of this object
  */
 	public double getWidth() {
@@ -165,7 +164,7 @@ public class GLabel extends GObject {
 /**
  * Returns the height of this string, as it appears on the display.
  *
- * @usage double height = glabel.getHeight();
+ * Example: double height = glabel.getHeight();
  * @return The height of this string
  */
 	public double getHeight() {
@@ -176,7 +175,7 @@ public class GLabel extends GObject {
 /**
  * Returns the distance this string extends above the baseline.
  *
- * @usage double ascent = glabel.getAscent();
+ * Example: double ascent = glabel.getAscent();
  * @return The ascent of this string in pixels
  */
 	public double getAscent() {
@@ -187,7 +186,7 @@ public class GLabel extends GObject {
 /**
  * Returns the distance this string descends below the baseline.
  *
- * @usage double descent = glabel.getDescent();
+ * Example: double descent = glabel.getDescent();
  * @return The descent of this string in pixels
  */
 	public double getDescent() {
@@ -198,9 +197,9 @@ public class GLabel extends GObject {
 /**
  * Returns a <code>FontMetrics</code> object describing the dimensions of this string.
  *
- * @usage FontMetrics fm = glabel.getFontMetrics();
+ * Example: FontMetrics fm = glabel.getFontMetrics();
  * @return A <code>FontMetrics</code> object describing the dimensions of this string
- * @noshow
+ *
  */
 	public FontMetrics getFontMetrics() {
 		Component comp = getComponent();
@@ -212,7 +211,7 @@ public class GLabel extends GObject {
 /**
  * Returns a <code>GRectangle</code> that specifies the bounding box for the string.
  *
- * @usage GRectangle bounds = glabel.getBounds();
+ * Example: GRectangle bounds = glabel.getBounds();
  * @return The bounding box for this object
  */
 	public GRectangle getBounds() {
@@ -357,7 +356,7 @@ public class GLabel extends GObject {
 /* Protected method: paramString() */
 /**
  * Returns a string indicating the parameters of this object.
- * @noshow
+ *
  */
 	public String paramString() {
 		return super.paramString() + ", string=\"" + label + "\"";

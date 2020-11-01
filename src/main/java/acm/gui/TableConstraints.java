@@ -40,7 +40,7 @@ import java.util.*;
  * the following advantages over the <code>GridBagConstraints</code>
  * class on which it is based:
  *
- * <p><ul>
+ * <p>&nbsp;</p><ul>
  * <li>The constraints can be specified as an easily readable string
  *     instead of by initializing the individual fields.
  * <li>The class includes new <code>width</code> and <code>height</code>
@@ -53,24 +53,24 @@ import java.util.*;
  *     displays nondefault values of the fields in a readable way.
  * </ul>
  *
- * <p>To create a <code>TableConstraints</code> object, use the
+ * <p>&nbsp;</p>To create a <code>TableConstraints</code> object, use the
  * constructor with a string argument to set the fields of the
  * underlying <code>GridBagConstraints</code> object.  For example,
  * suppose you wanted to achieve the effect of the traditional code
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><code>
  * &nbsp;    GridBagConstraints gbc = new GridBagConstraints();
  * &nbsp;    gbc.gridx = 2;
  * &nbsp;    gbc.gridy = 3;
  * &nbsp;    gbc.fill = GridBagConstraints.BOTH;
- * </code></pre>
+ * </code>
  *
- * <p>Using <code>TableConstraints</code>, you can do all of this
+ * <p>&nbsp;</p>Using <code>TableConstraints</code>, you can do all of this
  * with the constructor, as follows:
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><code>
  * &nbsp;    new TableConstraints("gridx=2 gridy=3 fill=BOTH");
- * </code></pre>
+ * </code>
  */
 public class TableConstraints extends GridBagConstraints {
 
@@ -97,7 +97,7 @@ public class TableConstraints extends GridBagConstraints {
  * Creates a new <code>TableConstraints</code> object with default
  * values for each of the fields.
  *
- * @usage TableConstraints constraints = new TableConstraints();
+ * Example: TableConstraints constraints = new TableConstraints();
  */
 	public TableConstraints() {
 		this("");
@@ -109,32 +109,32 @@ public class TableConstraints extends GridBagConstraints {
  * are initialized according from the specified string.  Each field is
  * initialized by specifying a binding in the form
  *
- * <p><pre><code>
- * &nbsp;    <font face="serif;times"><i>key</i></font>=<font face="serif;times"><i>value</i></font>
- * </code></pre>
+ * <p>&nbsp;</p><code>
+ * &nbsp;    <i>key</i>=<i>value</i>
+ * </code>
  *
- * <p>where <i>key</i> is the name of one of the public fields
+ * <p>&nbsp;</p>where <i>key</i> is the name of one of the public fields
  * in the <code>TableConstraints</code> class and <i>value</i> is the
  * corresponding value, which can be expressed either as an integer
  * or as one of the constant names appropriate to that field.  For
  * example, the string
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><code>
  * &nbsp;    "width=20 fill=BOTH"
- * </code></pre>
+ * </code>
  *
- * <p>would create a <code>TableConstraints</code> object whose
+ * <p>&nbsp;</p>would create a <code>TableConstraints</code> object whose
  * <code>width</code> field was set to 20 and whose <code>fill</code>
  * field was set the the constant <code>GridBagConstraints.BOTH</code>.
  *
- * <p>As a special case, the four elements of the <code>insets</code>
+ * <p>&nbsp;</p>As a special case, the four elements of the <code>insets</code>
  * field can be set using the key names <code>left</code>, <code>right</code>,
  * <code>top</code>, and <code>bottom</code>.  Also, because the names
  * are more likely to indicate their purposes to novices, the HTML names
  * <code>rowspan</code> and <code>colspan</code> can be used in place
  * of <code>gridwidth</code> and <code>gridheight</code>.
  *
- * @usage TableConstraints constraints = new TableConstraints(str);
+ * Example: TableConstraints constraints = new TableConstraints(str);
  * @param str The constraint string as a series of key/value pairs
  */
 	public TableConstraints(String str) {
@@ -146,9 +146,9 @@ public class TableConstraints extends GridBagConstraints {
  * Creates a new <code>TableConstraints</code> object whose components
  * are the key/value pairs in the map.
  *
- * @usage TableConstraints constraints = new TableConstraints(map);
+ * Example: TableConstraints constraints = new TableConstraints(map);
  * @param map A map containing the key/value pairs
- * @noshow
+ *
  */
 	public TableConstraints(Map<String,String> map) {
 		OptionTable constraintTable = new OptionTable(map);
@@ -196,9 +196,9 @@ public class TableConstraints extends GridBagConstraints {
  * of the specified <code>GridBagConstraints</code> object.  Clients will not
  * ordinarily need to call this version of the constructor.
  *
- * @usage TableConstraints constraints = new TableConstraints(gbc);
+ * Example: TableConstraints constraints = new TableConstraints(gbc);
  * @param gbc The <code>GridBagConstraints</code> object to copy
- * @noshow
+ *
  */
 	public TableConstraints(GridBagConstraints gbc) {
 		gridx = gbc.gridx;
@@ -226,7 +226,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>anchor</code> field from the constraint.
  *
- * @usage int anchor = constraint.getAnchor();
+ * Example: int anchor = constraint.getAnchor();
  * @return The <code>anchor</code> field from the constraint
  */
 	public int getAnchor() {
@@ -237,7 +237,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>fill</code> field from the constraint.
  *
- * @usage int fill = constraint.getFill();
+ * Example: int fill = constraint.getFill();
  * @return The <code>fill</code> field from the constraint
  */
 	public int getFill() {
@@ -248,7 +248,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>gridx</code> field from the constraint.
  *
- * @usage int gridx = constraint.getGridX();
+ * Example: int gridx = constraint.getGridX();
  * @return The <code>gridx</code> field from the constraint
  */
 	public int getGridX() {
@@ -259,7 +259,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>gridy</code> field from the constraint.
  *
- * @usage int gridy = constraint.getGridY();
+ * Example: int gridy = constraint.getGridY();
  * @return The <code>gridy</code> field from the constraint
  */
 	public int getGridY() {
@@ -270,7 +270,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>gridwidth</code> field from the constraint.
  *
- * @usage int gridwidth = constraint.getGridWidth();
+ * Example: int gridwidth = constraint.getGridWidth();
  * @return The <code>gridwidth</code> field from the constraint
  */
 	public int getGridWidth() {
@@ -281,7 +281,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>gridheight</code> field from the constraint.
  *
- * @usage int gridheight = constraint.getGridHeight();
+ * Example: int gridheight = constraint.getGridHeight();
  * @return The <code>gridheight</code> field from the constraint
  */
 	public int getGridHeight() {
@@ -292,7 +292,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>ipadx</code> field from the constraint.
  *
- * @usage int ipadx = constraint.getIPadX();
+ * Example: int ipadx = constraint.getIPadX();
  * @return The <code>ipadx</code> field from the constraint
  */
 	public int getIPadX() {
@@ -303,7 +303,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>ipady</code> field from the constraint.
  *
- * @usage int ipady = constraint.getIPadY();
+ * Example: int ipady = constraint.getIPadY();
  * @return The <code>ipady</code> field from the constraint
  */
 	public int getIPadY() {
@@ -314,7 +314,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>insets</code> field from the constraint.
  *
- * @usage Insets insets = constraint.getInsets();
+ * Example: Insets insets = constraint.getInsets();
  * @return The <code>insets</code> field from the constraint
  */
 	public Insets getInsets() {
@@ -325,7 +325,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>weightx</code> field from the constraint.
  *
- * @usage double weightx = constraint.getWeightX();
+ * Example: double weightx = constraint.getWeightX();
  * @return The <code>weightx</code> field from the constraint
  */
 	public double getWeightX() {
@@ -336,7 +336,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>weighty</code> field from the constraint.
  *
- * @usage double weighty = constraint.getWeightY();
+ * Example: double weighty = constraint.getWeightY();
  * @return The <code>weighty</code> field from the constraint
  */
 	public double getWeightY() {
@@ -347,7 +347,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>width</code> field from the constraint.
  *
- * @usage int width = constraint.getWidth();
+ * Example: int width = constraint.getWidth();
  * @return The <code>width</code> field from the constraint
  */
 	public int getWidth() {
@@ -358,7 +358,7 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Returns the <code>height</code> field from the constraint.
  *
- * @usage int height = constraint.getHeight();
+ * Example: int height = constraint.getHeight();
  * @return The <code>height</code> field from the constraint
  */
 	public int getHeight() {
@@ -369,9 +369,9 @@ public class TableConstraints extends GridBagConstraints {
 /**
  * Converts the constraint into a readable string.
  *
- * @usage String str = constraint.toString();
+ * Example: String str = constraint.toString();
  * @return A readable string version of the constraint
- * @noshow
+ *
  */
 	public String toString() {
 		String str = getClass().getName();

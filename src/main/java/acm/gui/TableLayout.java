@@ -50,49 +50,35 @@ import javax.swing.*;
  * The constructor for the <code>TableLayout</code> class takes the number
  * of rows and columns.  Thus, the constructor call
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><code>
  * &nbsp;    new TableLayout(3, 5)
- * <code></pre>
+ * </code>
  *
- * <p>creates a new <code>TableLayout</code> manager with three rows in the
+ * <p>&nbsp;</p>creates a new <code>TableLayout</code> manager with three rows in the
  * vertical dimension and five columns across the page.  Components are added
  * to the grid starting at the upper left, filling each horizontal row and
  * then moving on to the next row down after the current one is filled.
  *
- * <p>The <code>TableLayout</code> manager also supports more fine-grained
+ * <p>&nbsp;</p>The <code>TableLayout</code> manager also supports more fine-grained
  * control over the formatting of tables by allowing you to specify
  * constraints in the following form:
  *
- * <p><pre><code>
- * &nbsp;    </code><i>constraint</i><code>=</code><i>value</i><code>
- * </code></pre>
+ * <p>&nbsp;</p><code>
+ * &nbsp;    constraint = value
+ * </code>
  *
- * <p>For example, if you want to specify that a component occupies two
+ * <p>&nbsp;</p>For example, if you want to specify that a component occupies two
  * columns in the grid, you would use the constraint
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><code>
  * &nbsp;    "gridwidth=2"
- * </code></pre>
+ * </code>
  *
- * <p>Strings used as constraint objects can set several constraints at
+ * <p>&nbsp;</p>Strings used as constraint objects can set several constraints at
  * once by including multiple constraint/value pairs separated by spaces.
  *
- * <p>The <code>TableLayout</code> class accepts all constraints supported
- * by <code>GridBagLayout</code>.  The most common constraints are shown
- * in the following table:
- *
- * <p><table bgcolor=#FFFFFF border=1 cellspacing=0 width=750>
- * <tr><td><table border=0 cellspacing=1 cellpadding=0><tr><td colspan=2><code>gridwidth=</code><font face=times><i>columns</i></font>&nbsp;&nbsp;<i><font size=-1>or</font></i>&nbsp;&nbsp;<code>gridheight=</code><font face=times><i>rows</i></font></td></tr>
- * <tr><td width=25>&nbsp;</td><td width=720>Indicates that this table cell should span the indicated number of columns or rows.</td></tr></table></td></tr>
- * <tr><td><table border=0 cellspacing=1 cellpadding=0><tr><td colspan=2><code>width=</code><font face=times><i>pixels</i></font>&nbsp;&nbsp;<i><font size=-1>or</font></i>&nbsp;&nbsp;<code>height=</code><font face=times><i>pixels</i></font></td></tr>
- * <tr><td width=25>&nbsp;</td><td width=720>The <code>width</code> specification indicates that the width of this column should be the specified number of pixels.  If different widths are specified for cells in the same column, the column width is defined to be the maximum.  In the absence of any <code>width</code> specification, the column width is the largest of the preferred widths.  The <code>height</code> specification is interpreted symmetrically for row heights.</td></tr></table></td></tr>
- * <tr><td><table border=0 cellspacing=1 cellpadding=0><tr><td colspan=2><code>weightx=</code><font face=times><i>weight</i></font>&nbsp;&nbsp;<i><font size=-1>or</font></i>&nbsp;&nbsp;<code>weighty=</code><font face=times><i>weight</i></font></td></tr>
- * <tr><td width=25>&nbsp;</td><td width=720>If the total size of the table is less than the size of its enclosure, <code>TableLayout</code> will ordinarily center the table in the available space.  If any of the cells, however, are given nonzero <code>weightx</code> or <code>weighty</code> values, the extra space is distributed along that axis in proportion to the weights specified.  As in the <code>GridBagLayout</code> model, the weights are floating-point values and may therefore contain a decimal point.</td></tr></table></td></tr>
- * <tr><td><table border=0 cellspacing=1 cellpadding=0><tr><td colspan=2><code>fill=</code><font face=times><i>fill</i></font></td></tr>
- * <tr><td width=25>&nbsp;</td><td width=720>Indicates how the component in this cell should be resized if its preferred size is smaller than the cell size.  The legal values are <code>NONE</code>, <code>HORIZONTAL</code>, <code>VERTICAL</code>, and <code>BOTH</code>, indicating the axes along which stretching should occur.  The default is <code>BOTH</code>.</td></tr></table></td></tr>
- * <tr><td><table border=0 cellspacing=1 cellpadding=0><tr><td colspan=2><code>anchor=</code><font face=times><i>anchor</i></font></td></tr>
- * <tr><td width=25>&nbsp;</td><td width=720>If a component is not being filled along a particular axis, the <code>anchor</code> specification indicates where the component should be placed in its cell.  The default value is <code>CENTER</code>, but any of the standard compass directions (<code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>, <code>WEST</code>, <code>NORTHEAST</code>, <code>NORTHWEST</code>, <code>SOUTHEAST</code>, or <code>SOUTHWEST</code>) may also be used.</td></tr></table></td></tr>
- * </table>
+ * <p>&nbsp;</p>The <code>TableLayout</code> class accepts all constraints supported
+ * by <code>GridBagLayout</code>.
  */
 public class TableLayout implements LayoutManager2, Serializable {
 
@@ -131,7 +117,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Creates a new <code>TableLayout</code> object with no limits
  * on the number of rows and columns.
  *
- * @usage TableLayout layout = new TableLayout();
+ * Example: TableLayout layout = new TableLayout();
  */
 	public TableLayout() {
 		this(0, 0);
@@ -142,7 +128,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Creates a new <code>TableLayout</code> object with the specified
  * number of rows and columns.
  *
- * @usage TableLayout layout = new TableLayout(rows, columns);
+ * Example: TableLayout layout = new TableLayout(rows, columns);
  * @param rows The number of rows, or 0 for no limit
  * @param columns The number of columns, or 0 for no limit
  */
@@ -155,7 +141,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Creates a new <code>TableLayout</code> object with the specified
  * row count, column count, alignment, horizontal gap, and vertical gap.
  *
- * @usage TableLayout layout = new TableLayout(rows, columns, hgap, vgap);
+ * Example: TableLayout layout = new TableLayout(rows, columns, hgap, vgap);
  * @param rows The number of rows, or 0 for no limit
  * @param columns The number of columns, or 0 for no limit
  * @param hgap The horizontal gap between columns
@@ -178,7 +164,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Resets the number of columns in the table.
  *
- * @usage layout.setColumnCount(columns);
+ * Example: layout.setColumnCount(columns);
  * @param columns The new number of columns
  */
 	public void setColumnCount(int columns) {
@@ -190,7 +176,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Returns the number of columns in the table.
  *
- * @usage int columns = layout.getColumnCount();
+ * Example: int columns = layout.getColumnCount();
  * @return The  number of columns
  */
 	public int getColumnCount() {
@@ -201,7 +187,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Resets the number of rows in the table.
  *
- * @usage layout.setRowCount(rows);
+ * Example: layout.setRowCount(rows);
  * @param rows The new number of rows
  */
 	public void setRowCount(int rows) {
@@ -213,7 +199,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Returns the number of rows in the table.
  *
- * @usage int rows = layout.getRowCount();
+ * Example: int rows = layout.getRowCount();
  * @return The  number of rows
  */
 	public int getRowCount() {
@@ -226,7 +212,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * are <code>CENTER</code>, <code>LEFT</code>, <code>RIGHT</code>, and
  * <code>FILL</code>.
  *
- * @usage layout.setHorizontalAlignment(align);
+ * Example: layout.setHorizontalAlignment(align);
  * @param align The horizontal alignment for the table
  */
 	public void setHorizontalAlignment(int align) {
@@ -238,7 +224,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Returns the horizontal alignment for the table.
  *
- * @usage int align = layout.getHorizontalAlignment();
+ * Example: int align = layout.getHorizontalAlignment();
  * @return The horizontal alignment for the table
  */
 	public int getHorizontalAlignment() {
@@ -251,7 +237,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * are <code>CENTER</code>, <code>TOP</code>, <code>BOTTOM</code>, and
  * <code>FILL</code>.
  *
- * @usage layout.setVerticalAlignment(align);
+ * Example: layout.setVerticalAlignment(align);
  * @param align The vertical alignment for the table
  */
 	public void setVerticalAlignment(int align) {
@@ -263,7 +249,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Returns the vertical alignment for the table.
  *
- * @usage int align = layout.getVerticalAlignment();
+ * Example: int align = layout.getVerticalAlignment();
  * @return The vertical alignment for the table
  */
 	public int getVerticalAlignment() {
@@ -276,7 +262,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * are <code>NONE</code>, <code>HORIZONTAL</code>, <code>VERTICAL</code>, and
  * <code>BOTH</code>.
  *
- * @usage layout.setDefaultFill(fill);
+ * Example: layout.setDefaultFill(fill);
  * @param fill The default fill parameter for components in the table
  */
 	public void setDefaultFill(int fill) {
@@ -288,7 +274,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Returns the default fill parameter for components in the table.
  *
- * @usage int fill = layout.getDefaultFill();
+ * Example: int fill = layout.getDefaultFill();
  * @return The default fill parameter for components in the table
  */
 	public int getDefaultFill() {
@@ -299,7 +285,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Sets the horizontal gap between components.
  *
- * @usage layout.setHgap(pixels);
+ * Example: layout.setHgap(pixels);
  * @param pixels The gap between components in pixels
  */
 	public void setHgap(int pixels) {
@@ -311,7 +297,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Returns the horizontal gap between components.
  *
- * @usage int hgap = layout.getHgap();
+ * Example: int hgap = layout.getHgap();
  * @return The horizontal gap between components
  */
 	public int getHgap() {
@@ -322,7 +308,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Sets the vertical gap between components.
  *
- * @usage layout.setVgap(pixels);
+ * Example: layout.setVgap(pixels);
  * @param pixels The gap between components in pixels
  */
 	public void setVgap(int pixels) {
@@ -334,7 +320,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Returns the vertical gap between components.
  *
- * @usage int vgap = layout.getVgap();
+ * Example: int vgap = layout.getVgap();
  * @return The vertical gap between components
  */
 	public int getVgap() {
@@ -362,9 +348,9 @@ public class TableLayout implements LayoutManager2, Serializable {
  * already occupied.
  * </ul>
  *
- * @usage layout.setStrictGridBagModel(flag);
+ * Example: layout.setStrictGridBagModel(flag);
  * @param flag <code>true</code> to use a strict <code>GridBagLayout</code> model
- * @noshow
+ *
  */
 	public void setStrictGridBagModel(boolean flag) {
 		useStrictGridBagModel = flag;
@@ -376,9 +362,9 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Returns <code>true</code> if this layout manager is treating multirow
  * cells exactly as <code>GridBagLayout</code> does.
  *
- * @usage if (layout.isStrictGridBagModel()) . . .
+ * Example: if (layout.isStrictGridBagModel()) . . .
  * @return <code>true</code> if this manager is using the strict <code>GridBagLayout</code> model
- * @noshow
+ *
  */
 	public boolean isStrictGridBagModel() {
 		return useStrictGridBagModel;
@@ -389,7 +375,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Sets the constraints for the component to a copy of the supplied
  * constraints.
  *
- * @usage layout.setConstraints(comp, constraints);
+ * Example: layout.setConstraints(comp, constraints);
  * @param comp The component to be constrained
  * @param constraints The constraints object used to specify the layout
  */
@@ -403,7 +389,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Sets the constraints for the component to the constraints
  * specified by the string.
  *
- * @usage layout.setConstraints(comp, constraints);
+ * Example: layout.setConstraints(comp, constraints);
  * @param comp The component to be constrained
  * @param constraints A string specifying the constraints
  */
@@ -418,7 +404,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * clients can use this class in preference to <code>GridBagConstraints</code>
  * without needing a type cast.
  *
- * @usage TableConstraints tc = layout.getConstraints(comp);
+ * Example: TableConstraints tc = layout.getConstraints(comp);
  * @param comp The component whose constraints are requested
  * @return A copy of the constraints object used to specify the layout
  */
@@ -435,7 +421,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  *
  * @param constraints The constraint string
  * @param comp The component to be added
- * @noshow
+ *
  */
 	public void addLayoutComponent(String constraints, Component comp) {
 		addLayoutComponent(comp, constraints);
@@ -446,7 +432,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Removes the specified component from the layout.
  *
  * @param comp The component to be removed
- * @noshow
+ *
  */
 	public void removeLayoutComponent(Component comp) {
 		constraintTable.remove(comp);
@@ -460,7 +446,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  *
  * @param target The container in which the layout is done
  * @return The preferred dimensions for the layout
- * @noshow
+ *
  */
 	public Dimension preferredLayoutSize(Container target) {
 		if (target.getComponentCount() == 0) return new Dimension(0, 0);
@@ -474,7 +460,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  *
  * @param target The container in which the layout is done
  * @return The minimum dimensions for the layout
- * @noshow
+ *
  */
 	public Dimension minimumLayoutSize(Container target) {
 		if (target.getComponentCount() == 0) return new Dimension(0, 0);
@@ -486,7 +472,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Lays out the components in the target container.
  *
  * @param target The container in which the layout is done
- * @noshow
+ *
  */
 	public void layoutContainer(Container target) {
 		targetContainer = target;
@@ -500,7 +486,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  *
  * @param comp The component to be added
  * @param constraints The constraint object
- * @noshow
+ *
  */
 	public void addLayoutComponent(Component comp, Object constraints) {
 		if (constraints == null) {
@@ -526,7 +512,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  *
  * @param target The container in which the layout is done
  * @return The maximum dimensions for the layout
- * @noshow
+ *
  */
 	public Dimension maximumLayoutSize(Container target) {
 		return new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE);
@@ -539,7 +525,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  *
  * @param target The container in which the layout is done
  * @return A value between 0 and 1 indicating where this component should align
- * @noshow
+ *
  */
 	public float getLayoutAlignmentX(Container target) {
 		return 0.5F;
@@ -552,7 +538,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  *
  * @param target The container in which the layout is done
  * @return A value between 0 and 1 indicating where this component should align
- * @noshow
+ *
  */
 	public float getLayoutAlignmentY(Container target) {
 		return 0.5F;
@@ -563,7 +549,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * Indicates that the layout is no longer valid.
  *
  * @param target The container in which the layout is done
- * @noshow
+ *
  */
 	public synchronized void invalidateLayout(Container target) {
 		layoutTable = null;
@@ -588,7 +574,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /* Override method: toString() */
 /**
  * Creates a printable representation of the layout.
- * @noshow
+ *
  */
 	public String toString() {
 		String str = getClass().getName();
@@ -603,7 +589,7 @@ public class TableLayout implements LayoutManager2, Serializable {
 /**
  * Returns the constraints object for the specified component.
  *
- * @usage GridBagConstraints gbc = layout.lookupConstraints(comp);
+ * Example: GridBagConstraints gbc = layout.lookupConstraints(comp);
  * @param comp The component to be constrained
  * @return The constraints object used to specify the layout
  */
@@ -619,7 +605,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * and <code>gridheight</code> fields are filled in according to the actual position
  * in the grid.
  *
- * @usage TableConstraints tc = layout.lookupConstraints(comp, target);
+ * Example: TableConstraints tc = layout.lookupConstraints(comp, target);
  * @param comp The component to be constrained
  * @param target The container in which the layout is done
  * @return The constraints object actually applied to the layout
@@ -637,7 +623,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * can override this methods to establish specific bounds for certain component
  * classes, such as the code for scrollbars given here.
  *
- * @usage Dimension size = layout.getMinimumComponentSize(comp);
+ * Example: Dimension size = layout.getMinimumComponentSize(comp);
  * @param comp The component whose size is being tested
  * @return The minimum size for that component
  */
@@ -652,7 +638,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * can override this methods to establish specific bounds for certain component
  * classes, such as the code for scrollbars given here.
  *
- * @usage Dimension size = layout.getPreferredComponentSize(comp);
+ * Example: Dimension size = layout.getPreferredComponentSize(comp);
  * @param comp The component whose size is being tested
  * @return The preferred size for that component
  */
@@ -872,7 +858,7 @@ public class TableLayout implements LayoutManager2, Serializable {
  * interpreting the <code>gridwidth</code> and <code>gridheight</code>
  * constraints.
  *
- * @usage computeLayoutTable(target);
+ * Example: computeLayoutTable(target);
  * @param target The target container
  */
 	private void computeLayoutTable(Container target) {

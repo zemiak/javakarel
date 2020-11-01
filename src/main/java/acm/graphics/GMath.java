@@ -45,7 +45,7 @@ public class GMath {
 /**
  * Rounds a <code>double</code> value to the nearest <code>int</code>.
  *
- * @usage int n = round(x);
+ * Example: int n = round(x);
  * @param x A <code>double</code> value
  * @return The nearest <code>int</code> value
  */
@@ -58,7 +58,7 @@ public class GMath {
  * Returns the trigonometric sine of its argument where <code>angle</code>
  * is expressed in degrees.
  *
- * @usage double s = sinDegrees(angle);
+ * Example: double s = sinDegrees(angle);
  * @param angle An angle measured in degrees
  * @return The trigonometric sine of the angle
  */
@@ -71,7 +71,7 @@ public class GMath {
  * Returns the trigonometric cosine of its argument where <code>angle</code>
  * is expressed in degrees.
  *
- * @usage double c = cosDegrees(angle);
+ * Example: double c = cosDegrees(angle);
  * @param angle An angle measured in degrees
  * @return The trigonometric cosine of the angle
  */
@@ -84,7 +84,7 @@ public class GMath {
  * Returns the trigonometric tangent of its argument where <code>angle</code>
  * is expressed in degrees.
  *
- * @usage double t = tanDegrees(angle);
+ * Example: double t = tanDegrees(angle);
  * @param angle An angle measured in degrees
  * @return The trigonometric tangent of the angle
  */
@@ -98,7 +98,7 @@ public class GMath {
  * the <code>Math</code> class, but was added only in JDK1.2, which is not
  * supported in all browsers.
  *
- * @usage double degrees = toDegrees(radians);
+ * Example: double degrees = toDegrees(radians);
  * @param radians An angle measured in radians
  * @return The equivalent angle in degrees
  */
@@ -112,7 +112,7 @@ public class GMath {
  * the <code>Math</code> class, but was added only in JDK1.2, which is not
  * supported in all browsers.
  *
- * @usage double radians = toRadians(degrees);
+ * Example: double radians = toRadians(degrees);
  * @param degrees An angle measured in degrees
  * @return The equivalent angle in radians
  */
@@ -125,7 +125,7 @@ public class GMath {
  * Computes the distance between the origin and the point
  * (<code>x</code>,&nbsp;<code>y</code>).
  *
- * @usage double d = distance(x, y);
+ * Example: double d = distance(x, y);
  * @param x The x-coordinate of the point
  * @param y The y-coordinate of the point
  * @return The distance from the origin to the point (<code>x</code>,&nbsp;<code>y</code>)
@@ -139,7 +139,7 @@ public class GMath {
  * Computes the distance between the points (<code>x0</code>,&nbsp;<code>y0</code>)
  * and (<code>x1</code>,&nbsp;<code>y1</code>).
  *
- * @usage double d = distance(x0, y0, x1, y1);
+ * Example: double d = distance(x0, y0, x1, y1);
  * @param x0 The x-coordinate of one point
  * @param y0 The y-coordinate of that point
  * @param x1 The x-coordinate of the other point
@@ -160,7 +160,7 @@ public class GMath {
  * system is flipped.  The point (0, 0) is arbitrarily defined to be at
  * angle 0.
  *
- * @usage double theta = angle(x, y);
+ * Example: double theta = angle(x, y);
  * @param x The x-coordinate of the point
  * @param y The y-coordinate of the point
  * @return The angle from the origin to the point (<code>x</code>,&nbsp;<code>y</code>)
@@ -177,7 +177,7 @@ public class GMath {
  * point (<code>x0</code>,&nbsp;<code>y0</code>) and
  * (<code>x1</code>,&nbsp;<code>y1</code>).
  *
- * @usage double theta = angle(x0, y0, x1, y1);
+ * Example: double theta = angle(x0, y0, x1, y1);
  * @param x0 The x-coordinate of one point
  * @param y0 The y-coordinate of that point
  * @param x1 The x-coordinate of the other point

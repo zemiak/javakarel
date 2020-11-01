@@ -58,7 +58,7 @@ import javax.swing.*;
  * For example, the following code pops up a dialog box and
  * allows the user to enter an integer:
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    IODialog dialog = new IODialog();
  * &nbsp;    int n = dialog.readInt("Enter an integer: ");
  * </code></pre>
@@ -70,7 +70,7 @@ public class IODialog implements IOModel {
  * Instantiates a new IODialog object that can then be used for dialog-based
  * input and output.
  *
- * @usage dialog = new IODialog();
+ * Example: dialog = new IODialog();
  */
 	public IODialog() {
 		this(null);
@@ -81,7 +81,7 @@ public class IODialog implements IOModel {
  * Instantiates a new IODialog object that can then be used for dialog-based
  * input and output.
  *
- * @usage dialog = new IODialog(owner);
+ * Example: dialog = new IODialog(owner);
  * @param owner A <code>Component</code> used as the owner of created dialogs
  */
 	public IODialog(Component owner) {
@@ -98,7 +98,7 @@ public class IODialog implements IOModel {
  * output in the same dialog.  The <code>print</code> method is overloaded
  * so that <code>value</code> can be of any type.
  *
- * @usage dialog.print(value);
+ * Example: dialog.print(value);
  * @param value The value to be displayed
  */
 	public void print(String value) {
@@ -107,7 +107,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>boolean</code>.
- * @noshow
+ *
  */
 	public final void print(boolean x) {
 		print("" + x);
@@ -115,7 +115,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>char</code>.
- * @noshow
+ *
  */
 	public final void print(char x) {
 		print("" + x);
@@ -123,7 +123,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>double</code>.
- * @noshow
+ *
  */
 	public final void print(double x) {
 		print("" + x);
@@ -131,7 +131,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>float</code>.
- * @noshow
+ *
  */
 	public final void print(float x) {
 		print("" + x);
@@ -139,7 +139,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display an <code>int</code>.
- * @noshow
+ *
  */
 	public final void print(int x) {
 		print("" + x);
@@ -147,7 +147,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display a <code>long</code>.
- * @noshow
+ *
  */
 	public final void print(long x) {
 		print("" + x);
@@ -155,7 +155,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>print</code> can display an <code>Object</code>.
- * @noshow
+ *
  */
 	public final void print(Object x) {
 		print("" + x);
@@ -165,7 +165,7 @@ public class IODialog implements IOModel {
 /**
  * Completes the output line and displays the dialog.
  *
- * @usage dialog.println();
+ * Example: dialog.println();
  */
 	public void println() {
 		model.popupMessage(outputLine);
@@ -178,7 +178,7 @@ public class IODialog implements IOModel {
  * The <code>println</code> method is overloaded so that <code>value</code>
  * can be of any type.
  *
- * @usage dialog.println(value);
+ * Example: dialog.println(value);
  * @param value The value to be displayed
  */
 	public void println(String value) {
@@ -188,7 +188,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>boolean</code>.
- * @noshow
+ *
  */
 	public final void println(boolean x) {
 		println("" + x);
@@ -196,7 +196,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>char</code>.
- * @noshow
+ *
  */
 	public final void println(char x) {
 		println("" + x);
@@ -204,7 +204,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>double</code>.
- * @noshow
+ *
  */
 	public final void println(double x) {
 		println("" + x);
@@ -212,7 +212,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>float</code>.
- * @noshow
+ *
  */
 	public final void println(float x) {
 		println("" + x);
@@ -220,7 +220,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display an <code>int</code>.
- * @noshow
+ *
  */
 	public final void println(int x) {
 		println("" + x);
@@ -228,7 +228,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display a <code>long</code>.
- * @noshow
+ *
  */
 	public final void println(long x) {
 		println("" + x);
@@ -236,7 +236,7 @@ public class IODialog implements IOModel {
 
 /**
  * Makes sure that <code>println</code> can display an <code>Object</code>.
- * @noshow
+ *
  */
 	public final void println(Object x) {
 		println("" + x);
@@ -246,7 +246,7 @@ public class IODialog implements IOModel {
 /**
  * Displays the error message in an error dialog.
  *
- * @usage dialog.showErrorMessage(msg);
+ * Example: dialog.showErrorMessage(msg);
  * @param msg The error msg to be displayed
  */
 	public void showErrorMessage(String msg) {
@@ -258,7 +258,7 @@ public class IODialog implements IOModel {
  * Reads and returns a line of input from the dialog, without
  * including the end-of-line characters that terminate the input.
  *
- * @usage String str = dialog.readLine();
+ * Example: String str = dialog.readLine();
  * @return The next line of input as a <code>String</code>
  */
 	public final String readLine() {
@@ -271,7 +271,7 @@ public class IODialog implements IOModel {
  * as the value of this method.  The end-of-line characters that terminate
  * the input are not included in the returned string.
  *
- * @usage String str = dialog.readLine(prompt);
+ * Example: String str = dialog.readLine(prompt);
  * @param prompt The prompt string to display to the user
  * @return The next line of input as a <code>String</code>
  */
@@ -296,7 +296,7 @@ public class IODialog implements IOModel {
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = dialog.readInt();
+ * Example: int n = dialog.readInt();
  * @return The value of the input interpreted as a decimal integer
  */
 	public final int readInt() {
@@ -311,7 +311,7 @@ public class IODialog implements IOModel {
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = dialog.readInt(low, high);
+ * Example: int n = dialog.readInt(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  * @return The value of the input interpreted as a decimal integer
@@ -328,7 +328,7 @@ public class IODialog implements IOModel {
  * although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = dialog.readInt(prompt);
+ * Example: int n = dialog.readInt(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a decimal integer
  */
@@ -346,7 +346,7 @@ public class IODialog implements IOModel {
  * although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage int n = dialog.readInt(prompt, low, high);
+ * Example: int n = dialog.readInt(prompt, low, high);
  * @param prompt The prompt string to display to the user
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -375,7 +375,7 @@ public class IODialog implements IOModel {
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = dialog.readDouble();
+ * Example: double d = dialog.readDouble();
  * @return The value of the input interpreted as a <code>double</code>
  */
 	public final double readDouble() {
@@ -391,7 +391,7 @@ public class IODialog implements IOModel {
  * changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = dialog.readDouble(low, high);
+ * Example: double d = dialog.readDouble(low, high);
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
  * @return The value of the input interpreted as a <code>double</code>
@@ -408,7 +408,7 @@ public class IODialog implements IOModel {
  * reenter the data,  although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage double d = dialog.readDouble(prompt);
+ * Example: double d = dialog.readDouble(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a <code>double</code>
  */
@@ -425,7 +425,7 @@ public class IODialog implements IOModel {
  * to reenter the data,  although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage d = dialog.readDouble(prompt, low, high);
+ * Example: d = dialog.readDouble(prompt, low, high);
  * @param prompt The prompt string to display to the user
  * @param low The lowest value in the permitted range
  * @param high The highest value in the permitted range
@@ -455,7 +455,7 @@ public class IODialog implements IOModel {
  * although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = dialog.readBoolean();
+ * Example: boolean flag = dialog.readBoolean();
  * @return The value of the input interpreted as a boolean value
  */
 	public final boolean readBoolean() {
@@ -470,7 +470,7 @@ public class IODialog implements IOModel {
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = dialog.readBoolean(prompt);
+ * Example: boolean flag = dialog.readBoolean(prompt);
  * @param prompt The prompt string to display to the user
  * @return The value of the input interpreted as a boolean value
  */
@@ -487,7 +487,7 @@ public class IODialog implements IOModel {
  * to reenter the data, although this behavior can be changed using the
  * <a href="#setExceptionOnError(boolean)"><code>setExceptionOnError</code></a> method.
  *
- * @usage boolean flag = dialog.readBoolean(prompt);
+ * Example: boolean flag = dialog.readBoolean(prompt);
  * @param prompt The prompt string to display to the user
  * @param trueLabel The label for the button indicating <code>true</code>
  * @param falseLabel The label for the button indicating <code>false</code>
@@ -514,7 +514,7 @@ public class IODialog implements IOModel {
  * value is set to <code>true</code>, illegal input raises an
  * <a href="../util/ErrorException.html"><code>ErrorException</code></a> instead.
  *
- * @usage dialog.setExceptionOnError(flag);
+ * Example: dialog.setExceptionOnError(flag);
  * @param flag <code>false</code> to retry on errors; <code>true</code> to raise an exception
  */
 	public void setExceptionOnError(boolean flag) {
@@ -525,7 +525,7 @@ public class IODialog implements IOModel {
 /**
  * Returns the state of the error-handling flag.
  *
- * @usage boolean flag = dialog.getExceptionOnError();
+ * Example: boolean flag = dialog.getExceptionOnError();
  * @return The current setting of the error-handling mode (<code>false</code> to retry
  *         on errors; <code>true</code> to raise an exception)
  */
@@ -542,7 +542,7 @@ public class IODialog implements IOModel {
  * <a href="../util/CancelledException.html"><code>CancelledException</code></a>
  * if it is invoked.
  *
- * @usage dialog.setAllowCancel(flag);
+ * Example: dialog.setAllowCancel(flag);
  * @param flag <code>false</code> to remove "Cancel" button; <code>true</code> to enable it
  */
 	public void setAllowCancel(boolean flag) {
@@ -553,7 +553,7 @@ public class IODialog implements IOModel {
 /**
  * Returns the state of the cancellation mode.
  *
- * @usage boolean flag = dialog.getAllowCancel();
+ * Example: boolean flag = dialog.getAllowCancel();
  * @return The current setting of the error-handling mode (<code>false</code> to retry
  *         on errors; <code>true</code> to raise an exception)
  */
@@ -567,9 +567,9 @@ public class IODialog implements IOModel {
  * is non-<code>null</code> and the console is reading from an input stream,
  * then the dialog methods use the console for input instead of the dialog.
  *
- * @usage dialog.setAssociatedConsole(console);
+ * Example: dialog.setAssociatedConsole(console);
  * @param console The associated console
- * @noshow
+ *
  */
 	public void setAssociatedConsole(IOConsole console) {
 		myConsole = console;
@@ -579,9 +579,9 @@ public class IODialog implements IOModel {
 /**
  * Returns the associated console for the dialog.
  *
- * @usage IOConsole console = dialog.getAssociatedConsole();
+ * Example: IOConsole console = dialog.getAssociatedConsole();
  * @return The associated console
- * @noshow
+ *
  */
 	public IOConsole getAssociatedConsole() {
 		return myConsole;
@@ -589,7 +589,7 @@ public class IODialog implements IOModel {
 
 /* Factory method: createModel() */
 /**
- * Creates the input dialog model in Swing or AWT style, as appropriate.
+ * @return Creates the input dialog model in Swing or AWT style, as appropriate.
  */
 	protected DialogModel createModel() {
 		String className = new JPanel().getClass().getName();

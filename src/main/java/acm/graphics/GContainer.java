@@ -51,7 +51,7 @@ public interface GContainer {
 /**
  * Adds a new graphical object to this container.
  *
- * @usage gc.add(gobj);
+ * Example: gc.add(gobj);
  * @param gobj The graphical object to add
  */
 	public void add(GObject gobj);
@@ -61,7 +61,7 @@ public interface GContainer {
  * Adds the graphical object to this canvas and sets its location
  * to the point (<code>x</code>,&nbsp;<code>y</code>).
  *
- * @usage gc.add(gobj, x, y);
+ * Example: gc.add(gobj, x, y);
  * @param gobj The graphical object to add
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
@@ -72,7 +72,7 @@ public interface GContainer {
 /**
  * Adds the graphical object to this canvas and sets its location to the specified point.
  *
- * @usage gc.add(gobj, pt);
+ * Example: gc.add(gobj, pt);
  * @param gobj The graphical object to add
  * @param pt A <code>GPoint</code> object giving the coordinates of the point
  */
@@ -82,7 +82,7 @@ public interface GContainer {
 /**
  * Removes a graphical object from this container.
  *
- * @usage gc.remove(gobj);
+ * Example: gc.remove(gobj);
  * @param gobj The graphical object to remove
  */
 	public void remove(GObject gobj);
@@ -91,7 +91,7 @@ public interface GContainer {
 /**
  * Removes all graphical objects from this container.
  *
- * @usage gc.removeAll();
+ * Example: gc.removeAll();
  */
 	public void removeAll();
 
@@ -99,7 +99,7 @@ public interface GContainer {
 /**
  * Returns the number of graphical objects stored in this <code>GCanvas</code>.
  *
- * @usage int n = gc.getElementCount();
+ * Example: int n = gc.getElementCount();
  * @return The number of graphical objects in this <code>GCanvas</code>
  */
 	public int getElementCount();
@@ -109,7 +109,7 @@ public interface GContainer {
  * Returns the graphical object at the specified index, numbering from back
  * to front in the the <i>z</i> dimension.
  *
- * @usage GObject gobj = gc.getElement(index);
+ * Example: GObject gobj = gc.getElement(index);
  * @param index The index of the component to return
  * @return The graphical object at the specified index
  */
@@ -121,7 +121,7 @@ public interface GContainer {
  * (<code>x</code>, <code>y</code>), or <code>null</code> if no such
  * object exists.
  *
- * @usage GObject gobj = gc.getElementAt(x, y);
+ * Example: GObject gobj = gc.getElementAt(x, y);
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return The graphical object at the specified location, or <code>null</code>
@@ -134,7 +134,7 @@ public interface GContainer {
  * Returns the topmost graphical object that contains the specified point,
  * or <code>null</code> if no such object exists.
  *
- * @usage GObject gobj = gc.getElementAt(pt);
+ * Example: GObject gobj = gc.getElementAt(pt);
  * @param pt The coordinates being tested
  * @return The graphical object at the specified location, or <code>null</code>
  *         if no such object exists
@@ -383,7 +383,7 @@ class GIterator implements Iterator<GObject> {
  * container in the specified direction (<code>GContainer.FRONT_TO_BACK</code>
  * or <code>GContainer.BACK_TO_FRONT</code>).
  *
- * @usage Iterator<GObject> i = new GIterator(container, direction);
+ * Example: Iterator<GObject> i = new GIterator(container, direction);
  * @param container The <code>GContainer</code> whose elements the iterator should return
  * @param direction The direction in which to process the elements
  */
@@ -405,7 +405,7 @@ class GIterator implements Iterator<GObject> {
  * Returns <code>true</code> if the iterator has more elements.  Implements
  * the <code>hasNext</code> method for the <code>Iterator</code> interface.
  *
- * @usage while (i.hasNext()) . . .
+ * Example: while (i.hasNext()) . . .
  * @return <code>true</code> if the iterator has more elements, <code>false</code> otherwise
  */
 	public boolean hasNext() {
@@ -417,7 +417,7 @@ class GIterator implements Iterator<GObject> {
  * Returns the next element from the iterator.  Implements the <code>next</code>
  * method for the <code>Iterator</code> interface.
  *
- * @usage Object element = i.next();
+ * Example: Object element = i.next();
  * @return The next element from the iterator
  */
 	public GObject next() {
@@ -433,7 +433,7 @@ class GIterator implements Iterator<GObject> {
  * Returns the next element from the iterator as a <code>GObject</code>.  This
  * method is callable only if the iterator is declared as a <code>GIterator</code>.
  *
- * @usage GObject element = i.nextElement();
+ * Example: GObject element = i.nextElement();
  * @return The next element from the iterator as a <code>GObject</code>
  */
 	public GObject nextElement() {
@@ -445,7 +445,7 @@ class GIterator implements Iterator<GObject> {
  * Removes the current element from its container.  Implements the <code>remove</code>
  * method for the <code>Iterator</code> interface.
  *
- * @usage i.remove();
+ * Example: i.remove();
  */
 	public void remove() {
 		if (dir == GContainer.FRONT_TO_BACK) {

@@ -81,7 +81,7 @@ public class TablePanel extends JPanel {
  * Creates a new <code>TablePanel</code> whose layout manager supports the
  * specified number of rows and columns.
  *
- * @usage TablePanel panel = new TablePanel(rows, columns);
+ * Example: TablePanel panel = new TablePanel(rows, columns);
  * @param rows The number of rows, or 0 for no limit
  * @param columns The number of columns, or 0 for no limit
  */
@@ -95,7 +95,7 @@ public class TablePanel extends JPanel {
  * of rows and columns and the supplied values for the horizontal and
  * vertical gap.
  *
- * @usage TablePanel panel = new TablePanel(rows, columns, hgap, vgap);
+ * Example: TablePanel panel = new TablePanel(rows, columns, hgap, vgap);
  * @param rows The number of rows, or 0 for no limit
  * @param columns The number of columns, or 0 for no limit
  * @param hgap The gap between columns
@@ -111,7 +111,7 @@ public class TablePanel extends JPanel {
  * are <code>CENTER</code>, <code>LEFT</code>, <code>RIGHT</code>, and
  * <code>FILL</code>.
  *
- * @usage layout.setHorizontalAlignment(align);
+ * Example: layout.setHorizontalAlignment(align);
  * @param align The horizontal alignment for the table
  */
 	public void setHorizontalAlignment(int align) {
@@ -122,7 +122,7 @@ public class TablePanel extends JPanel {
 /**
  * Returns the horizontal alignment for the table.
  *
- * @usage align = layout.getHorizontalAlignment();
+ * Example: align = layout.getHorizontalAlignment();
  * @return The horizontal alignment for the table
  */
 	public int getHorizontalAlignment() {
@@ -135,7 +135,7 @@ public class TablePanel extends JPanel {
  * are <code>CENTER</code>, <code>TOP</code>, <code>BOTTOM</code>, and
  * <code>FILL</code>.
  *
- * @usage layout.setVerticalAlignment(align);
+ * Example: layout.setVerticalAlignment(align);
  * @param align The vertical alignment for the table
  */
 	public void setVerticalAlignment(int align) {
@@ -146,7 +146,7 @@ public class TablePanel extends JPanel {
 /**
  * Returns the vertical alignment for the table.
  *
- * @usage align = layout.getVerticalAlignment();
+ * Example: align = layout.getVerticalAlignment();
  * @return The vertical alignment for the table
  */
 	public int getVerticalAlignment() {
@@ -159,7 +159,7 @@ public class TablePanel extends JPanel {
  * are <code>NONE</code>, <code>HORIZONTAL</code>, <code>VERTICAL</code>, and
  * <code>BOTH</code>.
  *
- * @usage layout.setDefaultFill(fill);
+ * Example: layout.setDefaultFill(fill);
  * @param fill The default fill parameter for components in the table
  */
 	public void setDefaultFill(int fill) {
@@ -170,7 +170,7 @@ public class TablePanel extends JPanel {
 /**
  * Returns the default fill parameter for components in the table.
  *
- * @usage fill = layout.getDefaultFill();
+ * Example: fill = layout.getDefaultFill();
  * @return The default fill parameter for components in the table
  */
 	public int getDefaultFill() {

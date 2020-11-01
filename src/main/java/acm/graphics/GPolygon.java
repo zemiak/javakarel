@@ -48,7 +48,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Constructs a new empty polygon at the origin.
  *
- * @usage GPolygon gpoly = new GPolygon();
+ * Example: GPolygon gpoly = new GPolygon();
  */
 	public GPolygon() {
 		vertices = new VertexList();
@@ -59,7 +59,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Constructs a new empty polygon at (<code>x</code>, <code>y</code>).
  *
- * @usage GPolygon gpoly = new GPolygon(x, y);
+ * Example: GPolygon gpoly = new GPolygon(x, y);
  * @param x The x-coordinate of the origin of the polygon
  * @param y The y-coordinate of the origin of the polygon
  */
@@ -73,7 +73,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * Constructs a new polygon from the specified array of <code>GPoint</code>
  * objects.  The polygon is automatically marked as complete.
  *
- * @usage GPolygon gpoly = new GPolygon(points);
+ * Example: GPolygon gpoly = new GPolygon(points);
  * @param points An array of <code>GPoint</code> objects specifying the vertices
  */
 	public GPolygon(GPoint[] points) {
@@ -86,7 +86,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Adds a vertex at (<code>x</code>, <code>y</code>) relative to the polygon origin.
  *
- * @usage gpoly.addVertex(x, y);
+ * Example: gpoly.addVertex(x, y);
  * @param x The x-coordinate of the vertex relative to the polygon origin
  * @param y The y-coordinate of the vertex relative to the polygon origin
  */
@@ -103,7 +103,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * Adds an edge to the polygon whose components are given by the displacements
  * <code>dx</code> and <code>dy</code> from the last vertex.
  *
- * @usage gpoly.addEdge(dx, dy);
+ * Example: gpoly.addEdge(dx, dy);
  * @param dx The x displacement through which the edge moves
  * @param dy The y displacement through which the edge moves
  */
@@ -121,7 +121,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * edge is given by <code>r</code>, and the edge extends in direction <code>theta</code>,
  * measured in degrees counterclockwise from the +x axis.
  *
- * @usage gpoly.addPolarEdge(r, theta);
+ * Example: gpoly.addPolarEdge(r, theta);
  * @param r The length of the edge
  * @param theta The angle at which the edge extends measured in degrees
  */
@@ -140,7 +140,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * box are computed implicitly by figuring out what values would place the
  * current vertex at the starting position.
  *
- * @usage gpoly.addArc(arcWidth, arcHeight, start, sweep);
+ * Example: gpoly.addArc(arcWidth, arcHeight, start, sweep);
  * @param arcWidth The width of the oval from which the arc is taken
  * @param arcHeight The height of the oval from which the arc is taken
  * @param start The angle at which the arc begins
@@ -159,7 +159,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * Returns the coordinates of the last vertex added to the polygon, or <code>null</code>
  * if the polygon is empty.
  *
- * @usage GPoint vertex = gpoly.getCurrentPoint();
+ * Example: GPoint vertex = gpoly.getCurrentPoint();
  * @return The last vertex added to the polygon, or <code>null</code> if empty
  */
 	public GPoint getCurrentPoint() {
@@ -170,7 +170,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Scales the polygon by the scale factors <code>sx</code> and <code>sy</code>.
  *
- * @usage gpoly.scale(sx, sy);
+ * Example: gpoly.scale(sx, sy);
  * @param sx The factor used to scale all coordinates in the x direction
  * @param sy The factor used to scale all coordinates in the y direction
  */
@@ -185,7 +185,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * Scales the object on the screen by the scale factor <code>sf</code>, which applies
  * in both dimensions.
  *
- * @usage gobj.scale(sf);
+ * Example: gobj.scale(sf);
  * @param sf The factor used to scale all coordinates in both dimensions
  */
 	public final void scale(double sf) {
@@ -196,7 +196,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Rotates the polygon around its origin by the angle theta, measured in degrees.
  *
- * @usage gpoly.rotate(theta);
+ * Example: gpoly.rotate(theta);
  * @param theta The angle of rotation in degrees counterclockwise
  */
 	public void rotate(double theta) {
@@ -208,7 +208,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Sets whether this object is filled.
  *
- * @usage gobj.setFilled(fill);
+ * Example: gobj.setFilled(fill);
  * @param fill <code>true</code> if the object should be filled, <code>false</code> for an outline
  */
 	public void setFilled(boolean fill) {
@@ -220,7 +220,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Returns whether this object is filled.
  *
- * @usage if (gobj.isFilled()) . . .
+ * Example: if (gobj.isFilled()) . . .
  * @return The color used to display the object
  */
 	public boolean isFilled() {
@@ -231,7 +231,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Sets the color used to display the filled region of this object.
  *
- * @usage gobj.setFillColor(color);
+ * Example: gobj.setFillColor(color);
  * @param color The color used to display the filled region of this object
  */
 	public void setFillColor(Color color) {
@@ -245,7 +245,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * none has been set, <code>getFillColor</code> returns the color of the
  * object.
  *
- * @usage Color color = gobj.getFillColor();
+ * Example: Color color = gobj.getFillColor();
  * @return The color used to display the filled region of this object
  */
 	public Color getFillColor() {
@@ -257,7 +257,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * Returns the bounding box of this object, which is defined to be the
  * smallest rectangle that covers everything drawn by the figure.
  *
- * @usage GRectangle bounds = gpoly.getBounds();
+ * Example: GRectangle bounds = gpoly.getBounds();
  * @return The bounding box for this object
  */
 	public GRectangle getBounds() {
@@ -268,7 +268,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Checks to see whether a point is inside the object.
  *
- * @usage if (gpoly.contains(x, y)) . . .
+ * Example: if (gpoly.contains(x, y)) . . .
  * @param x The x-coordinate of the point being tested
  * @param y The y-coordinate of the point being tested
  * @return <code>true</code> if the point (<code>x</code>,&nbsp;<code>y</code>) is inside
@@ -282,7 +282,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		if (vertices.size() == 0) return;
@@ -302,7 +302,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * clients to take a polygon drawn using mouse clicks on the screen and
  * then to reformulate it so that it can be displayed relative to its center.
  *
- * @usage gpoly.recenter();
+ * Example: gpoly.recenter();
  */
 	public void recenter() {
 		vertices.recenter();
@@ -313,7 +313,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Overrides <code>clone</code> in <code>Object</code> to make sure
  * that the vertex list is copied rather than shared.
- * @noshow
+ *
  */
 	public Object clone() {
 		try {
@@ -469,7 +469,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 /**
  * Overrides <code>repaint</code> in <code>GObject</code> to invalidate the
  * cached polygon.
- * @noshow
+ *
  */
 	protected void repaint() {
 		cacheValid = false;
@@ -481,7 +481,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
  * Returns an AWT <code>Polygon</code> whose points are as close as possible
  * to the ones in this <code>GPolygon</code>.
  *
- * @usage Polygon p = gpoly.getPolygon();
+ * Example: Polygon p = gpoly.getPolygon();
  * @return An AWT polygon corresponding to this object
  */
 	protected Polygon getPolygon() {
@@ -542,7 +542,7 @@ public class GPolygon extends GObject implements GFillable, GScalable {
 
 /* Package class: VertexList */
 /**
- * The <code>VertexList<code> class represents a list of vertices.
+ * The <code>VertexList</code> class represents a list of vertices.
  */
 class VertexList implements Serializable {
 

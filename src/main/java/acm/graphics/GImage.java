@@ -54,7 +54,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * Creates a new <code>GImage</code> object at the origin that displays
  * the specified image.
  *
- * @usage GImage gimage = new GImage(image);
+ * Example: GImage gimage = new GImage(image);
  * @param image The image to use as the contents of this <code>GImage</code>
  */
 	public GImage(Image image) {
@@ -66,19 +66,19 @@ public class GImage extends GObject implements GResizable, GScalable {
  * Creates a new <code>GImage</code> object by looking for an image with that
  * name.  The search for an image by name consists of the following steps:
  *
- * <p><ol>
+ * <ol>
  * <li>Check to see if an image with that name has already been defined.  If
- *     so, return that image.<p>
+ *     so, return that image.
  *
  * <li>Check to see if there is a resource available with that name whose
  *     contents can be read as an <code>Image</code>.  If so, read the image
- *     from the resource file.<p>
+ *     from the resource file.
  *
  * <li>Load the image from a file with the specified name, relative to the
  *     application directory or the applet code base.
- * </ol><p>
+ * </ol>
  *
- * @usage GImage gimage = new GImage(name);
+ * Example: GImage gimage = new GImage(name);
  * @param name The name used to search for the contents of this image
  */
 	public GImage(String name) {
@@ -101,7 +101,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * The <i>alpha</i> value indicates the transparency, and the other values
  * are the red, green, and blue components of the color.
  *
- * @usage GImage gimage = new GImage(array);
+ * Example: GImage gimage = new GImage(array);
  * @param array A two-dimensional pixel array
  */
 	public GImage(int[][] array) {
@@ -113,7 +113,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * Creates a new <code>GImage</code> object at the specified coordinates.  The
  * <code>image</code> parameter is used to initialize the appearance of the image.
  *
- * @usage GImage gimage = new GImage(image, x, y);
+ * Example: GImage gimage = new GImage(image, x, y);
  * @param image The image to use as the contents of this <code>GImage</code>
  * @param x The x-coordinate of the upper left corner of the image
  * @param y The y-coordinate of the upper left corner of the image
@@ -130,7 +130,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * described in the single-argument version of the
  * <a href="#GImage(String)"><code>GImage</code></a> constructor.
  *
- * @usage GImage gimage = new GImage(image, x, y);
+ * Example: GImage gimage = new GImage(image, x, y);
  * @param name The name used to search for the contents of this image
  * @param x The x-coordinate of the upper left corner of the image
  * @param y The y-coordinate of the upper left corner of the image
@@ -156,7 +156,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * The <i>alpha</i> value indicates the transparency, and the other values
  * are the red, green, and blue components of the color.
  *
- * @usage GImage gimage = new GImage(array, x, y);
+ * Example: GImage gimage = new GImage(array, x, y);
  * @param array A two-dimensional pixel array
  * @param x The x-coordinate of the upper left corner of the image
  * @param y The y-coordinate of the upper left corner of the image
@@ -171,7 +171,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * specified as an argument.  Calling <code>setImage</code> automatically changes
  * the size of the image to be equal to that of the image data.
  *
- * @usage gimage.setImage(image);
+ * Example: gimage.setImage(image);
  * @param image The image to use as the contents of this <code>GImage</code>
  */
 	public void setImage(Image image) {
@@ -188,7 +188,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * in the constructors.  Calling <code>setImage</code> automatically changes
  * the size of the image to be equal to that of the image data.
  *
- * @usage gimage.setImage(name);
+ * Example: gimage.setImage(name);
  * @param name The name used to search for the contents of this image
  */
 	public void setImage(String name) {
@@ -199,7 +199,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns the image stored inside this <code>GImage</code>.
  *
- * @usage Image image = gimage.getImage();
+ * Example: Image image = gimage.getImage();
  * @return The <code>Image</code> object stored inside this <code>GImage</code>
  */
 	public Image getImage() {
@@ -213,7 +213,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * suffix of the file is not recognized as a supported image type, calling
  * this method generates an error.
  *
- * @usage gimage.saveImage(filename);
+ * Example: gimage.saveImage(filename);
  * @param filename The name of the file to which the image is saved
  */
 	public void saveImage(String filename) {
@@ -227,7 +227,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * suffix of the file is not recognized as a supported image type,
  * calling this method generates an error.
  *
- * @usage gimage.saveImage(file);
+ * Example: gimage.saveImage(file);
  * @param file The <code>File</code> to which the image is saved
  */
 	public void saveImage(File file) {
@@ -238,7 +238,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Implements the <code>paint</code> operation for this graphical object.  This method
  * is not called directly by clients.
- * @noshow
+ *
  */
 	public void paint(Graphics g) {
 		Component imageObserver = getComponent();
@@ -258,7 +258,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Changes the size of this object to the specified width and height.
  *
- * @usage gimage.setSize(width, height);
+ * Example: gimage.setSize(width, height);
  * @param width The new width of the object
  * @param height The new height of the object
  */
@@ -272,9 +272,9 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Changes the size of this object to the specified <code>GDimension</code>.
  *
- * @usage gimage.setSize(size);
+ * Example: gimage.setSize(size);
  * @param size A <code>GDimension</code> object specifying the size
- * @noshow
+ *
  */
 	public final void setSize(GDimension size) {
 		setSize(size.getWidth(), size.getHeight());
@@ -284,7 +284,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns the size of this object as a <code>GDimension</code>.
  *
- * @usage GDimension size = gimage.getSize();
+ * Example: GDimension size = gimage.getSize();
  * @return The size of this object
  */
 	public GDimension getSize() {
@@ -295,7 +295,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Changes the bounds of this object to the specified values.
  *
- * @usage gimage.setBounds(x, y, width, height);
+ * Example: gimage.setBounds(x, y, width, height);
  * @param x The new x-coordinate for the object
  * @param y The new y-coordinate for the object
  * @param width The new width of the object
@@ -312,7 +312,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * Changes the bounds of this object to the values from the specified
  * <code>GRectangle</code>.
  *
- * @usage gimage.setBounds(bounds);
+ * Example: gimage.setBounds(bounds);
  * @param bounds A <code>GRectangle</code> specifying the new bounds
  */
 	public final void setBounds(GRectangle bounds) {
@@ -323,7 +323,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns the bounding box of this object.
  *
- * @usage GRectangle bounds = gimage.getBounds();
+ * Example: GRectangle bounds = gimage.getBounds();
  * @return The bounding box for this object
  */
 	public GRectangle getBounds() {
@@ -335,7 +335,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Scales the object on the screen by the scale factors <code>sx</code> and <code>sy</code>.
  *
- * @usage gobj.scale(sx, sy);
+ * Example: gobj.scale(sx, sy);
  * @param sx The factor used to scale all coordinates in the x direction
  * @param sy The factor used to scale all coordinates in the y direction
  */
@@ -350,7 +350,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * Scales the object on the screen by the scale factor <code>sf</code>, which applies
  * in both dimensions.
  *
- * @usage gobj.scale(sf);
+ * Example: gobj.scale(sf);
  * @param sf The factor used to scale all coordinates in both dimensions
  */
 	public final void scale(double sf) {
@@ -361,7 +361,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns a two-dimensional array of pixel values from the stored image.
  *
- * @usage int[][] array = gimage.getPixelArray();
+ * Example: int[][] array = gimage.getPixelArray();
  * @return A two-dimensional array of pixel values from the stored image
  */
 	public int[][] getPixelArray() {
@@ -372,7 +372,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns the alpha component from an RGB value.
  *
- * @usage int alpha = GImage.getAlpha(pixel);
+ * Example: int alpha = GImage.getAlpha(pixel);
  * @param pixel An <code>int</code> containing a pixel value as alpha/red/green/blue.
  * @return The alpha component of the pixel
  */
@@ -384,7 +384,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns the red component from an RGB value.
  *
- * @usage int red = GImage.getRed(pixel);
+ * Example: int red = GImage.getRed(pixel);
  * @param pixel An <code>int</code> containing a pixel value as alpha/red/green/blue.
  * @return The red component of the pixel
  */
@@ -396,7 +396,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns the green component from an RGB value.
  *
- * @usage int green = GImage.getGreen(pixel);
+ * Example: int green = GImage.getGreen(pixel);
  * @param pixel An <code>int</code> containing a pixel value as alpha/red/green/blue.
  * @return The green component of the pixel
  */
@@ -408,7 +408,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns the blue component from an RGB value.
  *
- * @usage int blue = GImage.getBlue(pixel);
+ * Example: int blue = GImage.getBlue(pixel);
  * @param pixel An <code>int</code> containing a pixel value as alpha/red/green/blue.
  * @return The blue component of the pixel
  */
@@ -421,7 +421,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * Creates an opaque pixel value with the color components given by
  * <code>red</code>, <code>green</code>, and <code>blue</code>.
  *
- * @usage int pixel = GImage.createRGBPixel(red, green, blue);
+ * Example: int pixel = GImage.createRGBPixel(red, green, blue);
  * @param red The red component of the pixel (0 to 255)
  * @param green The green component of the pixel (0 to 255)
  * @param blue The blue component of the pixel (0 to 255)
@@ -437,7 +437,7 @@ public class GImage extends GObject implements GResizable, GScalable {
  * <code>red</code>, <code>green</code>, and <code>blue</code>
  * and the transparency value <code>alpha</code>.
  *
- * @usage int pixel = GImage.createRGBPixel(red, green, blue);
+ * Example: int pixel = GImage.createRGBPixel(red, green, blue);
  * @param red The red component of the pixel (0 to 255)
  * @param green The green component of the pixel (0 to 255)
  * @param blue The blue component of the pixel (0 to 255)
@@ -580,7 +580,7 @@ public class GImage extends GObject implements GResizable, GScalable {
 /**
  * Returns an AWT <code>Rectangle</code> that specifies the bounds of this object.
  *
- * @usage Rectangle r = grect.getAWTBounds();
+ * Example: Rectangle r = grect.getAWTBounds();
  * @return A <code>Rectangle</code> that specifies the bounds of this object
  */
 	protected Rectangle getAWTBounds() {

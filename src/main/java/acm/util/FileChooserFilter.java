@@ -43,7 +43,7 @@ public class FileChooserFilter extends javax.swing.filechooser.FileFilter {
  * overrides the <code>accept</code> and <code>getDescription</code>
  * methods.
  *
- * @usage FileChooserFilter filter = new FileChooserFilter();
+ * Example: FileChooserFilter filter = new FileChooserFilter();
  */
 	public FileChooserFilter() {
 		filenamePattern = null;
@@ -59,11 +59,11 @@ public class FileChooserFilter extends javax.swing.filechooser.FileFilter {
  * match all files ending with the extensions <code>.html</code>
  * or <code>.htm</code>, you could use the following constructor call:
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    new FileChooserPattern("*.html;*.htm")
  * </code></pre>
  *
- * @usage FileChooserFilter filter = new FileChooserFilter(pattern);
+ * Example: FileChooserFilter filter = new FileChooserFilter(pattern);
  * @param pattern The filename pattern
  */
 	public FileChooserFilter(String pattern) {
@@ -79,14 +79,14 @@ public class FileChooserFilter extends javax.swing.filechooser.FileFilter {
  * match all files ending with the extensions <code>.html</code>
  * or <code>.htm</code>, you could use the following constructor call:
  *
- * <p><pre><code>
+ * <p>&nbsp;</p><pre><code>
  * &nbsp;    new FileChooserPattern("*.html;*.htm")
  * </code></pre>
  *
  * <p>This version of the constructor makes it possible to set the
  * description that appears in the dialog.
  *
- * @usage FileChooserFilter filter = new FileChooserFilter(pattern, description);
+ * Example: FileChooserFilter filter = new FileChooserFilter(pattern, description);
  * @param pattern The filename pattern
  * @param description The description of the files for inclusion in the dialog
  */
@@ -100,7 +100,7 @@ public class FileChooserFilter extends javax.swing.filechooser.FileFilter {
  * Returns <code>true</code> if the specified file should be accepted by
  * the filter.
  *
- * @usage if (filter.accept(file)) . . .
+ * Example: if (filter.accept(file)) . . .
  * @param file The <code>File</code> object representing the file
  * @return <code>true</code> if the specified file should be accepted
  */

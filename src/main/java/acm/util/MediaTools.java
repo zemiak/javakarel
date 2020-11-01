@@ -91,25 +91,25 @@ public class MediaTools {
  * and then loads it to create an <code>Image</code>.  The search process
  * consists of the following steps:
  *
- * <p><ol>
+ * <p>&nbsp;</p><ol>
  * <li>Check to see if an image with that name has already been defined.  If
- *     so, return that image.<p>
+ *     so, return that image.<p>&nbsp;</p>
  *
  * <li>Check to see if there is a resource available with that name whose
  *     contents can be read as an <code>Image</code>.  If so, read the image
- *     from the resource file.<p>
+ *     from the resource file.<p>&nbsp;</p>
  *
  * <li>Load the image from a file with the specified name, relative to the
  *     application directory or the applet code base.
- * </ol><p>
+ * </ol><p>&nbsp;</p>
  *
  * The second and third steps are repeated for each element of the image
  * search path, which consists of a list of directories separated by colons.
  *
- * <p>Unlike the <code>getImage</code> method in the <code>Applet</code> class,
+ * <p>&nbsp;</p>Unlike the <code>getImage</code> method in the <code>Applet</code> class,
  * <code>loadImage</code> waits for an image to be fully loaded before returning.
  *
- * @usage Image image = MediaTools.loadImage(name);
+ * Example: Image image = MediaTools.loadImage(name);
  * @param name The name of the image
  * @return A fully loaded <code>Image</code> object
  */
@@ -125,11 +125,11 @@ public class MediaTools {
  * in that this version allows the client to specify the search path
  * explicitly.
  *
- * @usage Image image = MediaTools.loadImage(name, path);
+ * Example: Image image = MediaTools.loadImage(name, path);
  * @param name The name of the image
  * @param path A string of directories names separated by colons
  * @return A fully loaded <code>Image</code> object
- * @noshow
+ *
  */
 	public static Image loadImage(String name, String path) {
 		Image image = imageTable.get(name);
@@ -193,7 +193,7 @@ public class MediaTools {
 /**
  * Loads an image from the specified URL.
  *
- * @usage Image image = MediaTools.loadImage(url);
+ * Example: Image image = MediaTools.loadImage(url);
  * @param url The url containing the image
  * @return A fully loaded <code>Image</code> object
  */
@@ -205,7 +205,7 @@ public class MediaTools {
 /**
  * Makes sure that the image is fully loaded before returning.
  *
- * @usage image = MediaTools.loadImage(image);
+ * Example: image = MediaTools.loadImage(image);
  * @param image The <code>Image</code> which may not yet be loaded
  * @return The same <code>Image</code> after ensuring that it is fully loaded
  */
@@ -224,7 +224,7 @@ public class MediaTools {
 /**
  * Inserts the given image into the image table under the specified name.
  *
- * @usage MediaTools.defineImage(name, image);
+ * Example: MediaTools.defineImage(name, image);
  * @param name The name for the image
  * @param image The image to be stored in the table
  */
@@ -237,7 +237,7 @@ public class MediaTools {
  * Removes the image with the given name from the cache, allowing it
  * to be freed by the garbage collector.
  *
- * @usage MediaTools.flushImage(name);
+ * Example: MediaTools.flushImage(name);
  * @param name The name for the image
  */
 	public static void flushImage(String name) {
@@ -250,7 +250,7 @@ public class MediaTools {
  * standard image processing applications, the array is indexed so that the
  * first subscript determines the row and the second determines the column.
  *
- * @usage Image image = MediaTools.createImage(array);
+ * Example: Image image = MediaTools.createImage(array);
  * @param array A two-dimensional array of <code>int</code>s representing the pixels
  * @return An <code>Image</code> object
  */
@@ -270,7 +270,7 @@ public class MediaTools {
  * pixel array is stored in row-major order, which means that the pixels for
  * the entire first row come before the pixels in the second row, and so on.
  *
- * @usage Image image = MediaTools.createImage(pixels, width, height);
+ * Example: Image image = MediaTools.createImage(pixels, width, height);
  * @param pixels An array of <code>int</code>s representing the pixels
  * @param width The width of the image
  * @param height The height of the image
@@ -287,7 +287,7 @@ public class MediaTools {
  * Generates an image from an input stream containing the data bytes for the
  * image formatted in image/gif format.
  *
- * @usage Image image = MediaTools.createImage(in);
+ * Example: Image image = MediaTools.createImage(in);
  * @param in An input stream containing the data
  * @return An <code>Image</code> object
  */
@@ -309,7 +309,7 @@ public class MediaTools {
 /**
  * Generates an image from a string array that provides the pixel values.
  *
- * @usage Image image = MediaTools.createImage(hexData);
+ * Example: Image image = MediaTools.createImage(hexData);
  * @param hexData A hex string array representing a .gif value
  * @return An <code>Image</code> object
  */
@@ -354,7 +354,7 @@ public class MediaTools {
  * suffix of the file is not recognized as a supported image type, calling
  * this method generates an error.
  *
- * @usage MediaTools.saveImage(image, filename);
+ * Example: MediaTools.saveImage(image, filename);
  * @param image The image
  * @param filename The name of the file to which the image is saved
  */
@@ -369,7 +369,7 @@ public class MediaTools {
  * suffix of the file is not recognized as a supported image type,
  * calling this method generates an error.
  *
- * @usage MediaTools.saveImage(image, file);
+ * Example: MediaTools.saveImage(image, file);
  * @param image The image
  * @param file The <code>File</code> to which the image is saved
  */
@@ -406,11 +406,11 @@ public class MediaTools {
  * represented as a string array.  Clients can retrieve the PostScript preview
  * by asking for the <code>"PSPreview"</code> property.
  *
- * @usage MediaTools.createPSPreviewImage(image, preview);
+ * Example: MediaTools.createPSPreviewImage(image, preview);
  * @param image The original image
  * @param preview The corresponding PostScript preview
  * @return A new image that includes the preview
- * @noshow
+ *
  */
 	public static Image createPSPreviewImage(Image image, String[] preview) {
 		return new PSPreviewImage(image, preview);
@@ -422,22 +422,22 @@ public class MediaTools {
  * name and then loads it to create an <code>AudioClip</code>.  The search process
  * consists of the following steps:
  *
- * <p><ol>
+ * <p>&nbsp;</p><ol>
  * <li>Check to see if an audio clip with that name has already been defined.  If
- *     so, return that audio clip.<p>
+ *     so, return that audio clip.<p>&nbsp;</p>
  *
  * <li>Check to see if there is a resource available with that name whose
  *     contents can be read as an <code>AudioClip</code>.  If so, read the
- *     audio clip from the resource file.<p>
+ *     audio clip from the resource file.<p>&nbsp;</p>
  *
  * <li>Load the audio clip from a file with the specified name, relative to the
  *     application directory or the applet code base.
- * </ol><p>
+ * </ol><p>&nbsp;</p>
  *
  * The second and third steps are repeated for each element of the audio clip
  * search path, which consists of a list of directories separated by colons.
  *
- * @usage AudioClip clip = MediaTools.loadAudioClip(name);
+ * Example: AudioClip clip = MediaTools.loadAudioClip(name);
  * @param name The name of the audio clip
  * @return A new <code>AudioClip</code> object
  */
@@ -453,11 +453,11 @@ public class MediaTools {
  * in that this version allows the client to specify the search path
  * explicitly.
  *
- * @usage AudioClip clip = MediaTools.loadAudioClip(name, path);
+ * Example: AudioClip clip = MediaTools.loadAudioClip(name, path);
  * @param name The name of the audio clip
  * @param path A string of directories names separated by colons
  * @return A new <code>AudioClip</code> object
- * @noshow
+ *
  */
 	public static AudioClip loadAudioClip(String name, String path) {
 		AudioClip clip = audioClipTable.get(name);
@@ -526,7 +526,7 @@ public class MediaTools {
 /**
  * Loads an audio clip from the specified URL.
  *
- * @usage AudioClip clip = MediaTools.loadAudioClip(url);
+ * Example: AudioClip clip = MediaTools.loadAudioClip(url);
  * @param url The url containing the audio clip
  * @return A new <code>AudioClip</code> object
  */
@@ -538,7 +538,7 @@ public class MediaTools {
 /**
  * Inserts the given clip into the audio clip table under the specified name.
  *
- * @usage MediaTools.defineAudioClip(name, clip);
+ * Example: MediaTools.defineAudioClip(name, clip);
  * @param name The name for the audio clip
  * @param clip The audio clip to be stored in the table
  */
@@ -551,7 +551,7 @@ public class MediaTools {
  * Removes the audio clip with the given name from the cache, allowing it
  * to be freed by the garbage collector.
  *
- * @usage MediaTools.flushAudioClip(name);
+ * Example: MediaTools.flushAudioClip(name);
  * @param name The name for the audio clip
  */
 	public static void flushAudioClip(String name) {
@@ -565,7 +565,7 @@ public class MediaTools {
  * object from the data.  If that fails, it then backs up to the older strategy
  * of using the <code>SunAudioClip</code> class.
  *
- * @usage AudioClip clip = MediaTools.createAudioClip(in);
+ * Example: AudioClip clip = MediaTools.createAudioClip(in);
  * @param in An input stream containing the data
  * @return An <code>AudioClip</code> object
  */
@@ -585,7 +585,7 @@ public class MediaTools {
 /**
  * Generates an audio clip from a string array that provides the sound values.
  *
- * @usage AudioClip audio clip = MediaTools.createAudioClip(hexData);
+ * Example: AudioClip audio clip = MediaTools.createAudioClip(hexData);
  * @param hexData A hex string array representing an audio clip
  * @return An <code>AudioClip</code> object
  */
@@ -599,18 +599,18 @@ public class MediaTools {
  * and then opens it to create an <code>InputStream</code>.  The search process
  * consists of the following steps:
  *
- * <p><ol>
+ * <p>&nbsp;</p><ol>
  * <li>Check to see if there is a resource available with that name.  If so,
- *     return an <code>InputStream</code> open on that resource.<p>
+ *     return an <code>InputStream</code> open on that resource.<p>&nbsp;</p>
  *
  * <li>Open the file with the specified name, relative to the application
  *     directory or the applet code base.
- * </ol><p>
+ * </ol><p>&nbsp;</p>
  *
  * These steps are repeated for each element of the datafile search path, which
  * consists of a list of directories separated by colons.
  *
- * @usage InputStream in = MediaTools.openDataFile(name);
+ * Example: InputStream in = MediaTools.openDataFile(name);
  * @param name The name of the input file
  * @return A new <code>InputStream</code> open on the specified file
  */
@@ -626,7 +626,7 @@ public class MediaTools {
  * in that this version allows the client to specify the search path
  * explicitly.
  *
- * @usage InputStream in = MediaTools.openDataFile(name, path);
+ * Example: InputStream in = MediaTools.openDataFile(name, path);
  * @param name The name of the audio clip
  * @param path A string of directories names separated by colons
  * @return A new <code>InputStream</code> open on the specified file
@@ -688,7 +688,7 @@ public class MediaTools {
 /**
  * Opens the specified URL to create an <code>InputStream</code>.
  *
- * @usage InputStream in = MediaTools.openDataFile(url);
+ * Example: InputStream in = MediaTools.openDataFile(url);
  * @param url The URL of the data file
  * @return A new <code>InputStream</code> open on the specified URL
  */
@@ -702,10 +702,10 @@ public class MediaTools {
  * <code>type</code> parameter is used to specify the image type, as
  * described in the <code>BufferedImage</code> documentation.
  *
- * @usage BufferedImage image = MediaTools.createBufferedImage(image, type);
+ * Example: BufferedImage image = MediaTools.createBufferedImage(image, type);
  * @param image The original image
  * @param type The type code used to describe the image model
- * @param A <code>BufferedImage</code> containing the image data
+ * @return BufferedImage containing the image data
  */
 	public static BufferedImage createBufferedImage(Image image, int type) {
 		int width = image.getWidth(null);
@@ -722,7 +722,7 @@ public class MediaTools {
  * Returns an input stream whose bytes come from the string array <code>hex</code>,
  * in which the elements consist of continuous bytes of hex data.
  *
- * @usage InputStream in = MediaTools.getHexInputStream(hexData);
+ * Example: InputStream in = MediaTools.getHexInputStream(hexData);
  * @param hexData An array of strings specifying a byte stream coded in hex
  * @return An input stream for reading the bytes
  */
@@ -736,7 +736,7 @@ public class MediaTools {
  * whether images and audio clips are cached internally by name.  This flag is disabled
  * by default.
  *
- * @usage MediaTools.setCachingEnabled(flag);
+ * Example: MediaTools.setCachingEnabled(flag);
  * @param flag <code>true</code> to enable caching by name, <code>false</code> to disable it.
  */
 	public static void setCachingEnabled(boolean flag) {
@@ -749,7 +749,7 @@ public class MediaTools {
  * clips are cached internally by name, as described in
  * <a href="#setCachingEnabled(boolean)"><code>setCachingEnabled</code></a>.
  *
- * @usage boolean flag = MediaTools.isCachingEnabled();
+ * Example: boolean flag = MediaTools.isCachingEnabled();
  * @return <code>true</code> if caching by name is enabled, <code>false</code> otherwise.
  */
 	public static boolean isCachingEnabled() {
@@ -760,7 +760,7 @@ public class MediaTools {
 /**
  * This method returns a new lightweight component suitable as an <code>imageObserver</code>.
  *
- * @usage Component imageObserver = MediaTools.getImageObserver();
+ * Example: Component imageObserver = MediaTools.getImageObserver();
  * @return A new lightweight component suitable as an <code>imageObserver</code>.
  */
 	public static Component getImageObserver() {
@@ -772,7 +772,7 @@ public class MediaTools {
  * This method sounds the audible alert on the console, which is typically a beep
  * sound.
  *
- * @usage MediaTools.beep();
+ * Example: MediaTools.beep();
  */
 	public static void beep() {
 		Toolkit.getDefaultToolkit().beep();
@@ -782,6 +782,9 @@ public class MediaTools {
 /**
  * Loads an image from the specified URL.  The <code>topLevel</code> flag
  * is <code>false</code> if this is invoked internally.
+ * @param url what image
+ * @param topLevel false when invoked internally
+ * @return Image loaded image
  */
 	public static Image loadImage(URL url, boolean topLevel) {
 		Image image = null;
@@ -832,6 +835,10 @@ public class MediaTools {
 /**
  * Loads an audio clip from the specified URL.  The <code>topLevel</code> flag
  * is <code>false</code> if this is invoked internally.
+ *
+ * @param url audio to load
+ * @param topLevel false if internal call
+ * @return AudioClip loaded audio
  */
 	public static AudioClip loadAudioClip(URL url, boolean topLevel) {
 		AudioClip clip = null;
@@ -853,6 +860,10 @@ public class MediaTools {
 /**
  * Opens a data file using the specified URL.  The <code>topLevel</code> flag
  * is <code>false</code> if this is invoked internally.
+ *
+ * @param url Data file to load
+ * @param topLevel false when internal
+ * @return InputStream data stream
  */
 	public static InputStream openDataFile(URL url, boolean topLevel) {
 		InputStream in = null;
@@ -898,7 +909,7 @@ class HexInputStream extends InputStream {
 /**
  * Creates an input stream whose bytes come from the specified string array.
  *
- * @usage HexInputStream in = new HexInputStream(hexData);
+ * Example: HexInputStream in = new HexInputStream(hexData);
  * @param hexData An array of strings containing the input bytes
  */
 	public HexInputStream(String[] hexData) {
@@ -911,7 +922,7 @@ class HexInputStream extends InputStream {
 /**
  * Reads the next byte of data from the input.
  *
- * @usage int ch = in.read();
+ * Example: int ch = in.read();
  * @return The next byte of data, or -1 at the end of file
  */
 	public int read() {
@@ -1079,7 +1090,7 @@ class PSPreviewImage extends Image {
  * Creates an <code>Image</code> subclass that encapsulates an existing image
  * and a PostScript preview.
  *
- * @usage Image image = PSPreviewImage(image, preview);
+ * Example: Image image = PSPreviewImage(image, preview);
  * @param image The original image
  * @param preview The corresponding PostScript preview
  */
@@ -1145,7 +1156,7 @@ class ImageSaver {
  * tools in the <code>javax.imageio</code> to save an image as indicated
  * by the format name and image buffer type.
  *
- * @usage ImageSaver saver = new ImageSaver(format, type);
+ * Example: ImageSaver saver = new ImageSaver(format, type);
  * @param format The informal name of the image format
  * @param type The integer code for the <code>BufferedImage</code> type
  */
@@ -1158,7 +1169,7 @@ class ImageSaver {
 /**
  * Sets the output stream this <code>ImageSaver</code> uses to write data.
  *
- * @usage saver.setOutputStream(output);
+ * Example: saver.setOutputStream(output);
  * @param output The output stream used to write data
  */
 	public void setOutputStream(OutputStream output) {
@@ -1169,7 +1180,7 @@ class ImageSaver {
 /**
  * Returns the output stream used by this <code>ImageSaver</code>.
  *
- * @usage OutputStream output = saver.getOutputStream();
+ * Example: OutputStream output = saver.getOutputStream();
  * @return The output stream used to write data
  */
 	public OutputStream getOutputStream() {
@@ -1183,7 +1194,7 @@ class ImageSaver {
  * from the <code>javax.imageio</code> package to write the file.  Subclasses
  * that do their own data formatting must override this method.
  *
- * @usage saver.saveImage(image);
+ * Example: saver.saveImage(image);
  * @param image The image to be written
  */
 	public void saveImage(Image image) {
@@ -1206,7 +1217,7 @@ class ImageSaver {
  * does nothing.  Subclasses that need to update the file type information
  * must override this method.
  *
- * @usage saver.updateFileType(file);
+ * Example: saver.updateFileType(file);
  * @param file The file whose information needs to be updated
  */
 	public void updateFileType(File file) {
@@ -1217,7 +1228,7 @@ class ImageSaver {
 /**
  * Writes the low-order byte of <code>x</code> to the output stream.
  *
- * @usage saver.dumpByte(x);
+ * Example: saver.dumpByte(x);
  * @param x A byte stored in an integer
  */
 	public void dumpByte(int x) {
@@ -1232,7 +1243,7 @@ class ImageSaver {
 /**
  * Writes the low-order 16 bits of <code>x</code> to the output stream.
  *
- * @usage saver.dumpShort(x);
+ * Example: saver.dumpShort(x);
  * @param x A 16-bit quantity stored in an integer
  */
 	public void dumpShort(int x) {
@@ -1248,7 +1259,7 @@ class ImageSaver {
 /**
  * Writes the 32-bit word in <code>x</code> to the output stream.
  *
- * @usage saver.dumpLong(x);
+ * Example: saver.dumpLong(x);
  * @param x A 32-bit integer word
  */
 	public void dumpLong(int x) {
@@ -1267,7 +1278,7 @@ class ImageSaver {
  * Extracts the specified component of a pixel.  Transparency is simulated
  * by computing a weighted average between white and the given value.
  *
- * @usage int component = getPixelComponent(pixel, color);
+ * Example: int component = getPixelComponent(pixel, color);
  * @param pixel The 32-bit integer pixel, including the alpha channel
  * @param color The character 'R', 'G', or 'B', indicating the component
  * @return An eight-bit component value, expanded to an integer
@@ -1329,7 +1340,7 @@ class BMPImageSaver extends ImageSaver {
  * This class saves GIF images.  This implementation uses one of two
  * strategies to encode the image:
  *
- * <p><ol>
+ * <p>&nbsp;</p><ol>
  * <li>If this version of Java includes a GIF writer, use that one.
  * <li>If not, default to the public-domain GIF89 writer.
  * </ol>
@@ -1429,7 +1440,7 @@ private void dumpHeader() {
  * block consists of a sequence of TIFF entries, each of which
  * contains the following information:
  *
- * <p><ol>
+ * <p>&nbsp;</p><ol>
  *   <li>An operation code (2 bytes)
  *   <li>Code for type of data (2 bytes)
  *   <li>The number of data elements in an array (typically 1)
@@ -1711,7 +1722,7 @@ class PICTImageSaver extends ImageSaver {
  * in some other structure (such as an RTF file), these bytes do not
  * appear.  Padding is enabled by default.
  *
- * @usage saver.setPaddingFlag(flag)
+ * Example: saver.setPaddingFlag(flag)
  * @param flag A flag to control padding (<code>true</code> by default)
  */
 	public void setPaddingFlag(boolean flag) {
@@ -1870,20 +1881,20 @@ class PICTImageSaver extends ImageSaver {
  * encoding, because that is the only packing type that most
  * applications understand.
  *
- * <p>Each packed scanline uses run-length encoding to compress
+ * <p>&nbsp;</p>Each packed scanline uses run-length encoding to compress
  * the data for each component of the scan line independently,
  * starting with the red values.  Each sequence of bytes in the
  * encoding is preceded by a flag byte <code>b</code>, which has
  * two interpretations depending on its high-order bit:
  *
- * <p><ul>
+ * <p>&nbsp;</p><ul>
  *    <li>If the high-order bit is 0, the flag byte is followed by
  *        <code>b + 1</code> data bytes.
  *    <li>If that bit is 1, the flag byte is followed by (-b)
  *        <code>-b + 1</code> copies of the next byte.
  * </ul>
  *
- * <p>Some PICT readers seem to preallocate space for a scan line
+ * <p>&nbsp;</p>Some PICT readers seem to preallocate space for a scan line
  * based on the maximal size of the optimal run-length encoding.
  * Unfortunately, in a scan line with short matching sequences
  * alternating with short independent sequences, the naive
@@ -2104,7 +2115,7 @@ class RTFImageSaver extends PICTImageSaver {
 /**
  * Instances of this Gif89Frame subclass are constructed from RGB image info,
  *  either in the form of an Image object or a pixel array.
- *  <p>
+ *  <p>&nbsp;</p>
  *  There is an important restriction to note.  It is only permissible to add
  *  DirectGif89Frame objects to a Gif89Encoder constructed without an explicit
  *  color map.  The GIF color table will be automatically generated from pixel
@@ -2183,7 +2194,7 @@ class DirectGif89Frame extends Gif89Frame {
  *  including nearly all of the present class, is original code.  My main
  *  motivation for writing a new encoder was to support animated GIFs, but the
  *  package also adds support for embedded textual comments.
- *  <p>
+ *  <p>&nbsp;</p>
  *  There are still some limitations.  For instance, animations are limited to
  *  a single global color table.  But that is usually what you want anyway, so
  *  as to avoid irregularities on some displays.  (So this is not really a
@@ -2191,7 +2202,7 @@ class DirectGif89Frame extends Gif89Frame {
  *  restriction is that the total number of RGB colors in a given input-batch
  *  mustn't exceed 256.  Obviously, there is an opening here for someone who
  *  would like to add a color-reducing preprocessor.
- *  <p>
+ *  <p>&nbsp;</p>
  *  The encoder, though very usable in its present form, is at bottom only a
  *  partial implementation skewed toward my own particular needs.  Hence a
  *  couple of caveats are in order.  (1) During development it was in the back
@@ -2202,13 +2213,13 @@ class DirectGif89Frame extends Gif89Frame {
  *  overlooked something.  (2) The encoder classes aren't thread safe, so use
  *  caution in a context where access is shared by multiple threads.  (Better
  *  yet, finish the library and re-release it :)
- *  <p>
+ *  <p>&nbsp;</p>
  *  There follow a couple of simple examples illustrating the most common way to
  *  use the encoder, i.e., to encode AWT Image objects created elsewhere in the
  *  program.  Use of some of the most popular format options is also shown,
  *  though you will want to peruse the API for additional features.
  *
- *  <p>
+ *  <p>&nbsp;</p>
  *  <strong>Animated GIF Example</strong>
  *  <pre>
  *  import net.jmge.gif.Gif89Encoder;
@@ -2524,7 +2535,7 @@ class Gif89Encoder {
  * conversion to a static GIF, or (2) a file containing a list of GIFs and/or
  * JPEGs, one per line, to be combined into an animated GIF.  The output will
  * appear in the current directory as 'gif89out.gif'.
- * <p>
+ * <p>&nbsp;</p>
  * (N.B. This test program will abort if the input file(s) exceed(s) 256 total
  * RGB colors, so in its present form it has no value as a generic JPEG to GIF
  * converter.  Also, when multiple files are input, you need to be wary of the
@@ -2844,13 +2855,13 @@ class ReverseColorMap {
  *  nothing to do with GUI "frames" such as java.awt.Frame.  We merely use the
  *  term in its very common sense of a still picture in an animation sequence.
  *  It's hoped that the restricted context will prevent any confusion.
- *  <p>
+ *  <p>&nbsp;</p>
  *  An instance of this class is used in conjunction with a Gif89Encoder object
  *  to represent and encode a single static image and its associated "control"
  *  data.  A Gif89Frame doesn't know or care whether it is encoding one of the
  *  many animation frames in a GIF movie, or the single bitmap in a "normal"
  *  GIF. (FYI, this design mirrors the encoded GIF structure.)
- *  <p>
+ *  <p>&nbsp;</p>
  *  Since Gif89Frame is an abstract class we don't instantiate it directly, but
  *  instead create instances of its concrete subclasses, IndexGif89Frame and
  *  DirectGif89Frame.  From the API standpoint, these subclasses differ only
@@ -2860,7 +2871,7 @@ class ReverseColorMap {
  *  advantages in specialized circumstances.  (Of course, in routine situations
  *  you might not explicitly instantiate any frames at all, instead letting
  *  Gif89Encoder's convenience methods do the honors.)
- *  <p>
+ *  <p>&nbsp;</p>
  *  As far as the public API is concerned, objects in the Gif89Frame hierarchy
  *  interact with a Gif89Encoder only via the latter's methods for adding and
  *  querying frames.  (As a side note, you should know that while Gif89Encoder
@@ -2868,7 +2879,7 @@ class ReverseColorMap {
  *  is NOT true.  That is, even though the ultimate encoding of a Gif89Frame may
  *  be affected by the context its parent encoder object provides, it retains
  *  its original condition and can be reused in a different context.)
- *  <p>
+ *  <p>&nbsp;</p>
  *  The core pixel-encoding code in this class was essentially lifted from
  *  Jef Poskanzer's well-known <cite>Acme GifEncoder</cite>, so please see the
  *  <a href="../readme.txt">readme</a> containing his notice.
@@ -3385,7 +3396,7 @@ class GifPixelsEncoder {
  * palette is desired.  It is also much more efficient when one is using an
  * algorithmic frame generator that isn't interested in RGB values (such
  * as a cellular automaton).
- * <p>
+ * <p>&nbsp;</p>
  * Objects of this class are normally added to a Gif89Encoder object that has
  * been provided with an explicit color table at construction.  While you may
  * also add them to "auto-map" encoders without an exception being thrown,
