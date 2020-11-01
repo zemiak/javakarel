@@ -3,7 +3,7 @@
 
 import stanford.karel.*;
 
-public class RowOfBeepers extends Karel {
+public class rowofbeepers extends Karel {
     public void run() {
         while(frontIsClear())
         {
