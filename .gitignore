@@ -32,4 +32,3 @@ target
 .mvn
 .factorypath
 target/maven-status/maven-compiler-plugin/compile/default-compile/*
-
